@@ -1,0 +1,12 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'LBFM-Swift' do
+  use_frameworks!
+
+  # Pods for LBFM-Swift
+  pod 'SnapKit'
+  pod 'Kingfisher'
+  #tabbar样式
+  pod 'ESTabBarController-swift'
+end
