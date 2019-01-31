@@ -1,0 +1,6 @@
+framework module JXMarqueeView {
+  umbrella header "JXMarqueeView-umbrella.h"
+
+  export *
+  module * { export * }
+}

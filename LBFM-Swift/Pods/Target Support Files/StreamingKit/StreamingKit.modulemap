@@ -1,0 +1,6 @@
+framework module StreamingKit {
+  umbrella header "StreamingKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
