@@ -17,10 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
+        // 加载tabbar样式
+        setupTabBarStyle()
         
         return true
     }
 
+    
+    func setupTabBarStyle(){
+        
+    }
 
 
 }
