@@ -3,12 +3,13 @@ platform :ios, '9.0'
 
 target 'LBFM-Swift' do
   use_frameworks!
-
+  # 忽略引入库的所有警告
+  inhibit_all_warnings!
   # Pods for LBFM-Swift
   pod 'SnapKit'
   pod 'Kingfisher'
   #tabbar样式
-  pod 'ESTabBarController-swift'
+  pod 'ESTabBarController-swift', '~> 2.6.2'
   #banner滚动图片
   pod 'FSPagerView'
   pod 'Moya'
@@ -29,3 +30,5 @@ target 'LBFM-Swift' do
   #播放网络音频
   pod 'StreamingKit'
 end
+
+

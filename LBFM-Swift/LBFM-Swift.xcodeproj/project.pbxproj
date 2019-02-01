@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A1400652202D61D00C98D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1400642202D61D00C98D59 /* AppDelegate.swift */; };
 		3A14006A2202D61D00C98D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1400682202D61D00C98D59 /* Main.storyboard */; };
 		3A14006C2202D62000C98D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A14006B2202D62000C98D59 /* Assets.xcassets */; };
 		3A14006F2202D62000C98D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A14006D2202D62000C98D59 /* LaunchScreen.storyboard */; };
@@ -23,13 +22,16 @@
 		3A9533522203FB9500E4DC70 /* WRProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95334D2203FB9500E4DC70 /* WRProxy.swift */; };
 		3A9533532203FB9500E4DC70 /* WRCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95334E2203FB9500E4DC70 /* WRCycleScrollView.swift */; };
 		3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95334F2203FB9500E4DC70 /* WRCycleCell.swift */; };
+		3A953356220408C900E4DC70 /* LBFMBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A953355220408C900E4DC70 /* LBFMBasicContentView.swift */; };
+		3A9533582204096900E4DC70 /* LBFMBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533572204096900E4DC70 /* LBFMBouncesContentView.swift */; };
+		3A95335A220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A953359220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift */; };
+		3A95337B2204207A00E4DC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95337A2204207A00E4DC70 /* AppDelegate.swift */; };
 		951A29CC187163D3CCB50D74 /* Pods_LBFM_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDD0EC24A1F87D27F80ED62 /* Pods_LBFM_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CFEE505BF3F94F8DFD531F9 /* Pods-LBFM-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBFM-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBFM-Swift/Pods-LBFM-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		3A1400612202D61D00C98D59 /* LBFM-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LBFM-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A1400642202D61D00C98D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A1400692202D61D00C98D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A14006B2202D62000C98D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A14006E2202D62000C98D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +48,10 @@
 		3A95334D2203FB9500E4DC70 /* WRProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRProxy.swift; sourceTree = "<group>"; };
 		3A95334E2203FB9500E4DC70 /* WRCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleScrollView.swift; sourceTree = "<group>"; };
 		3A95334F2203FB9500E4DC70 /* WRCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleCell.swift; sourceTree = "<group>"; };
+		3A953355220408C900E4DC70 /* LBFMBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMBasicContentView.swift; sourceTree = "<group>"; };
+		3A9533572204096900E4DC70 /* LBFMBouncesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMBouncesContentView.swift; sourceTree = "<group>"; };
+		3A953359220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMIrregularityBasicContentView.swift; sourceTree = "<group>"; };
+		3A95337A2204207A00E4DC70 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDD0EC24A1F87D27F80ED62 /* Pods_LBFM_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBFM_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF6F2A9F63490E9AF6C0FBE /* Pods-LBFM-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBFM-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBFM-Swift/Pods-LBFM-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +106,7 @@
 		3A1400632202D61D00C98D59 /* LBFM-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				3A1400642202D61D00C98D59 /* AppDelegate.swift */,
+				3A9533792204207A00E4DC70 /* AppDelegate */,
 				3A9533312203F11D00E4DC70 /* Common */,
 				3A9533322203F11D00E4DC70 /* Controller */,
 				3A9533332203F11D00E4DC70 /* Lib */,
@@ -201,6 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				3A9533452203F25000E4DC70 /* LBFMNavigationController.swift */,
+				3A953355220408C900E4DC70 /* LBFMBasicContentView.swift */,
+				3A9533572204096900E4DC70 /* LBFMBouncesContentView.swift */,
+				3A953359220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -223,6 +232,14 @@
 				3A95334F2203FB9500E4DC70 /* WRCycleCell.swift */,
 			);
 			path = WRCycleScrollView;
+			sourceTree = "<group>";
+		};
+		3A9533792204207A00E4DC70 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3A95337A2204207A00E4DC70 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,16 +385,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A9533522203FB9500E4DC70 /* WRProxy.swift in Sources */,
-				3A1400652202D61D00C98D59 /* AppDelegate.swift in Sources */,
 				3A9533412203F1E900E4DC70 /* LBFMMineController.swift in Sources */,
 				3A9533432203F1F600E4DC70 /* LBFMPlayController.swift in Sources */,
 				3A9533512203FB9500E4DC70 /* WRCustomNavigationBar.swift in Sources */,
 				3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */,
 				3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */,
 				3A9533482203F5A500E4DC70 /* LBFMHeader.swift in Sources */,
+				3A9533582204096900E4DC70 /* LBFMBouncesContentView.swift in Sources */,
+				3A95337B2204207A00E4DC70 /* AppDelegate.swift in Sources */,
+				3A953356220408C900E4DC70 /* LBFMBasicContentView.swift in Sources */,
 				3A9533502203FB9500E4DC70 /* WRNavigationBar.swift in Sources */,
 				3A9533532203FB9500E4DC70 /* WRCycleScrollView.swift in Sources */,
 				3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */,
+				3A95335A220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift in Sources */,
 				3A95333D2203F1D000E4DC70 /* LBFMFindController.swift in Sources */,
 				3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */,
 			);
@@ -536,7 +556,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "JCSON-liubo.LBFM-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -556,7 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "JCSON-liubo.LBFM-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
