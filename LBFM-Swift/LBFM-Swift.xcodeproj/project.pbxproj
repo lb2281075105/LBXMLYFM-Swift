@@ -11,6 +11,12 @@
 		3A14006A2202D61D00C98D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1400682202D61D00C98D59 /* Main.storyboard */; };
 		3A14006C2202D62000C98D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A14006B2202D62000C98D59 /* Assets.xcassets */; };
 		3A14006F2202D62000C98D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A14006D2202D62000C98D59 /* LaunchScreen.storyboard */; };
+		3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333A2203F1BF00E4DC70 /* LBFMHomeController.swift */; };
+		3A95333D2203F1D000E4DC70 /* LBFMFindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */; };
+		3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333E2203F1DD00E4DC70 /* LBFMListenController.swift */; };
+		3A9533412203F1E900E4DC70 /* LBFMMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533402203F1E900E4DC70 /* LBFMMineController.swift */; };
+		3A9533432203F1F600E4DC70 /* LBFMPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533422203F1F600E4DC70 /* LBFMPlayController.swift */; };
+		3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533452203F25000E4DC70 /* LBFMNavigationController.swift */; };
 		951A29CC187163D3CCB50D74 /* Pods_LBFM_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDD0EC24A1F87D27F80ED62 /* Pods_LBFM_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +28,12 @@
 		3A14006B2202D62000C98D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A14006E2202D62000C98D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A1400702202D62000C98D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A95333A2203F1BF00E4DC70 /* LBFMHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeController.swift; sourceTree = "<group>"; };
+		3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindController.swift; sourceTree = "<group>"; };
+		3A95333E2203F1DD00E4DC70 /* LBFMListenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenController.swift; sourceTree = "<group>"; };
+		3A9533402203F1E900E4DC70 /* LBFMMineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMMineController.swift; sourceTree = "<group>"; };
+		3A9533422203F1F600E4DC70 /* LBFMPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMPlayController.swift; sourceTree = "<group>"; };
+		3A9533452203F25000E4DC70 /* LBFMNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMNavigationController.swift; sourceTree = "<group>"; };
 		BEDD0EC24A1F87D27F80ED62 /* Pods_LBFM_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBFM_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF6F2A9F63490E9AF6C0FBE /* Pods-LBFM-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBFM-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBFM-Swift/Pods-LBFM-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,12 +89,106 @@
 			isa = PBXGroup;
 			children = (
 				3A1400642202D61D00C98D59 /* AppDelegate.swift */,
+				3A9533312203F11D00E4DC70 /* Common */,
+				3A9533322203F11D00E4DC70 /* Controller */,
+				3A9533332203F11D00E4DC70 /* Lib */,
+				3A9533302203F11D00E4DC70 /* Orther */,
 				3A1400682202D61D00C98D59 /* Main.storyboard */,
 				3A14006B2202D62000C98D59 /* Assets.xcassets */,
 				3A14006D2202D62000C98D59 /* LaunchScreen.storyboard */,
 				3A1400702202D62000C98D59 /* Info.plist */,
 			);
 			path = "LBFM-Swift";
+			sourceTree = "<group>";
+		};
+		3A9533302203F11D00E4DC70 /* Orther */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Orther;
+			sourceTree = "<group>";
+		};
+		3A9533312203F11D00E4DC70 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3A9533322203F11D00E4DC70 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A9533442203F23300E4DC70 /* Main */,
+				3A9533392203F19400E4DC70 /* 喜马拉雅 */,
+				3A9533352203F19300E4DC70 /* Find(发现) */,
+				3A9533342203F19300E4DC70 /* Home(首页) */,
+				3A9533362203F19400E4DC70 /* Listen(我听) */,
+				3A9533382203F19400E4DC70 /* Mine(我的) */,
+				3A9533372203F19400E4DC70 /* Play(播放) */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3A9533332203F11D00E4DC70 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		3A9533342203F19300E4DC70 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				3A95333A2203F1BF00E4DC70 /* LBFMHomeController.swift */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		3A9533352203F19300E4DC70 /* Find(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */,
+			);
+			path = "Find(发现)";
+			sourceTree = "<group>";
+		};
+		3A9533362203F19400E4DC70 /* Listen(我听) */ = {
+			isa = PBXGroup;
+			children = (
+				3A95333E2203F1DD00E4DC70 /* LBFMListenController.swift */,
+			);
+			path = "Listen(我听)";
+			sourceTree = "<group>";
+		};
+		3A9533372203F19400E4DC70 /* Play(播放) */ = {
+			isa = PBXGroup;
+			children = (
+				3A9533422203F1F600E4DC70 /* LBFMPlayController.swift */,
+			);
+			path = "Play(播放)";
+			sourceTree = "<group>";
+		};
+		3A9533382203F19400E4DC70 /* Mine(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				3A9533402203F1E900E4DC70 /* LBFMMineController.swift */,
+			);
+			path = "Mine(我的)";
+			sourceTree = "<group>";
+		};
+		3A9533392203F19400E4DC70 /* 喜马拉雅 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "喜马拉雅";
+			sourceTree = "<group>";
+		};
+		3A9533442203F23300E4DC70 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3A9533452203F25000E4DC70 /* LBFMNavigationController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +334,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A1400652202D61D00C98D59 /* AppDelegate.swift in Sources */,
+				3A9533412203F1E900E4DC70 /* LBFMMineController.swift in Sources */,
+				3A9533432203F1F600E4DC70 /* LBFMPlayController.swift in Sources */,
+				3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */,
+				3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */,
+				3A95333D2203F1D000E4DC70 /* LBFMFindController.swift in Sources */,
+				3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
