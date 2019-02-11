@@ -1,5 +1,5 @@
 //
-//  LBFMFindController.swift
+//  LBFMHomeVIPController.swift
 //  LBFM-Swift
 //
 //  Created by liubo on 2019/2/1.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class LBFMFindController: UIViewController {
+class LBFMHomeVIPController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.white
+        // Do any additional setup after loading the view.
     }
     
 

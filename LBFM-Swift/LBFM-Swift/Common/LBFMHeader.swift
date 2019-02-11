@@ -15,15 +15,15 @@ import Foundation
 //import SwiftMessages
 
 
-let LBFMWidth = UIScreen.main.bounds.size.width
-let LBFMHeight = UIScreen.main.bounds.size.height
+let LBFMScreenWidth = UIScreen.main.bounds.size.width
+let LBFMScreenHeight = UIScreen.main.bounds.size.height
 
 let LBFMButtonColor = UIColor(red: 242/255.0, green: 77/255.0, blue: 51/255.0, alpha: 1)
 let LBFMDownColor = UIColor.init(red: 240/255.0, green: 241/255.0, blue: 244/255.0, alpha: 1)
 
 
 // iphone X
-let isIphoneX = LBFMHeight == 812 ? true : false
+let isIphoneX = LBFMScreenHeight == 812 ? true : false
 // LBFMNavBarHeight
 let LBFMNavBarHeight : CGFloat = isIphoneX ? 88 : 64
 // LBFMTabBarHeight
