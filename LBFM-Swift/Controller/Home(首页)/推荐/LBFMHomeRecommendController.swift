@@ -51,12 +51,14 @@ class LBFMHomeRecommendController: UIViewController {
 //        collection.uHead = URefreshHeader{ [weak self] in self?.loadData() }
 //        return collection
 //    }()
-    
+    lazy var viewModel: LBFMRecommendViewModel = {
+        return LBFMRecommendViewModel()
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
-        
+        viewModel.refreshDataSource()
         setupLoadRecommendAdData()
     }
     

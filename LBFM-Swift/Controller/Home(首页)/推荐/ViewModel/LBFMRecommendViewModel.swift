@@ -31,7 +31,7 @@ class LBFMRecommendViewModel: NSObject {
 
 extension LBFMRecommendViewModel {
     func refreshDataSource() {
-        //首页推荐接口请求
+        // 首页推荐接口请求
         LBFMRecommendProvider.request(.recommendList) { result in
             if case let .success(response) = result {
                 //解析数据

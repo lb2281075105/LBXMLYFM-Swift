@@ -8,7 +8,7 @@
 
 import Foundation
 import HandyJSON
-
+// 最外层的model
 struct LBFMHomeRecommendModel: HandyJSON {
     var msg:String?
     var ret:Int = 0
@@ -16,7 +16,7 @@ struct LBFMHomeRecommendModel: HandyJSON {
     var list:[LBFMRecommendModel]?
 }
 
-
+// 里层的model
 struct LBFMRecommendModel: HandyJSON {
     var bottomHasMore: Bool = false
     var hasMore: Bool = false
