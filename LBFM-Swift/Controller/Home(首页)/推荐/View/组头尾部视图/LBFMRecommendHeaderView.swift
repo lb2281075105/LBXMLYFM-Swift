@@ -47,6 +47,9 @@ class LBFMRecommendHeaderView: UICollectionReusableView {
     
     // 布局
     func setupHeaderView() {
+        
+        
+        
         self.addSubview(self.titleLabel)
         self.titleLabel.text = "猜你喜欢"
         self.titleLabel.textColor = UIColor.red

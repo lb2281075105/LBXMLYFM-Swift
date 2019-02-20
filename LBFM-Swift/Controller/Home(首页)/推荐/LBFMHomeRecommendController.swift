@@ -21,7 +21,8 @@ class LBFMHomeRecommendController: UIViewController {
     private let LBFMRecommendHeaderViewID     = "LBFMRecommendHeaderView"
     private let LBFMRecommendFooterViewID     = "LBFMRecommendFooterView"
     
-//    private let FMRecommendHeaderCellID     = "FMRecommendHeaderCell"
+    // 注册不同的cell
+    private let LBFMRecommendHeaderCellID     = "LBFMRecommendHeaderCell"
 //    private let FMRecommendGuessLikeCellID  = "FMRecommendGuessLikeCell"
 //    private let FMHotAudiobookCellID        = "FMHotAudiobookCell"
 //    private let FMAdvertCellID              = "FMAdvertCell"
@@ -37,11 +38,11 @@ class LBFMHomeRecommendController: UIViewController {
         collection.dataSource = self
         collection.backgroundColor = UIColor.white
         // MARK -注册头视图和尾视图
-        collection.register(LBFMRecommendHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID)
-        collection.register(LBFMRecommendFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID)
+//        collection.register(LBFMRecommendHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID)
+//        collection.register(LBFMRecommendFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID)
 
-//        // MARK -注册不同分区cell
-//        collection.register(FMRecommendHeaderCell.self, forCellWithReuseIdentifier: FMRecommendHeaderCellID)
+        // MARK -注册不同分区cell
+        collection.register(LBFMRecommendHeaderCell.self, forCellWithReuseIdentifier: LBFMRecommendHeaderCellID)
 //        collection.register(FMRecommendGuessLikeCell.self, forCellWithReuseIdentifier: FMRecommendGuessLikeCellID)
 //        collection.register(FMHotAudiobookCell.self, forCellWithReuseIdentifier: FMHotAudiobookCellID)
 //        collection.register(FMAdvertCell.self, forCellWithReuseIdentifier: FMAdvertCellID)
@@ -108,13 +109,13 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
         if moduleType == "focus"{
 
 //        if moduleType == "focus" || moduleType == "square" || moduleType == "topBuzz" {
-//            let cell:FMRecommendHeaderCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMRecommendHeaderCellID, for: indexPath) as! FMRecommendHeaderCell
-//            cell.focusModel = viewModel.focus
+            let cell:LBFMRecommendHeaderCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMRecommendHeaderCellID, for: indexPath) as! LBFMRecommendHeaderCell
+            cell.focusModel = viewModel.focus
 //            cell.squareList = viewModel.squareList
 //            cell.topBuzzListData = viewModel.topBuzzList
 //            cell.delegate = self
-//            return cell
-//        }
+            return cell
+        }
 //        else if moduleType == "guessYouLike" || moduleType == "paidCategory" || moduleType == "categoriesForLong" || moduleType == "cityCategory"{
 //            ///横式排列布局cell
 //            let cell:FMRecommendGuessLikeCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMRecommendGuessLikeCellID, for: indexPath) as! FMRecommendGuessLikeCell
@@ -150,10 +151,10 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
 //            let cell:FMRecommendForYouCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMRecommendForYouCellID, for: indexPath) as! FMRecommendForYouCell
 //            return cell
 //
-        }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        
-            return cell
+//        }
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+    
+            return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -188,16 +189,16 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
         return viewModel.referenceSizeForFooterInSection(section: section)
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        let moduleType = viewModel.homeRecommendList?[indexPath.section].moduleType
-        if kind == UICollectionElementKindSectionHeader {
-            let headerView : LBFMRecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID, for: indexPath) as! LBFMRecommendHeaderView
-
-            return headerView
-        }else if kind == UICollectionElementKindSectionFooter {
-            let footerView : LBFMRecommendFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID, for: indexPath) as! LBFMRecommendFooterView
-            return footerView
-        }
-        return UICollectionReusableView()
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+////        let moduleType = viewModel.homeRecommendList?[indexPath.section].moduleType
+//        if kind == UICollectionElementKindSectionHeader {
+//            let headerView : LBFMRecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID, for: indexPath) as! LBFMRecommendHeaderView
+//
+//            return headerView
+//        }else if kind == UICollectionElementKindSectionFooter {
+//            let footerView : LBFMRecommendFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID, for: indexPath) as! LBFMRecommendFooterView
+//            return footerView
+//        }
+//        return UICollectionReusableView()
+//    }
 }

@@ -10,9 +10,10 @@
 		3A14006A2202D61D00C98D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1400682202D61D00C98D59 /* Main.storyboard */; };
 		3A14006C2202D62000C98D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A14006B2202D62000C98D59 /* Assets.xcassets */; };
 		3A14006F2202D62000C98D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A14006D2202D62000C98D59 /* LaunchScreen.storyboard */; };
-		3A26D5D922168CA70080A362 /* LBFMRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26D5D822168CA70080A362 /* LBFMRecommendHeaderView.swift */; };
-		3A26D5DB22168F300080A362 /* LBFMRecommendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26D5DA22168F300080A362 /* LBFMRecommendFooterView.swift */; };
 		3A26D5DE22169F3B0080A362 /* URefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26D5DD22169F3B0080A362 /* URefresh.swift */; };
+		3A26D5E22216BB5D0080A362 /* LBFMRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26D5E02216BB5D0080A362 /* LBFMRecommendHeaderView.swift */; };
+		3A26D5E32216BB5D0080A362 /* LBFMRecommendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26D5E12216BB5D0080A362 /* LBFMRecommendFooterView.swift */; };
+		3A26D5E62216BBAF0080A362 /* LBFMRecommendHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26D5E52216BBAF0080A362 /* LBFMRecommendHeaderCell.swift */; };
 		3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333A2203F1BF00E4DC70 /* LBFMHomeController.swift */; };
 		3A95333D2203F1D000E4DC70 /* LBFMFindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */; };
 		3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333E2203F1DD00E4DC70 /* LBFMListenController.swift */; };
@@ -48,9 +49,10 @@
 		3A14006B2202D62000C98D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A14006E2202D62000C98D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A1400702202D62000C98D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A26D5D822168CA70080A362 /* LBFMRecommendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendHeaderView.swift; sourceTree = "<group>"; };
-		3A26D5DA22168F300080A362 /* LBFMRecommendFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendFooterView.swift; sourceTree = "<group>"; };
 		3A26D5DD22169F3B0080A362 /* URefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URefresh.swift; sourceTree = "<group>"; };
+		3A26D5E02216BB5D0080A362 /* LBFMRecommendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMRecommendHeaderView.swift; sourceTree = "<group>"; };
+		3A26D5E12216BB5D0080A362 /* LBFMRecommendFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMRecommendFooterView.swift; sourceTree = "<group>"; };
+		3A26D5E52216BBAF0080A362 /* LBFMRecommendHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendHeaderCell.swift; sourceTree = "<group>"; };
 		3A95333A2203F1BF00E4DC70 /* LBFMHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeController.swift; sourceTree = "<group>"; };
 		3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindController.swift; sourceTree = "<group>"; };
 		3A95333E2203F1DD00E4DC70 /* LBFMListenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenController.swift; sourceTree = "<group>"; };
@@ -143,21 +145,29 @@
 			path = "LBFM-Swift";
 			sourceTree = "<group>";
 		};
-		3A26D5D722168BC80080A362 /* 头尾部视图 */ = {
-			isa = PBXGroup;
-			children = (
-				3A26D5D822168CA70080A362 /* LBFMRecommendHeaderView.swift */,
-				3A26D5DA22168F300080A362 /* LBFMRecommendFooterView.swift */,
-			);
-			path = "头尾部视图";
-			sourceTree = "<group>";
-		};
 		3A26D5DC22169F3B0080A362 /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
 				3A26D5DD22169F3B0080A362 /* URefresh.swift */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		3A26D5DF2216BB5D0080A362 /* 组头尾部视图 */ = {
+			isa = PBXGroup;
+			children = (
+				3A26D5E02216BB5D0080A362 /* LBFMRecommendHeaderView.swift */,
+				3A26D5E12216BB5D0080A362 /* LBFMRecommendFooterView.swift */,
+			);
+			path = "组头尾部视图";
+			sourceTree = "<group>";
+		};
+		3A26D5E42216BB9E0080A362 /* LBFMHeaderViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A26D5E52216BBAF0080A362 /* LBFMRecommendHeaderCell.swift */,
+			);
+			path = LBFMHeaderViewCell;
 			sourceTree = "<group>";
 		};
 		3A9533302203F11D00E4DC70 /* Orther */ = {
@@ -353,7 +363,8 @@
 		3AEAA624221106BB00B46FA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3A26D5D722168BC80080A362 /* 头尾部视图 */,
+				3A26D5E42216BB9E0080A362 /* LBFMHeaderViewCell */,
+				3A26D5DF2216BB5D0080A362 /* 组头尾部视图 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,13 +536,14 @@
 				3A95338C2204274500E4DC70 /* ViewController.swift in Sources */,
 				3A9533432203F1F600E4DC70 /* LBFMPlayController.swift in Sources */,
 				3A9533512203FB9500E4DC70 /* WRCustomNavigationBar.swift in Sources */,
+				3A26D5E32216BB5D0080A362 /* LBFMRecommendFooterView.swift in Sources */,
 				3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */,
 				3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */,
 				3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */,
-				3A26D5D922168CA70080A362 /* LBFMRecommendHeaderView.swift in Sources */,
 				3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */,
 				3A9533482203F5A500E4DC70 /* LBFMHeader.swift in Sources */,
 				3A9533582204096900E4DC70 /* LBFMBouncesContentView.swift in Sources */,
+				3A26D5E22216BB5D0080A362 /* LBFMRecommendHeaderView.swift in Sources */,
 				3A95337B2204207A00E4DC70 /* AppDelegate.swift in Sources */,
 				3A953356220408C900E4DC70 /* LBFMBasicContentView.swift in Sources */,
 				3A9533502203FB9500E4DC70 /* WRNavigationBar.swift in Sources */,
@@ -540,8 +552,8 @@
 				3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */,
 				3A95335A220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift in Sources */,
 				3A95333D2203F1D000E4DC70 /* LBFMFindController.swift in Sources */,
-				3A26D5DB22168F300080A362 /* LBFMRecommendFooterView.swift in Sources */,
 				3A9533882204258800E4DC70 /* LBFMHomeLiveController.swift in Sources */,
+				3A26D5E62216BBAF0080A362 /* LBFMRecommendHeaderCell.swift in Sources */,
 				3A9533822204254800E4DC70 /* LBFMHomeClassifyController.swift in Sources */,
 				3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */,
 			);
