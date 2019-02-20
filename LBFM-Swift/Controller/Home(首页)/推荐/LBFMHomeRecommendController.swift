@@ -69,11 +69,11 @@ class LBFMHomeRecommendController: UIViewController {
     
     func loadData(){
         // 加载数据
-//        viewModel.updataBlock = { [unowned self] in
+        viewModel.updateDataBlock = { [unowned self] in
 ////            self.collectionView.uHead.endRefreshing()
-//            // 更新列表数据
-//            self.collectionView.reloadData()
-//        }
+            // 更新列表数据
+            self.collectionView.reloadData()
+        }
         viewModel.refreshDataSource()
     }
     func setupLoadRecommendAdData() {

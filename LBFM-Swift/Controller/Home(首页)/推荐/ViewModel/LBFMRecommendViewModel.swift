@@ -26,7 +26,7 @@ class LBFMRecommendViewModel: NSObject {
 
     // Mark: -数据源更新
     typealias AddDataBlock = () ->Void
-    var updataBlock:AddDataBlock?
+    var updateDataBlock:AddDataBlock?
 }
 
 extension LBFMRecommendViewModel {
@@ -61,7 +61,7 @@ extension LBFMRecommendViewModel {
                     if let live = JSONDeserializer<LBFMLiveModel>.deserializeModelArrayFrom(json: json["list"][14]["list"].description) {
                         self.liveList = live as? [LBFMLiveModel]
                     }
-                    self.updataBlock?()
+                    self.updateDataBlock?()
                 }
             }
         }
