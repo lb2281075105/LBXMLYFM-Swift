@@ -25,7 +25,7 @@ class LBFMHomeRecommendController: UIViewController {
     private let LBFMRecommendGuessLikeCellID  = "LBFMRecommendGuessLikeCell"
     private let LBFMHotAudiobookCellID        = "LBFMHotAudiobookCell"
     private let LBFMAdvertCellID              = "LBFMAdvertCell"
-//    private let FMOneKeyListenCellID        = "FMOneKeyListenCell"
+    private let LBFMOneKeyListenCellID        = "LBFMOneKeyListenCell"
 //    private let FMRecommendForYouCellID     = "FMRecommendForYouCell"
 //    private let HomeRecommendLiveCellID     = "HomeRecommendLiveCell"
 //
@@ -50,7 +50,8 @@ class LBFMHomeRecommendController: UIViewController {
         collection.register(LBFMHotAudiobookCell.self, forCellWithReuseIdentifier: LBFMHotAudiobookCellID)
         // 广告
         collection.register(LBFMAdvertCell.self, forCellWithReuseIdentifier: LBFMAdvertCellID)
-//        collection.register(FMOneKeyListenCell.self, forCellWithReuseIdentifier: FMOneKeyListenCellID)
+        // 懒人电台
+        collection.register(LBFMOneKeyListenCell.self, forCellWithReuseIdentifier: LBFMOneKeyListenCellID)
 //        collection.register(FMRecommendForYouCell.self, forCellWithReuseIdentifier: FMRecommendForYouCellID)
 //        collection.register(HomeRecommendLiveCell.self, forCellWithReuseIdentifier: HomeRecommendLiveCellID)
 //        collection.uHead = URefreshHeader{ [weak self] in self?.loadData() }
@@ -141,12 +142,12 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
             // cell.adModel = self.recommnedAdvertList?[2]
             }
             return cell
+        }else if moduleType == "oneKeyListen" {
+            let cell:LBFMOneKeyListenCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMOneKeyListenCellID, for: indexPath) as! LBFMOneKeyListenCell
+            cell.oneKeyListenList = viewModel.oneKeyListenList
+            return cell
         }
-//        else if moduleType == "oneKeyListen" {
-//            let cell:FMOneKeyListenCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMOneKeyListenCellID, for: indexPath) as! FMOneKeyListenCell
-//            cell.oneKeyListenList = viewModel.oneKeyListenList
-//            return cell
-//        }else if moduleType == "live" {
+//        else if moduleType == "live" {
 //            let cell:HomeRecommendLiveCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRecommendLiveCellID, for: indexPath) as! HomeRecommendLiveCell
 //            cell.liveList = viewModel.liveList
 //            return cell
