@@ -24,7 +24,7 @@ class LBFMHomeRecommendController: UIViewController {
     private let LBFMRecommendHeaderCellID     = "LBFMRecommendHeaderCell"
     private let LBFMRecommendGuessLikeCellID  = "LBFMRecommendGuessLikeCell"
     private let LBFMHotAudiobookCellID        = "LBFMHotAudiobookCell"
-//    private let FMAdvertCellID              = "FMAdvertCell"
+    private let LBFMAdvertCellID              = "LBFMAdvertCell"
 //    private let FMOneKeyListenCellID        = "FMOneKeyListenCell"
 //    private let FMRecommendForYouCellID     = "FMRecommendForYouCell"
 //    private let HomeRecommendLiveCellID     = "HomeRecommendLiveCell"
@@ -48,7 +48,8 @@ class LBFMHomeRecommendController: UIViewController {
         collection.register(LBFMRecommendGuessLikeCell.self, forCellWithReuseIdentifier: LBFMRecommendGuessLikeCellID)
         // 热门有声书
         collection.register(LBFMHotAudiobookCell.self, forCellWithReuseIdentifier: LBFMHotAudiobookCellID)
-//        collection.register(FMAdvertCell.self, forCellWithReuseIdentifier: FMAdvertCellID)
+        // 广告
+        collection.register(LBFMAdvertCell.self, forCellWithReuseIdentifier: LBFMAdvertCellID)
 //        collection.register(FMOneKeyListenCell.self, forCellWithReuseIdentifier: FMOneKeyListenCellID)
 //        collection.register(FMRecommendForYouCell.self, forCellWithReuseIdentifier: FMRecommendForYouCellID)
 //        collection.register(HomeRecommendLiveCell.self, forCellWithReuseIdentifier: HomeRecommendLiveCellID)
@@ -127,21 +128,21 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
         }else if moduleType == "categoriesForShort" || moduleType == "playlist" || moduleType == "categoriesForExplore"{
             // 竖式排列布局cell
             let cell:LBFMHotAudiobookCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMHotAudiobookCellID, for: indexPath) as! LBFMHotAudiobookCell
-//            cell.delegate = self
+            cell.delegate = self
             cell.recommendListData = viewModel.homeRecommendList?[indexPath.section].list
             return cell
+        }else if moduleType == "ad" {
+            let cell:LBFMAdvertCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMAdvertCellID, for: indexPath) as! LBFMAdvertCell
+            if indexPath.section == 7 {
+                cell.adModel = self.recommnedAdvertList?[0]
+            }else if indexPath.section == 13 {
+                cell.adModel = self.recommnedAdvertList?[1]
+            // }else if indexPath.section == 17 {
+            // cell.adModel = self.recommnedAdvertList?[2]
+            }
+            return cell
         }
-//        else if moduleType == "ad" {
-//            let cell:FMAdvertCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMAdvertCellID, for: indexPath) as! FMAdvertCell
-//            if indexPath.section == 7 {
-//                cell.adModel = self.recommnedAdvertList?[0]
-//            }else if indexPath.section == 13 {
-//                cell.adModel = self.recommnedAdvertList?[1]
-//                //            }else if indexPath.section == 17 {
-//                //                cell.adModel = self.recommnedAdvertList?[2]
-//            }
-//            return cell
-//        }else if moduleType == "oneKeyListen" {
+//        else if moduleType == "oneKeyListen" {
 //            let cell:FMOneKeyListenCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMOneKeyListenCellID, for: indexPath) as! FMOneKeyListenCell
 //            cell.oneKeyListenList = viewModel.oneKeyListenList
 //            return cell
