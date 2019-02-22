@@ -34,7 +34,6 @@ class LBFMRecommendGridCell: UICollectionViewCell {
         self.addSubview(self.titleLabel)
         self.titleLabel.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
-            //            make.bottom.equalToSuperview().offset(-5)
             make.height.equalTo(20)
             make.top.equalTo(self.imageView.snp.bottom).offset(5)
         }

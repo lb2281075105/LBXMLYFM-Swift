@@ -13,7 +13,6 @@ import SwiftMessages
 
 class LBFMHomeRecommendController: UIViewController {
 
-    let otherMessages = SwiftMessages()
     // 穿插的广告数据
     private var recommnedAdvertList:[LBFMRecommnedAdvertModel]?
     
@@ -23,7 +22,7 @@ class LBFMHomeRecommendController: UIViewController {
     
     // 注册不同的cell
     private let LBFMRecommendHeaderCellID     = "LBFMRecommendHeaderCell"
-//    private let FMRecommendGuessLikeCellID  = "FMRecommendGuessLikeCell"
+    private let LBFMRecommendGuessLikeCellID  = "LBFMRecommendGuessLikeCell"
 //    private let FMHotAudiobookCellID        = "FMHotAudiobookCell"
 //    private let FMAdvertCellID              = "FMAdvertCell"
 //    private let FMOneKeyListenCellID        = "FMOneKeyListenCell"
@@ -43,7 +42,11 @@ class LBFMHomeRecommendController: UIViewController {
 
         // MARK -注册不同分区cell
         collection.register(LBFMRecommendHeaderCell.self, forCellWithReuseIdentifier: LBFMRecommendHeaderCellID)
-//        collection.register(FMRecommendGuessLikeCell.self, forCellWithReuseIdentifier: FMRecommendGuessLikeCellID)
+        // 猜你喜欢
+        collection.register(LBFMRecommendGuessLikeCell.self, forCellWithReuseIdentifier: LBFMRecommendGuessLikeCellID)
+        // 默认
+        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+
 //        collection.register(FMHotAudiobookCell.self, forCellWithReuseIdentifier: FMHotAudiobookCellID)
 //        collection.register(FMAdvertCell.self, forCellWithReuseIdentifier: FMAdvertCellID)
 //        collection.register(FMOneKeyListenCell.self, forCellWithReuseIdentifier: FMOneKeyListenCellID)
@@ -115,14 +118,14 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
             cell.topBuzzListData = viewModel.topBuzzList
             cell.delegate = self
             return cell
+        }else if moduleType == "guessYouLike" || moduleType == "paidCategory" || moduleType == "categoriesForLong" || moduleType == "cityCategory"{
+            ///横式排列布局cell
+            let cell:LBFMRecommendGuessLikeCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMRecommendGuessLikeCellID, for: indexPath) as! LBFMRecommendGuessLikeCell
+            cell.delegate = self
+            cell.recommendListData = viewModel.homeRecommendList?[indexPath.section].list
+            return cell
         }
-//        else if moduleType == "guessYouLike" || moduleType == "paidCategory" || moduleType == "categoriesForLong" || moduleType == "cityCategory"{
-//            ///横式排列布局cell
-//            let cell:FMRecommendGuessLikeCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMRecommendGuessLikeCellID, for: indexPath) as! FMRecommendGuessLikeCell
-//            cell.delegate = self
-//            cell.recommendListData = viewModel.homeRecommendList?[indexPath.section].list
-//            return cell
-//        }else if moduleType == "categoriesForShort" || moduleType == "playlist" || moduleType == "categoriesForExplore"{
+//            else if moduleType == "categoriesForShort" || moduleType == "playlist" || moduleType == "categoriesForExplore"{
 //            // 竖式排列布局cell
 //            let cell:FMHotAudiobookCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMHotAudiobookCellID, for: indexPath) as! FMHotAudiobookCell
 //            cell.delegate = self
@@ -148,13 +151,13 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
 //            return cell
 //        }
 //        else {
-//            let cell:FMRecommendForYouCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMRecommendForYouCellID, for: indexPath) as! FMRecommendForYouCell
+//            let cell:LBFMRecommendForYouCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMRecommendForYouCellID, for: indexPath) as! FMRecommendForYouCell
 //            return cell
 //
 //        }
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-    
-            return UICollectionViewCell()
+        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -243,13 +246,14 @@ extension LBFMHomeRecommendController:LBFMRecommendHeaderCellDelegate {
         }
     }
 }
-//// Mark: -点击猜你喜欢cell代理方法
-//extension LBFMHomeRecommendController:FMRecommendGuessLikeCellDelegate {
-//    func recommendGuessLikeCellItemClick(model: RecommendListModel) {
+// Mark: -点击猜你喜欢cell代理方法
+extension LBFMHomeRecommendController:LBFMRecommendGuessLikeCellDelegate {
+    func recommendGuessLikeCellItemClick(model: LBFMRecommendListModel) {
 //        let vc = FMPlayDetailController(albumId: model.albumId)
 //        self.navigationController?.pushViewController(vc, animated: true)
-//    }
-//}
+        print("点击猜你喜欢")
+    }
+}
 //
 //// Mark: -点击热门有声书等cell代理方法
 //extension LBFMHomeRecommendController:FMHotAudiobookCellDelegate {
