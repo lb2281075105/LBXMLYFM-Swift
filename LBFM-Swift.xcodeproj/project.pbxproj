@@ -22,6 +22,10 @@
 		3A40DAB4221FE1EE00A4C734 /* LBFMAdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAB3221FE1EE00A4C734 /* LBFMAdvertCell.swift */; };
 		3A40DAB7221FE35200A4C734 /* LBFMOneKeyListenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAB6221FE35200A4C734 /* LBFMOneKeyListenCell.swift */; };
 		3A40DAB9221FE3D900A4C734 /* LBOneKeyListenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAB8221FE3D900A4C734 /* LBOneKeyListenCell.swift */; };
+		3A40DABC221FE70B00A4C734 /* LBFMHomeRecommendLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DABB221FE70B00A4C734 /* LBFMHomeRecommendLiveCell.swift */; };
+		3A40DABE221FE71C00A4C734 /* LBRecommendLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DABD221FE71C00A4C734 /* LBRecommendLiveCell.swift */; };
+		3A40DAC1221FE74E00A4C734 /* ReplicatorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAC0221FE74E00A4C734 /* ReplicatorLayer.swift */; };
+		3A40DAC3221FEAA500A4C734 /* LBRecommendForYouCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAC2221FEAA500A4C734 /* LBRecommendForYouCell.swift */; };
 		3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333A2203F1BF00E4DC70 /* LBFMHomeController.swift */; };
 		3A95333D2203F1D000E4DC70 /* LBFMFindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */; };
 		3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333E2203F1DD00E4DC70 /* LBFMListenController.swift */; };
@@ -71,6 +75,10 @@
 		3A40DAB3221FE1EE00A4C734 /* LBFMAdvertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMAdvertCell.swift; sourceTree = "<group>"; };
 		3A40DAB6221FE35200A4C734 /* LBFMOneKeyListenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMOneKeyListenCell.swift; sourceTree = "<group>"; };
 		3A40DAB8221FE3D900A4C734 /* LBOneKeyListenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBOneKeyListenCell.swift; sourceTree = "<group>"; };
+		3A40DABB221FE70B00A4C734 /* LBFMHomeRecommendLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeRecommendLiveCell.swift; sourceTree = "<group>"; };
+		3A40DABD221FE71C00A4C734 /* LBRecommendLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBRecommendLiveCell.swift; sourceTree = "<group>"; };
+		3A40DAC0221FE74E00A4C734 /* ReplicatorLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplicatorLayer.swift; sourceTree = "<group>"; };
+		3A40DAC2221FEAA500A4C734 /* LBRecommendForYouCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBRecommendForYouCell.swift; sourceTree = "<group>"; };
 		3A95333A2203F1BF00E4DC70 /* LBFMHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeController.swift; sourceTree = "<group>"; };
 		3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindController.swift; sourceTree = "<group>"; };
 		3A95333E2203F1DD00E4DC70 /* LBFMListenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenController.swift; sourceTree = "<group>"; };
@@ -203,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				3A40DAAB221FDBDF00A4C734 /* LBFMRecommendForYouCell.swift */,
+				3A40DAC2221FEAA500A4C734 /* LBRecommendForYouCell.swift */,
 			);
 			path = "为你推荐";
 			sourceTree = "<group>";
@@ -231,6 +240,23 @@
 				3A40DAB8221FE3D900A4C734 /* LBOneKeyListenCell.swift */,
 			);
 			path = "懒人电台";
+			sourceTree = "<group>";
+		};
+		3A40DABA221FE6F900A4C734 /* 推荐直播 */ = {
+			isa = PBXGroup;
+			children = (
+				3A40DABB221FE70B00A4C734 /* LBFMHomeRecommendLiveCell.swift */,
+				3A40DABD221FE71C00A4C734 /* LBRecommendLiveCell.swift */,
+			);
+			path = "推荐直播";
+			sourceTree = "<group>";
+		};
+		3A40DABF221FE74E00A4C734 /* ReplicatorLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3A40DAC0221FE74E00A4C734 /* ReplicatorLayer.swift */,
+			);
+			path = ReplicatorLayer;
 			sourceTree = "<group>";
 		};
 		3A9533302203F11D00E4DC70 /* Orther */ = {
@@ -265,6 +291,7 @@
 		3A9533332203F11D00E4DC70 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3A40DABF221FE74E00A4C734 /* ReplicatorLayer */,
 				3A26D5DC22169F3B0080A362 /* Refresh */,
 				3A9533492203FB9500E4DC70 /* WRNavigationBar */,
 			);
@@ -426,6 +453,7 @@
 		3AEAA624221106BB00B46FA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3A40DABA221FE6F900A4C734 /* 推荐直播 */,
 				3A40DAB5221FE34700A4C734 /* 懒人电台 */,
 				3A40DAB2221FE1E400A4C734 /* 广告 */,
 				3A40DAAD221FDCDE00A4C734 /* 最热有声书 */,
@@ -619,9 +647,11 @@
 				3A9533862204257100E4DC70 /* LBFMHomeVIPController.swift in Sources */,
 				3A40DAA7221FD2E800A4C734 /* LBFMRecommendGuessLikeCell.swift in Sources */,
 				3A9533522203FB9500E4DC70 /* WRProxy.swift in Sources */,
+				3A40DABC221FE70B00A4C734 /* LBFMHomeRecommendLiveCell.swift in Sources */,
 				3A9533412203F1E900E4DC70 /* LBFMMineController.swift in Sources */,
 				3A95338C2204274500E4DC70 /* ViewController.swift in Sources */,
 				3A9533432203F1F600E4DC70 /* LBFMPlayController.swift in Sources */,
+				3A40DAC1221FE74E00A4C734 /* ReplicatorLayer.swift in Sources */,
 				3A9533512203FB9500E4DC70 /* WRCustomNavigationBar.swift in Sources */,
 				3A26D5E32216BB5D0080A362 /* LBFMRecommendFooterView.swift in Sources */,
 				3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */,
@@ -647,9 +677,11 @@
 				3A95333D2203F1D000E4DC70 /* LBFMFindController.swift in Sources */,
 				3A40DAAC221FDBDF00A4C734 /* LBFMRecommendForYouCell.swift in Sources */,
 				3A9533882204258800E4DC70 /* LBFMHomeLiveController.swift in Sources */,
+				3A40DABE221FE71C00A4C734 /* LBRecommendLiveCell.swift in Sources */,
 				3A40DAB4221FE1EE00A4C734 /* LBFMAdvertCell.swift in Sources */,
 				3A40DAB7221FE35200A4C734 /* LBFMOneKeyListenCell.swift in Sources */,
 				3A26D5E62216BBAF0080A362 /* LBFMRecommendHeaderCell.swift in Sources */,
+				3A40DAC3221FEAA500A4C734 /* LBRecommendForYouCell.swift in Sources */,
 				3A9533822204254800E4DC70 /* LBFMHomeClassifyController.swift in Sources */,
 				3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */,
 			);

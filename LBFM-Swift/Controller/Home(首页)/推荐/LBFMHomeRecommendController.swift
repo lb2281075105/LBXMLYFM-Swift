@@ -22,13 +22,18 @@ class LBFMHomeRecommendController: UIViewController {
     
     // 注册不同的cell
     private let LBFMRecommendHeaderCellID     = "LBFMRecommendHeaderCell"
+    // 猜你喜欢
     private let LBFMRecommendGuessLikeCellID  = "LBFMRecommendGuessLikeCell"
+    // 热门有声书
     private let LBFMHotAudiobookCellID        = "LBFMHotAudiobookCell"
+    // 广告
     private let LBFMAdvertCellID              = "LBFMAdvertCell"
+    // 懒人电台
     private let LBFMOneKeyListenCellID        = "LBFMOneKeyListenCell"
-//    private let FMRecommendForYouCellID     = "FMRecommendForYouCell"
-//    private let HomeRecommendLiveCellID     = "HomeRecommendLiveCell"
-//
+    // 为你推荐
+    private let LBFMRecommendForYouCellID     = "LBFMRecommendForYouCell"
+    // 推荐直播
+    private let LBFMHomeRecommendLiveCellID   = "LBFMHomeRecommendLiveCell"
     
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
@@ -52,8 +57,10 @@ class LBFMHomeRecommendController: UIViewController {
         collection.register(LBFMAdvertCell.self, forCellWithReuseIdentifier: LBFMAdvertCellID)
         // 懒人电台
         collection.register(LBFMOneKeyListenCell.self, forCellWithReuseIdentifier: LBFMOneKeyListenCellID)
-//        collection.register(FMRecommendForYouCell.self, forCellWithReuseIdentifier: FMRecommendForYouCellID)
-//        collection.register(HomeRecommendLiveCell.self, forCellWithReuseIdentifier: HomeRecommendLiveCellID)
+        // 为你推荐
+        collection.register(LBFMRecommendForYouCell.self, forCellWithReuseIdentifier: LBFMRecommendForYouCellID)
+        // 推荐直播
+        collection.register(LBFMHomeRecommendLiveCell.self, forCellWithReuseIdentifier: LBFMHomeRecommendLiveCellID)
 //        collection.uHead = URefreshHeader{ [weak self] in self?.loadData() }
         return collection
     }()
@@ -146,19 +153,17 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
             let cell:LBFMOneKeyListenCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMOneKeyListenCellID, for: indexPath) as! LBFMOneKeyListenCell
             cell.oneKeyListenList = viewModel.oneKeyListenList
             return cell
+        }else if moduleType == "live" {
+            let cell:LBFMHomeRecommendLiveCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMHomeRecommendLiveCellID, for: indexPath) as! LBFMHomeRecommendLiveCell
+            cell.liveList = viewModel.liveList
+            return cell
+        }else {
+            let cell:LBFMRecommendForYouCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMRecommendForYouCellID, for: indexPath) as! LBFMRecommendForYouCell
+            return cell
+
         }
-//        else if moduleType == "live" {
-//            let cell:HomeRecommendLiveCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRecommendLiveCellID, for: indexPath) as! HomeRecommendLiveCell
-//            cell.liveList = viewModel.liveList
-//            return cell
-//        }
-//        else {
-//            let cell:LBFMRecommendForYouCell = collectionView.dequeueReusableCell(withReuseIdentifier: FMRecommendForYouCellID, for: indexPath) as! FMRecommendForYouCell
-//            return cell
-//
-//        }
-        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        return cell
+//        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+//        return cell
         
     }
     
