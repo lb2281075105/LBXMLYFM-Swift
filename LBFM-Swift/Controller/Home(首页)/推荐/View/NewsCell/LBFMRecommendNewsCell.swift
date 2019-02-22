@@ -52,7 +52,7 @@ class LBFMRecommendNewsCell: UICollectionViewCell {
         super.init(frame: frame)
         setupLayout()
         // 开启定时器
-        starTimer()
+        starTimer() 
     }
     
     func setupLayout(){
