@@ -10,8 +10,6 @@ import UIKit
 
 open class PhysicsPanHandler {
 
-    public var hideDelay: TimeInterval = 0.2
-
     public struct MotionSnapshot {
         var angle: CGFloat
         var time: CFAbsoluteTime
@@ -89,23 +87,17 @@ open class PhysicsPanHandler {
     private(set) public var isOffScreen = false
     private var restingCenter: CGPoint?
 
-    public init() {}
-
-    lazy var pan: UIPanGestureRecognizer = {
-        let pan = UIPanGestureRecognizer()
-        pan.addTarget(self, action: #selector(pan(_:)))
-        return pan
-    }()
-
-    func configure(context: AnimationContext, animator: Animator) {
-        if let oldView = (messageView as? BackgroundViewable)?.backgroundView ?? messageView {
-            oldView.removeGestureRecognizer(pan)
-        }
+    public init(context: AnimationContext, animator: Animator) {
         messageView = context.messageView
-        let view = (messageView as? BackgroundViewable)?.backgroundView ?? messageView
-        view?.addGestureRecognizer(pan)
         containerView = context.containerView
         self.animator = animator
+        let pan = UIPanGestureRecognizer()
+        pan.addTarget(self, action: #selector(pan(_:)))
+        if let view = messageView as? BackgroundViewable {
+            view.backgroundView.addGestureRecognizer(pan)
+        } else {
+            context.messageView.addGestureRecognizer(pan)
+        }
     }
 
     @objc func pan(_ pan: UIPanGestureRecognizer) {
@@ -122,12 +114,12 @@ open class PhysicsPanHandler {
             let attachmentBehavior = UIAttachmentBehavior(item: messageView, offsetFromCenter: offset, attachedToAnchor: anchorPoint)
             state.attachmentBehavior = attachmentBehavior
             state.itemBehavior.action = { [weak self, weak messageView, weak containerView] in
-                guard let self = self, !self.isOffScreen, let messageView = messageView, let containerView = containerView, let animator = self.animator else { return }
+                guard let strongSelf = self, let messageView = messageView, let containerView = containerView, let animator = strongSelf.animator else { return }
                 let view = (messageView as? BackgroundViewable)?.backgroundView ?? messageView
                 let frame = containerView.convert(view.bounds, from: view)
                 if !containerView.bounds.intersects(frame) {
-                    self.isOffScreen = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + self.hideDelay) {
+                    strongSelf.isOffScreen = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
                         animator.delegate?.hide(animator: animator)
                     }
                 }
@@ -147,7 +139,7 @@ open class PhysicsPanHandler {
                 // Limit the speed and angular velocity to reasonable values
                 let speedScale = speed > 0 ? min(1, 1800 / speed) : 1
                 let escapeVelocity = CGPoint(x: velocity.x * speedScale, y: velocity.y * speedScale)
-                let angularSpeedScale = min(1, 10 / abs(angularVelocity))
+                let angularSpeedScale = min(1, 10 / fabs(angularVelocity))
                 let escapeAngularVelocity = angularVelocity * angularSpeedScale
                 state.itemBehavior.addLinearVelocity(escapeVelocity, for: messageView)
                 state.itemBehavior.addAngularVelocity(escapeAngularVelocity, for: messageView)

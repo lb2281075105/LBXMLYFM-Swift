@@ -113,7 +113,7 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
             cell.focusModel = viewModel.focus
             cell.squareList = viewModel.squareList
             cell.topBuzzListData = viewModel.topBuzzList
-//            cell.delegate = self
+            cell.delegate = self
             return cell
         }
 //        else if moduleType == "guessYouLike" || moduleType == "paidCategory" || moduleType == "categoriesForLong" || moduleType == "cityCategory"{
@@ -202,3 +202,64 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
 //        return UICollectionReusableView()
 //    }
 }
+// Mark:- 点击顶部分类按钮进入相对应界面
+extension LBFMHomeRecommendController:LBFMRecommendHeaderCellDelegate {
+    
+    func recommendHeaderBannerClick(url: String) {
+        
+        let status2 = MessageView.viewFromNib(layout: .statusLine)
+        status2.backgroundView.backgroundColor = LBFMButtonColor
+        status2.bodyLabel?.textColor = UIColor.white
+        status2.configureContent(body: "暂时没有点击功能")
+        var status2Config = SwiftMessages.defaultConfig
+        status2Config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        status2Config.preferredStatusBarStyle = .lightContent
+        SwiftMessages.show(config: status2Config, view: status2)
+
+    }
+
+    func recommendHeaderBtnClick(categoryId:String,title:String,url:String){
+        if url == ""{
+            if categoryId == "0"{
+                let warning = MessageView.viewFromNib(layout: .cardView)
+                warning.configureTheme(.warning)
+                warning.configureDropShadow()
+
+                let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
+                warning.configureContent(title: "Warning", body: "暂时没有数据!!!", iconText: iconText)
+                warning.button?.isHidden = true
+                var warningConfig = SwiftMessages.defaultConfig
+                warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+                SwiftMessages.show(config: warningConfig, view: warning)
+            }else{
+//                let vc = ClassifySubMenuController(categoryId:Int(categoryId)!)
+//                vc.title = title
+//                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }else{
+//            let vc = FMWebViewController(url:url)
+//            vc.title = title
+//            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+//// Mark: -点击猜你喜欢cell代理方法
+//extension LBFMHomeRecommendController:FMRecommendGuessLikeCellDelegate {
+//    func recommendGuessLikeCellItemClick(model: RecommendListModel) {
+//        let vc = FMPlayDetailController(albumId: model.albumId)
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
+//}
+//
+//// Mark: -点击热门有声书等cell代理方法
+//extension LBFMHomeRecommendController:FMHotAudiobookCellDelegate {
+//    func hotAudiobookCellItemClick(model: RecommendListModel) {
+//        let vc = FMPlayDetailController(albumId: model.albumId)
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
+//}
+
+
+
+
+
