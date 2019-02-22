@@ -1,0 +1,51 @@
+{
+	"data": {
+		"albumResults": [{
+			"albumCover": "http://fdfs.xmcdn.com/group48/M02/C9/7C/wKgKnFtxYwTgJrdUAAMlJjjsBp4199_mobile_large.jpg",
+			"albumId": 16627924,
+			"albumTitle": "写信告诉我 | 第二季",
+			"avatar": "http://fdfs.xmcdn.com/group35/M0B/C2/7F/wKgJnFoVUBLx5zWvAADKb-NxDhc363_mobile_small.jpg",
+			"dynamicType": 1,
+			"isAuthorized": false,
+			"isDraft": false,
+			"isPaid": false,
+			"isTop": false,
+			"lastUpdateAt": 1534156860000,
+			"nickname": "超级制作",
+			"serialState": 1,
+			"status": 1,
+			"timeline": 1.5342099E13,
+			"trackId": 105324718,
+			"trackTitle": "春夏回信陈粒：万物都爱我，也恨我不争气",
+			"trackType": 1,
+			"uid": 91044493,
+			"unreadNum": 0
+		}, {
+			"albumCover": "http://fdfs.xmcdn.com/group45/M08/3F/9A/wKgKjls8RHLBNYgDAATYHbyDDmw839_mobile_large.jpg",
+			"albumId": 16243355,
+			"albumTitle": "崔永元——像他一样说话",
+			"avatar": "http://fdfs.xmcdn.com/group46/M0B/14/19/wKgKj1s6SoGwqs4lAABxrcTmNys051_mobile_small.jpg",
+			"displayDiscountedPrice": "99.00喜点",
+			"displayPrice": "99.00喜点",
+			"dynamicType": 1,
+			"isAuthorized": false,
+			"isDraft": false,
+			"isPaid": true,
+			"isTop": false,
+			"lastUpdateAt": 1534176003000,
+			"nickname": "崔永元",
+			"priceTypeEnum": 2,
+			"serialState": 1,
+			"status": 1,
+			"timeline": 1.534209897E13,
+			"trackId": 105402288,
+			"trackTitle": "17.崔氏幽默是如何诞生的？",
+			"trackType": 1,
+			"uid": 120256440,
+			"unreadNum": 0
+		}],
+		"hasMore": false,
+		"totalSize": 2
+	},
+	"ret": 0
+}
