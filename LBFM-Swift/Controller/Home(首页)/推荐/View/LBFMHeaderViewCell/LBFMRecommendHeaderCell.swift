@@ -55,7 +55,6 @@ class LBFMRecommendHeaderCell: UICollectionViewCell {
         super.init(frame: frame)
         /// 设置布局
         setupLayOut()
-        backgroundColor = UIColor.red
     }
     
     func setupLayOut() {

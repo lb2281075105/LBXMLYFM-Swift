@@ -17,6 +17,8 @@
 		3A40DAA7221FD2E800A4C734 /* LBFMRecommendGuessLikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAA6221FD2E800A4C734 /* LBFMRecommendGuessLikeCell.swift */; };
 		3A40DAA9221FD4F300A4C734 /* LBFMGuessYouLikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAA8221FD4F300A4C734 /* LBFMGuessYouLikeCell.swift */; };
 		3A40DAAC221FDBDF00A4C734 /* LBFMRecommendForYouCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAAB221FDBDF00A4C734 /* LBFMRecommendForYouCell.swift */; };
+		3A40DAAF221FDD4600A4C734 /* LBFMHotAudiobookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAAE221FDD4600A4C734 /* LBFMHotAudiobookCell.swift */; };
+		3A40DAB1221FDD9000A4C734 /* LBHotAudiobookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40DAB0221FDD9000A4C734 /* LBHotAudiobookCell.swift */; };
 		3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333A2203F1BF00E4DC70 /* LBFMHomeController.swift */; };
 		3A95333D2203F1D000E4DC70 /* LBFMFindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */; };
 		3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95333E2203F1DD00E4DC70 /* LBFMListenController.swift */; };
@@ -61,6 +63,8 @@
 		3A40DAA6221FD2E800A4C734 /* LBFMRecommendGuessLikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendGuessLikeCell.swift; sourceTree = "<group>"; };
 		3A40DAA8221FD4F300A4C734 /* LBFMGuessYouLikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMGuessYouLikeCell.swift; sourceTree = "<group>"; };
 		3A40DAAB221FDBDF00A4C734 /* LBFMRecommendForYouCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendForYouCell.swift; sourceTree = "<group>"; };
+		3A40DAAE221FDD4600A4C734 /* LBFMHotAudiobookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHotAudiobookCell.swift; sourceTree = "<group>"; };
+		3A40DAB0221FDD9000A4C734 /* LBHotAudiobookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBHotAudiobookCell.swift; sourceTree = "<group>"; };
 		3A95333A2203F1BF00E4DC70 /* LBFMHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeController.swift; sourceTree = "<group>"; };
 		3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindController.swift; sourceTree = "<group>"; };
 		3A95333E2203F1DD00E4DC70 /* LBFMListenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenController.swift; sourceTree = "<group>"; };
@@ -195,6 +199,15 @@
 				3A40DAAB221FDBDF00A4C734 /* LBFMRecommendForYouCell.swift */,
 			);
 			path = "为你推荐";
+			sourceTree = "<group>";
+		};
+		3A40DAAD221FDCDE00A4C734 /* 最热有声书 */ = {
+			isa = PBXGroup;
+			children = (
+				3A40DAAE221FDD4600A4C734 /* LBFMHotAudiobookCell.swift */,
+				3A40DAB0221FDD9000A4C734 /* LBHotAudiobookCell.swift */,
+			);
+			path = "最热有声书";
 			sourceTree = "<group>";
 		};
 		3A9533302203F11D00E4DC70 /* Orther */ = {
@@ -390,6 +403,7 @@
 		3AEAA624221106BB00B46FA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3A40DAAD221FDCDE00A4C734 /* 最热有声书 */,
 				3A40DAAA221FDBCE00A4C734 /* 为你推荐 */,
 				3A40DAA5221FD2DA00A4C734 /* 猜你喜欢 */,
 				3AF87042221F9AB30078F0A8 /* NewsCell */,
@@ -591,6 +605,7 @@
 				3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */,
 				3AF87044221F9ACD0078F0A8 /* LBFMRecommendNewsCell.swift in Sources */,
 				3A9533482203F5A500E4DC70 /* LBFMHeader.swift in Sources */,
+				3A40DAAF221FDD4600A4C734 /* LBFMHotAudiobookCell.swift in Sources */,
 				3A9533582204096900E4DC70 /* LBFMBouncesContentView.swift in Sources */,
 				3A26D5E22216BB5D0080A362 /* LBFMRecommendHeaderView.swift in Sources */,
 				3A40DAA9221FD4F300A4C734 /* LBFMGuessYouLikeCell.swift in Sources */,
@@ -598,6 +613,7 @@
 				3A953356220408C900E4DC70 /* LBFMBasicContentView.swift in Sources */,
 				3A9533502203FB9500E4DC70 /* WRNavigationBar.swift in Sources */,
 				3A95338A2204259B00E4DC70 /* LBFMHomeBroadcastController.swift in Sources */,
+				3A40DAB1221FDD9000A4C734 /* LBHotAudiobookCell.swift in Sources */,
 				3AF87041221F980C0078F0A8 /* LBFMRecommendGridCell.swift in Sources */,
 				3A9533532203FB9500E4DC70 /* WRCycleScrollView.swift in Sources */,
 				3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */,
