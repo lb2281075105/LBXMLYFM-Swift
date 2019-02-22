@@ -39,6 +39,8 @@
 		3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */; };
 		3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */; };
 		3AEFE58E2211471C00B88942 /* LBFMRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */; };
+		3AF87041221F980C0078F0A8 /* LBFMRecommendGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF87040221F980C0078F0A8 /* LBFMRecommendGridCell.swift */; };
+		3AF87044221F9ACD0078F0A8 /* LBFMRecommendNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF87043221F9ACD0078F0A8 /* LBFMRecommendNewsCell.swift */; };
 		951A29CC187163D3CCB50D74 /* Pods_LBFM_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDD0EC24A1F87D27F80ED62 /* Pods_LBFM_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendAPI.swift; sourceTree = "<group>"; };
 		3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendModel.swift; sourceTree = "<group>"; };
 		3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendViewModel.swift; sourceTree = "<group>"; };
+		3AF87040221F980C0078F0A8 /* LBFMRecommendGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendGridCell.swift; sourceTree = "<group>"; };
+		3AF87043221F9ACD0078F0A8 /* LBFMRecommendNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendNewsCell.swift; sourceTree = "<group>"; };
 		BEDD0EC24A1F87D27F80ED62 /* Pods_LBFM_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBFM_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF6F2A9F63490E9AF6C0FBE /* Pods-LBFM-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBFM-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBFM-Swift/Pods-LBFM-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -363,6 +367,8 @@
 		3AEAA624221106BB00B46FA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3AF87042221F9AB30078F0A8 /* NewsCell */,
+				3AF8703F221F97FC0078F0A8 /* 九宫格 */,
 				3A26D5E42216BB9E0080A362 /* LBFMHeaderViewCell */,
 				3A26D5DF2216BB5D0080A362 /* 组头尾部视图 */,
 			);
@@ -383,6 +389,22 @@
 				3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		3AF8703F221F97FC0078F0A8 /* 九宫格 */ = {
+			isa = PBXGroup;
+			children = (
+				3AF87040221F980C0078F0A8 /* LBFMRecommendGridCell.swift */,
+			);
+			path = "九宫格";
+			sourceTree = "<group>";
+		};
+		3AF87042221F9AB30078F0A8 /* NewsCell */ = {
+			isa = PBXGroup;
+			children = (
+				3AF87043221F9ACD0078F0A8 /* LBFMRecommendNewsCell.swift */,
+			);
+			path = NewsCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,6 +563,7 @@
 				3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */,
 				3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */,
 				3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */,
+				3AF87044221F9ACD0078F0A8 /* LBFMRecommendNewsCell.swift in Sources */,
 				3A9533482203F5A500E4DC70 /* LBFMHeader.swift in Sources */,
 				3A9533582204096900E4DC70 /* LBFMBouncesContentView.swift in Sources */,
 				3A26D5E22216BB5D0080A362 /* LBFMRecommendHeaderView.swift in Sources */,
@@ -548,6 +571,7 @@
 				3A953356220408C900E4DC70 /* LBFMBasicContentView.swift in Sources */,
 				3A9533502203FB9500E4DC70 /* WRNavigationBar.swift in Sources */,
 				3A95338A2204259B00E4DC70 /* LBFMHomeBroadcastController.swift in Sources */,
+				3AF87041221F980C0078F0A8 /* LBFMRecommendGridCell.swift in Sources */,
 				3A9533532203FB9500E4DC70 /* WRCycleScrollView.swift in Sources */,
 				3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */,
 				3A95335A220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift in Sources */,

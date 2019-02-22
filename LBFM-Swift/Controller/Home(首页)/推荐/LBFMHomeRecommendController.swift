@@ -57,6 +57,7 @@ class LBFMHomeRecommendController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 添加滑动视图
         self.view.addSubview(self.collectionView)
         self.collectionView.snp.makeConstraints { (make) in
             make.width.height.equalToSuperview()
@@ -106,13 +107,12 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let moduleType = viewModel.homeRecommendList?[indexPath.section].moduleType
-        if moduleType == "focus"{
-
-//        if moduleType == "focus" || moduleType == "square" || moduleType == "topBuzz" {
+        
+        if moduleType == "focus" || moduleType == "square" || moduleType == "topBuzz" {
             let cell:LBFMRecommendHeaderCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMRecommendHeaderCellID, for: indexPath) as! LBFMRecommendHeaderCell
             cell.focusModel = viewModel.focus
-//            cell.squareList = viewModel.squareList
-//            cell.topBuzzListData = viewModel.topBuzzList
+            cell.squareList = viewModel.squareList
+            cell.topBuzzListData = viewModel.topBuzzList
 //            cell.delegate = self
             return cell
         }
@@ -166,7 +166,7 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
         return viewModel.insetForSectionAt(section: section)
     }
     
-    //最小 item 间距
+    //最小item间距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return viewModel.minimumInteritemSpacingForSectionAt(section: section)
     }
