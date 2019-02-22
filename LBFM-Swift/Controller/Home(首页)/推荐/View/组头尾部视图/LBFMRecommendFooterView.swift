@@ -11,6 +11,8 @@ import UIKit
 class LBFMRecommendFooterView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = LBFMDownColor
+
         self.setupFooterView()
     }
     

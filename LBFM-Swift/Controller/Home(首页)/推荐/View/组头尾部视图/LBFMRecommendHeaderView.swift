@@ -7,8 +7,12 @@
 //
 
 import UIKit
+// 创建闭包 - OC中的block
+typealias LBFMHeaderMoreBtnClick = () ->Void
 
 class LBFMRecommendHeaderView: UICollectionReusableView {
+    var headerMoreBtnClick : LBFMHeaderMoreBtnClick?
+
     // 标题
     private var titleLabel:UILabel = {
        let titleLabel = UILabel()
@@ -33,7 +37,9 @@ class LBFMRecommendHeaderView: UICollectionReusableView {
        return moreButton
     }()
     @objc func moreButtonClick(moreButton:UIButton) {
-        print("点解")
+        // 闭包回调
+        guard let headerMoreBtnClick = headerMoreBtnClick else { return }
+        headerMoreBtnClick()
     }
     
     override init(frame: CGRect) {
@@ -48,11 +54,8 @@ class LBFMRecommendHeaderView: UICollectionReusableView {
     // 布局
     func setupHeaderView() {
         
-        
-        
         self.addSubview(self.titleLabel)
         self.titleLabel.text = "猜你喜欢"
-        self.titleLabel.textColor = UIColor.red
         self.titleLabel.snp.makeConstraints { (make) in
             make.left.top.equalTo(15)
             make.width.equalTo(150)
@@ -60,7 +63,7 @@ class LBFMRecommendHeaderView: UICollectionReusableView {
         }
         
         self.addSubview(self.subLabel)
-        self.subLabel.text = "副标题"
+//        self.subLabel.text = "副标题"
         subLabel.textColor = UIColor.red
         self.subLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.titleLabel.snp.right)
@@ -68,12 +71,22 @@ class LBFMRecommendHeaderView: UICollectionReusableView {
             make.right.equalToSuperview().offset(-100)
         }
         self.addSubview(self.moreButton)
-        self.moreButton.setTitle("您好", for: .normal)
+//        self.moreButton.setTitle("您好", for: .normal)
         self.moreButton.snp.makeConstraints { (make) in
             make.right.equalTo(15)
             make.top.equalTo(15)
             make.width.equalTo(100)
             make.height.equalTo(30)
+        }
+    }
+    var homeRecommendList:LBFMRecommendModel? {
+        didSet{
+            guard let model = homeRecommendList else { return }
+            if (model.title != nil) {
+                self.titleLabel.text = model.title
+            }else {
+                self.titleLabel.text = "猜你喜欢"
+            }
         }
     }
 }

@@ -42,8 +42,8 @@ class LBFMHomeRecommendController: UIViewController {
         collection.dataSource = self
         collection.backgroundColor = UIColor.white
         // MARK -注册头视图和尾视图
-//        collection.register(LBFMRecommendHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID)
-//        collection.register(LBFMRecommendFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID)
+        collection.register(LBFMRecommendHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID)
+        collection.register(LBFMRecommendFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID)
 
         // MARK -注册不同分区cell
         // 默认
@@ -199,18 +199,40 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
         return viewModel.referenceSizeForFooterInSection(section: section)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-////        let moduleType = viewModel.homeRecommendList?[indexPath.section].moduleType
-//        if kind == UICollectionElementKindSectionHeader {
-//            let headerView : LBFMRecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID, for: indexPath) as! LBFMRecommendHeaderView
-//
-//            return headerView
-//        }else if kind == UICollectionElementKindSectionFooter {
-//            let footerView : LBFMRecommendFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID, for: indexPath) as! LBFMRecommendFooterView
-//            return footerView
-//        }
-//        return UICollectionReusableView()
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let moduleType = viewModel.homeRecommendList?[indexPath.section].moduleType
+        if kind == UICollectionElementKindSectionHeader {
+            let headerView : LBFMRecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID, for: indexPath) as! LBFMRecommendHeaderView
+            headerView.homeRecommendList = viewModel.homeRecommendList?[indexPath.section]
+            // 分区头右边更多按钮点击跳转
+            headerView.headerMoreBtnClick = {[weak self]() in
+                if moduleType == "guessYouLike"{
+//                    let vc = LBFMHomeGuessYouLikeMoreController()
+//                    self?.navigationController?.pushViewController(vc, animated: true)
+                }else if moduleType == "paidCategory" {
+//                    let vc = LBFMHomeVIPController(isRecommendPush:true)
+//                    vc.title = "精品"
+//                    self?.navigationController?.pushViewController(vc, animated: true)
+                }else if moduleType == "live"{
+//                    let vc = LBFMHomeLiveController()
+//                    vc.title = "直播"
+//                    self?.navigationController?.pushViewController(vc, animated: true)
+                }else {
+                    guard let categoryId = self?.viewModel.homeRecommendList?[indexPath.section].target?.categoryId else {return}
+                    if categoryId != 0 {
+//                        let vc = LBFMClassifySubMenuController(categoryId:categoryId,isVipPush:false)
+//                        vc.title = self?.viewModel.homeRecommendList?[indexPath.section].title
+//                        self?.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+            return headerView
+        }else if kind == UICollectionElementKindSectionFooter {
+            let footerView : LBFMRecommendFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID, for: indexPath) as! LBFMRecommendFooterView
+            return footerView
+        }
+        return UICollectionReusableView()
+    }
 }
 // Mark:- 点击顶部分类按钮进入相对应界面
 extension LBFMHomeRecommendController:LBFMRecommendHeaderCellDelegate {

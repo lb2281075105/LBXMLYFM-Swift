@@ -35,7 +35,9 @@ class LBFMAdvertCell: UICollectionViewCell {
     
     func setUpLayout(){
         self.addSubview(self.imageView)
-        self.imageView.image = UIImage(named: "pic1.jpeg")
+        self.imageView.image = UIImage(named: "fj.jpg")
+        self.imageView.contentMode = .scaleAspectFill
+        self.imageView.clipsToBounds = true
         self.imageView.snp.makeConstraints { (make) in
             make.left.top.equalToSuperview().offset(15)
             make.right.equalToSuperview().offset(-15)
@@ -51,7 +53,7 @@ class LBFMAdvertCell: UICollectionViewCell {
         }
         
         self.addSubview(self.subLabel)
-        self.subLabel.text = "开年会发年终奖呀领导开年会发年终奖呀领导开年会发年终奖呀领导开年会发年终奖呀领导开年会发年终奖呀领导开年会发年终奖呀领导"
+        self.subLabel.text = "开年会发年终奖呀领导开年会发年终奖呀"
         self.subLabel.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15)
             make.right.equalToSuperview().offset(-15)
@@ -70,7 +72,7 @@ class LBFMAdvertCell: UICollectionViewCell {
             guard let model = adModel else {return}
             self.titleLabel.text = model.name
             self.subLabel.text = model.description
-            self.imageView.kf.setImage(with: URL(string: model.cover!))
+//            self.imageView.image = UIImage(named: "fj.jpg")
         }
     }
 }
