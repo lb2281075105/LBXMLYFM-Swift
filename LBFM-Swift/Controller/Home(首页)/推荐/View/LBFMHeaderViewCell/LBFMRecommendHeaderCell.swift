@@ -137,7 +137,7 @@ extension LBFMRecommendHeaderCell: UICollectionViewDelegate, UICollectionViewDat
             return cell
         }else {
             let cell:LBFMRecommendNewsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "LBFMRecommendNewsCell", for: indexPath) as! LBFMRecommendNewsCell
-//            cell.topBuzzList = self.topBuzzList
+            cell.topBuzzList = self.topBuzzList
             return cell
         }
     }
