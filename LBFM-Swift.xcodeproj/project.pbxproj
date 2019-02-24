@@ -55,6 +55,8 @@
 		3A9533882204258800E4DC70 /* LBFMHomeLiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533872204258800E4DC70 /* LBFMHomeLiveController.swift */; };
 		3A95338A2204259B00E4DC70 /* LBFMHomeBroadcastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533892204259B00E4DC70 /* LBFMHomeBroadcastController.swift */; };
 		3A95338C2204274500E4DC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95338B2204274500E4DC70 /* ViewController.swift */; };
+		3ACA6E112222559000202E98 /* LBFMListenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */; };
+		3ACA6E1322225A3700202E98 /* LBFMListenChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */; };
 		3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */; };
 		3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */; };
 		3AEFE58E2211471C00B88942 /* LBFMRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */; };
@@ -115,6 +117,8 @@
 		3A9533872204258800E4DC70 /* LBFMHomeLiveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeLiveController.swift; sourceTree = "<group>"; };
 		3A9533892204259B00E4DC70 /* LBFMHomeBroadcastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeBroadcastController.swift; sourceTree = "<group>"; };
 		3A95338B2204274500E4DC70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenHeaderView.swift; sourceTree = "<group>"; };
+		3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenChannelController.swift; sourceTree = "<group>"; };
 		3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendAPI.swift; sourceTree = "<group>"; };
 		3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendModel.swift; sourceTree = "<group>"; };
 		3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendViewModel.swift; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 		3A40DAC5221FFE5100A4C734 /* 一键听 */ = {
 			isa = PBXGroup;
 			children = (
+				3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */,
 			);
 			path = "一键听";
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 		3A40DACB222000A700A4C734 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -739,6 +745,7 @@
 				3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */,
 				3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */,
 				3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */,
+				3ACA6E1322225A3700202E98 /* LBFMListenChannelController.swift in Sources */,
 				3AF87044221F9ACD0078F0A8 /* LBFMRecommendNewsCell.swift in Sources */,
 				3A9533482203F5A500E4DC70 /* LBFMHeader.swift in Sources */,
 				3A40DAAF221FDD4600A4C734 /* LBFMHotAudiobookCell.swift in Sources */,
@@ -762,6 +769,7 @@
 				3A9533882204258800E4DC70 /* LBFMHomeLiveController.swift in Sources */,
 				3A40DABE221FE71C00A4C734 /* LBRecommendLiveCell.swift in Sources */,
 				3A40DAB4221FE1EE00A4C734 /* LBFMAdvertCell.swift in Sources */,
+				3ACA6E112222559000202E98 /* LBFMListenHeaderView.swift in Sources */,
 				3A40DAB7221FE35200A4C734 /* LBFMOneKeyListenCell.swift in Sources */,
 				3A40DACA221FFE8F00A4C734 /* LBFMListenRecommendController.swift in Sources */,
 				3A26D5E62216BBAF0080A362 /* LBFMRecommendHeaderCell.swift in Sources */,
