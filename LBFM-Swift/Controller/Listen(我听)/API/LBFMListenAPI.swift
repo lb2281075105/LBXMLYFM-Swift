@@ -36,8 +36,9 @@ extension LBFMListenAPI: TargetType {
         }
     }
     
-    
+    /// 请求方式
     public var method: Moya.Method { return .get }
+    /// 请求参数
     public var task: Task {
         var parmeters = ["pageId":1] as [String : Any]
         switch self {
@@ -63,5 +64,6 @@ extension LBFMListenAPI: TargetType {
     }
     
     public var sampleData: Data { return "".data(using: String.Encoding.utf8)! }
+    /// 请求头
     public var headers: [String : String]? { return nil }
 }
