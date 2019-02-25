@@ -85,6 +85,17 @@
 		3ACA6E5D2223B97D00202E98 /* LBFMVipEnjoyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E5C2223B97D00202E98 /* LBFMVipEnjoyCell.swift */; };
 		3ACA6E5F2223BAEE00202E98 /* LBFMHomeVipEnjoyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E5E2223BAEE00202E98 /* LBFMHomeVipEnjoyCell.swift */; };
 		3ACA6E612223BD3A00202E98 /* LBFMHomeVIPCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E602223BD3A00202E98 /* LBFMHomeVIPCell.swift */; };
+		3ACA6E682223C8E600202E98 /* LBFMLiveCategoryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E672223C8E600202E98 /* LBFMLiveCategoryListController.swift */; };
+		3ACA6E6A2223C8FF00202E98 /* LBFMHomeLiveAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E692223C8FF00202E98 /* LBFMHomeLiveAPI.swift */; };
+		3ACA6E6C2223C97700202E98 /* LBFMHomeLiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E6B2223C97700202E98 /* LBFMHomeLiveViewModel.swift */; };
+		3ACA6E6E2223C98A00202E98 /* LBFMHomeLiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E6D2223C98900202E98 /* LBFMHomeLiveModel.swift */; };
+		3ACA6E782223CC8500202E98 /* LBFMLiveRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E702223CC8500202E98 /* LBFMLiveRankCell.swift */; };
+		3ACA6E792223CC8500202E98 /* LBFMHomeLiveRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E712223CC8500202E98 /* LBFMHomeLiveRankCell.swift */; };
+		3ACA6E7A2223CC8500202E98 /* LBFMHomeLiveHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E722223CC8500202E98 /* LBFMHomeLiveHeaderView.swift */; };
+		3ACA6E7B2223CC8500202E98 /* LBFMLiveHeaderGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E742223CC8500202E98 /* LBFMLiveHeaderGridCell.swift */; };
+		3ACA6E7C2223CC8500202E98 /* LBFMHomeLiveGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E752223CC8500202E98 /* LBFMHomeLiveGridCell.swift */; };
+		3ACA6E7D2223CC8500202E98 /* LBFMHomeLiveBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E772223CC8500202E98 /* LBFMHomeLiveBannerCell.swift */; };
+		3ACA6E7F2223D1E100202E98 /* LBFMRecommendLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E7E2223D1E100202E98 /* LBFMRecommendLiveCell.swift */; };
 		3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */; };
 		3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */; };
 		3AEFE58E2211471C00B88942 /* LBFMRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */; };
@@ -175,6 +186,17 @@
 		3ACA6E5C2223B97D00202E98 /* LBFMVipEnjoyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMVipEnjoyCell.swift; sourceTree = "<group>"; };
 		3ACA6E5E2223BAEE00202E98 /* LBFMHomeVipEnjoyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeVipEnjoyCell.swift; sourceTree = "<group>"; };
 		3ACA6E602223BD3A00202E98 /* LBFMHomeVIPCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeVIPCell.swift; sourceTree = "<group>"; };
+		3ACA6E672223C8E600202E98 /* LBFMLiveCategoryListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMLiveCategoryListController.swift; sourceTree = "<group>"; };
+		3ACA6E692223C8FF00202E98 /* LBFMHomeLiveAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeLiveAPI.swift; sourceTree = "<group>"; };
+		3ACA6E6B2223C97700202E98 /* LBFMHomeLiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeLiveViewModel.swift; sourceTree = "<group>"; };
+		3ACA6E6D2223C98900202E98 /* LBFMHomeLiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeLiveModel.swift; sourceTree = "<group>"; };
+		3ACA6E702223CC8500202E98 /* LBFMLiveRankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMLiveRankCell.swift; sourceTree = "<group>"; };
+		3ACA6E712223CC8500202E98 /* LBFMHomeLiveRankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMHomeLiveRankCell.swift; sourceTree = "<group>"; };
+		3ACA6E722223CC8500202E98 /* LBFMHomeLiveHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMHomeLiveHeaderView.swift; sourceTree = "<group>"; };
+		3ACA6E742223CC8500202E98 /* LBFMLiveHeaderGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMLiveHeaderGridCell.swift; sourceTree = "<group>"; };
+		3ACA6E752223CC8500202E98 /* LBFMHomeLiveGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMHomeLiveGridCell.swift; sourceTree = "<group>"; };
+		3ACA6E772223CC8500202E98 /* LBFMHomeLiveBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMHomeLiveBannerCell.swift; sourceTree = "<group>"; };
+		3ACA6E7E2223D1E100202E98 /* LBFMRecommendLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendLiveCell.swift; sourceTree = "<group>"; };
 		3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendAPI.swift; sourceTree = "<group>"; };
 		3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendModel.swift; sourceTree = "<group>"; };
 		3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendViewModel.swift; sourceTree = "<group>"; };
@@ -574,6 +596,11 @@
 			isa = PBXGroup;
 			children = (
 				3A9533872204258800E4DC70 /* LBFMHomeLiveController.swift */,
+				3ACA6E662223C8D100202E98 /* Controller */,
+				3ACA6E622223C88C00202E98 /* API */,
+				3ACA6E632223C88C00202E98 /* Model */,
+				3ACA6E652223C88C00202E98 /* View */,
+				3ACA6E642223C88C00202E98 /* ViewModel */,
 			);
 			path = "直播";
 			sourceTree = "<group>";
@@ -776,6 +803,76 @@
 				3ACA6E602223BD3A00202E98 /* LBFMHomeVIPCell.swift */,
 			);
 			path = "分类课";
+			sourceTree = "<group>";
+		};
+		3ACA6E622223C88C00202E98 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E692223C8FF00202E98 /* LBFMHomeLiveAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3ACA6E632223C88C00202E98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E6D2223C98900202E98 /* LBFMHomeLiveModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3ACA6E642223C88C00202E98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E6B2223C97700202E98 /* LBFMHomeLiveViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3ACA6E652223C88C00202E98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E762223CC8500202E98 /* 轮播图 */,
+				3ACA6E732223CC8500202E98 /* 直播顶部 */,
+				3ACA6E6F2223CC8500202E98 /* 直播排行榜 */,
+				3ACA6E722223CC8500202E98 /* LBFMHomeLiveHeaderView.swift */,
+				3ACA6E7E2223D1E100202E98 /* LBFMRecommendLiveCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3ACA6E662223C8D100202E98 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E672223C8E600202E98 /* LBFMLiveCategoryListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3ACA6E6F2223CC8500202E98 /* 直播排行榜 */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E702223CC8500202E98 /* LBFMLiveRankCell.swift */,
+				3ACA6E712223CC8500202E98 /* LBFMHomeLiveRankCell.swift */,
+			);
+			path = "直播排行榜";
+			sourceTree = "<group>";
+		};
+		3ACA6E732223CC8500202E98 /* 直播顶部 */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E742223CC8500202E98 /* LBFMLiveHeaderGridCell.swift */,
+				3ACA6E752223CC8500202E98 /* LBFMHomeLiveGridCell.swift */,
+			);
+			path = "直播顶部";
+			sourceTree = "<group>";
+		};
+		3ACA6E762223CC8500202E98 /* 轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E772223CC8500202E98 /* LBFMHomeLiveBannerCell.swift */,
+			);
+			path = "轮播图";
 			sourceTree = "<group>";
 		};
 		3AEAA622221106BA00B46FA7 /* Controller */ = {
@@ -997,12 +1094,14 @@
 				3A40DABC221FE70B00A4C734 /* LBFMHomeRecommendLiveCell.swift in Sources */,
 				3ACA6E4322239D8800202E98 /* LBFMHomeVipViewModel.swift in Sources */,
 				3ACA6E1B2223651500202E98 /* LBFMListenSubscibeCell.swift in Sources */,
+				3ACA6E6E2223C98A00202E98 /* LBFMHomeLiveModel.swift in Sources */,
 				3ACA6E1F222368BB00202E98 /* LBFMOneKeyListenLTCell.swift in Sources */,
 				3A9533412203F1E900E4DC70 /* LBFMMineController.swift in Sources */,
 				3A95338C2204274500E4DC70 /* ViewController.swift in Sources */,
 				3ACA6E2322236A0E00202E98 /* LBFMListenChannelCell.swift in Sources */,
 				3A40DAC8221FFE7700A4C734 /* LBFMListenSubscibeController.swift in Sources */,
 				3ACA6E2C2223892900202E98 /* LBFMListenRecommendViewModel.swift in Sources */,
+				3ACA6E7F2223D1E100202E98 /* LBFMRecommendLiveCell.swift in Sources */,
 				3ACA6E332223931C00202E98 /* LBFMHomeClassifyViewModel.swift in Sources */,
 				3A9533432203F1F600E4DC70 /* LBFMPlayController.swift in Sources */,
 				3ACA6E612223BD3A00202E98 /* LBFMHomeVIPCell.swift in Sources */,
@@ -1013,8 +1112,10 @@
 				3A9533512203FB9500E4DC70 /* WRCustomNavigationBar.swift in Sources */,
 				3A26D5E32216BB5D0080A362 /* LBFMRecommendFooterView.swift in Sources */,
 				3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */,
+				3ACA6E7C2223CC8500202E98 /* LBFMHomeLiveGridCell.swift in Sources */,
 				3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */,
 				3ACA6E192223613D00202E98 /* LBFMListenSubscibeViewModel.swift in Sources */,
+				3ACA6E6C2223C97700202E98 /* LBFMHomeLiveViewModel.swift in Sources */,
 				3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */,
 				3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */,
 				3ACA6E1322225A3700202E98 /* LBFMListenChannelController.swift in Sources */,
@@ -1023,11 +1124,16 @@
 				3ACA6E3D2223961400202E98 /* LBFMHomeClassifyCell.swift in Sources */,
 				3A9533482203F5A500E4DC70 /* LBFMHeader.swift in Sources */,
 				3ACA6E522223B71D00202E98 /* LBFMHomeVipHeaderView.swift in Sources */,
+				3ACA6E7D2223CC8500202E98 /* LBFMHomeLiveBannerCell.swift in Sources */,
 				3ACA6E39222395E900202E98 /* LBFMHomeClassifyHeaderView.swift in Sources */,
 				3ACA6E5B2223B8EE00202E98 /* LBFMVipHotCell.swift in Sources */,
 				3A40DAAF221FDD4600A4C734 /* LBFMHotAudiobookCell.swift in Sources */,
+				3ACA6E7A2223CC8500202E98 /* LBFMHomeLiveHeaderView.swift in Sources */,
 				3A9533582204096900E4DC70 /* LBFMBouncesContentView.swift in Sources */,
+				3ACA6E7B2223CC8500202E98 /* LBFMLiveHeaderGridCell.swift in Sources */,
+				3ACA6E782223CC8500202E98 /* LBFMLiveRankCell.swift in Sources */,
 				3ACA6E5F2223BAEE00202E98 /* LBFMHomeVipEnjoyCell.swift in Sources */,
+				3ACA6E6A2223C8FF00202E98 /* LBFMHomeLiveAPI.swift in Sources */,
 				3A26D5E22216BB5D0080A362 /* LBFMRecommendHeaderView.swift in Sources */,
 				3ACA6E3B222395FE00202E98 /* LBFMHomeClassifyFooterView.swift in Sources */,
 				3A40DAA9221FD4F300A4C734 /* LBFMGuessYouLikeCell.swift in Sources */,
@@ -1043,8 +1149,10 @@
 				3ACA6E542223B73700202E98 /* LBFMHomeVipFooterView.swift in Sources */,
 				3AF87041221F980C0078F0A8 /* LBFMRecommendGridCell.swift in Sources */,
 				3A40DAB9221FE3D900A4C734 /* LBOneKeyListenCell.swift in Sources */,
+				3ACA6E682223C8E600202E98 /* LBFMLiveCategoryListController.swift in Sources */,
 				3A9533532203FB9500E4DC70 /* WRCycleScrollView.swift in Sources */,
 				3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */,
+				3ACA6E792223CC8500202E98 /* LBFMHomeLiveRankCell.swift in Sources */,
 				3ACA6E4F22239F1E00202E98 /* LBFMVipCategoryCell.swift in Sources */,
 				3A95335A220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift in Sources */,
 				3ACA6E162223608900202E98 /* LBFMListenFooterView.swift in Sources */,
