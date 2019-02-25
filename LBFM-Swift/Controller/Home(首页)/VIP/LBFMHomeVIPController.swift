@@ -156,7 +156,7 @@ extension LBFMHomeVIPController:LBFMHomeVipBannerCellDelegate{
         warning.configureDropShadow()
         
         let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
-        warning.configureContent(title: "Warning", body: "哎呀呀!咋没反应呢???", iconText: iconText)
+        warning.configureContent(title: "Warning", body: "暂时没有点击功能", iconText: iconText)
         warning.button?.isHidden = true
         var warningConfig = SwiftMessages.defaultConfig
         warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
