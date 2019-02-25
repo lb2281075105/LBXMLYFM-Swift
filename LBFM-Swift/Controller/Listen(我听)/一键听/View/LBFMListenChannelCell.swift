@@ -43,10 +43,10 @@ class LBFMListenChannelCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        setUpUI()
+        setUpLayout()
     }
     
-    func setUpUI(){
+    func setUpLayout(){
         self.addSubview(self.picView)
         self.picView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(20)
@@ -75,14 +75,13 @@ class LBFMListenChannelCell: UITableViewCell {
             make.right.equalToSuperview().offset(-70)
         }
         
-        
         self.picView.addSubview(self.playBtn)
         self.playBtn.snp.makeConstraints { (make) in
             make.bottom.right.equalToSuperview().offset(-15)
             make.width.height.equalTo(45)
         }
     }
-    /// 一键听主页数据模型
+    // 一键听主页数据模型
     var channelResults:ChannelResultsModel? {
         didSet {
             guard let model = channelResults else {return}

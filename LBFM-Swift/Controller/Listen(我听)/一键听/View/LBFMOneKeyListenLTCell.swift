@@ -12,7 +12,7 @@ class LBFMOneKeyListenLTCell: UITableViewCell {
     // 竖线
     var lineView:UIView = {
         let view = UIView()
-        view.backgroundColor = LBFMDownColor
+        view.backgroundColor = LBFMButtonColor
         view.isHidden = true
         return view
     }()

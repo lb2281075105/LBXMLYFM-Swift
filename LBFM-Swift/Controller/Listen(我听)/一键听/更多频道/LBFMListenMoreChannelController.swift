@@ -34,7 +34,7 @@ class LBFMListenMoreChannelController: UIViewController {
     
     // 懒加载右边tableview
     private lazy var rightTableView : UITableView = {
-        let tableView = UITableView.init(frame:CGRect(x:LBFMScreenWidth * 0.2, y:0, width:LBFMScreenWidth*0.8, height: LBFMScreenHeight), style: UITableViewStyle.grouped)
+        let tableView = UITableView.init(frame:CGRect(x:LBFMScreenWidth * 0.2, y:0, width:LBFMScreenWidth * 0.8, height: LBFMScreenHeight), style: UITableViewStyle.grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.white
@@ -98,7 +98,8 @@ extension LBFMListenMoreChannelController : UITableViewDelegate, UITableViewData
             let row = indexPath.row
             let oldRow = self.lastPath?.row
             if row == oldRow && self.lastPath != nil {
-                cell.titleLabel.textColor = LBFMDownColor
+                
+                cell.titleLabel.textColor = LBFMButtonColor
                 cell.lineView.isHidden = false
             }else {
                 cell.titleLabel.textColor = UIColor.black
@@ -167,8 +168,7 @@ extension LBFMListenMoreChannelController : UITableViewDelegate, UITableViewData
             }
             self.lastPath = indexPath
             let rightMoveToIndexPath  = IndexPath(row: 0, section: indexPath.row)
-            self.rightTableView .selectRow(at: rightMoveToIndexPath, animated: true, scrollPosition: UITableViewScrollPosition.top)
-            
+            self.rightTableView.selectRow(at: rightMoveToIndexPath, animated: true, scrollPosition: UITableViewScrollPosition.top)
         }
     }
     
@@ -183,7 +183,7 @@ extension LBFMListenMoreChannelController : UITableViewDelegate, UITableViewData
             let oldRow = (self.lastPath != nil) ? self.lastPath?.row:-1
             if newRow != oldRow {
                 let newCell:LBFMOneKeyListenLTCell = self.leftTableView.cellForRow(at: leftMoveToIndexPath) as! LBFMOneKeyListenLTCell
-                newCell.titleLabel.textColor = LBFMDownColor
+                newCell.titleLabel.textColor = LBFMButtonColor
                 newCell.lineView.isHidden = false
                 
                 let oldCell:LBFMOneKeyListenLTCell = self.leftTableView.cellForRow(at: self.lastPath!) as! LBFMOneKeyListenLTCell
