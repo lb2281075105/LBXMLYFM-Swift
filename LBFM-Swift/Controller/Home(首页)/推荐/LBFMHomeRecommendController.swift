@@ -61,7 +61,7 @@ class LBFMHomeRecommendController: UIViewController {
         collection.register(LBFMRecommendForYouCell.self, forCellWithReuseIdentifier: LBFMRecommendForYouCellID)
         // 推荐直播
         collection.register(LBFMHomeRecommendLiveCell.self, forCellWithReuseIdentifier: LBFMHomeRecommendLiveCellID)
-//        collection.uHead = URefreshHeader{ [weak self] in self?.loadData() }
+        collection.uHead = URefreshHeader{ [weak self] in self?.setupLoadData() }
         return collection
     }()
     lazy var viewModel: LBFMRecommendViewModel = {
@@ -75,15 +75,15 @@ class LBFMHomeRecommendController: UIViewController {
             make.width.height.equalToSuperview()
             make.center.equalToSuperview()
         }
-//        self.collectionView.uHead.beginRefreshing()
-        loadData()
-//        setupLoadRecommendAdData()
+        self.collectionView.uHead.beginRefreshing()
+        setupLoadData()
+        setupLoadRecommendAdData()
     }
     
-    func loadData(){
+    func setupLoadData(){
         // 加载数据
         viewModel.updateDataBlock = { [unowned self] in
-////            self.collectionView.uHead.endRefreshing()
+            self.collectionView.uHead.endRefreshing()
             // 更新列表数据
             self.collectionView.reloadData()
         }
