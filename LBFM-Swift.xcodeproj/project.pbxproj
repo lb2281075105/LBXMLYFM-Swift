@@ -60,6 +60,10 @@
 		3ACA6E162223608900202E98 /* LBFMListenFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */; };
 		3ACA6E192223613D00202E98 /* LBFMListenSubscibeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E182223613D00202E98 /* LBFMListenSubscibeViewModel.swift */; };
 		3ACA6E1B2223651500202E98 /* LBFMListenSubscibeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E1A2223651500202E98 /* LBFMListenSubscibeCell.swift */; };
+		3ACA6E1F222368BB00202E98 /* LBFMOneKeyListenLTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E1E222368BB00202E98 /* LBFMOneKeyListenLTCell.swift */; };
+		3ACA6E21222368D100202E98 /* LBFMListenChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E20222368D100202E98 /* LBFMListenChannelViewModel.swift */; };
+		3ACA6E2322236A0E00202E98 /* LBFMListenChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E2222236A0E00202E98 /* LBFMListenChannelCell.swift */; };
+		3ACA6E2622237A5800202E98 /* LBFMListenMoreChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E2522237A5800202E98 /* LBFMListenMoreChannelController.swift */; };
 		3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */; };
 		3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */; };
 		3AEFE58E2211471C00B88942 /* LBFMRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */; };
@@ -125,6 +129,10 @@
 		3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenFooterView.swift; sourceTree = "<group>"; };
 		3ACA6E182223613D00202E98 /* LBFMListenSubscibeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenSubscibeViewModel.swift; sourceTree = "<group>"; };
 		3ACA6E1A2223651500202E98 /* LBFMListenSubscibeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenSubscibeCell.swift; sourceTree = "<group>"; };
+		3ACA6E1E222368BB00202E98 /* LBFMOneKeyListenLTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMOneKeyListenLTCell.swift; sourceTree = "<group>"; };
+		3ACA6E20222368D100202E98 /* LBFMListenChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenChannelViewModel.swift; sourceTree = "<group>"; };
+		3ACA6E2222236A0E00202E98 /* LBFMListenChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenChannelCell.swift; sourceTree = "<group>"; };
+		3ACA6E2522237A5800202E98 /* LBFMListenMoreChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenMoreChannelController.swift; sourceTree = "<group>"; };
 		3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendAPI.swift; sourceTree = "<group>"; };
 		3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendModel.swift; sourceTree = "<group>"; };
 		3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendViewModel.swift; sourceTree = "<group>"; };
@@ -296,6 +304,9 @@
 		3A40DAC5221FFE5100A4C734 /* 一键听 */ = {
 			isa = PBXGroup;
 			children = (
+				3ACA6E2422237A4200202E98 /* 更多频道 */,
+				3ACA6E1C222367F600202E98 /* View */,
+				3ACA6E1D222367F700202E98 /* ViewModel */,
 				3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */,
 			);
 			path = "一键听";
@@ -543,6 +554,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3ACA6E1C222367F600202E98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E1E222368BB00202E98 /* LBFMOneKeyListenLTCell.swift */,
+				3ACA6E2222236A0E00202E98 /* LBFMListenChannelCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3ACA6E1D222367F700202E98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E20222368D100202E98 /* LBFMListenChannelViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3ACA6E2422237A4200202E98 /* 更多频道 */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA6E2522237A5800202E98 /* LBFMListenMoreChannelController.swift */,
+			);
+			path = "更多频道";
+			sourceTree = "<group>";
+		};
 		3AEAA622221106BA00B46FA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -760,11 +796,14 @@
 				3A9533522203FB9500E4DC70 /* WRProxy.swift in Sources */,
 				3A40DABC221FE70B00A4C734 /* LBFMHomeRecommendLiveCell.swift in Sources */,
 				3ACA6E1B2223651500202E98 /* LBFMListenSubscibeCell.swift in Sources */,
+				3ACA6E1F222368BB00202E98 /* LBFMOneKeyListenLTCell.swift in Sources */,
 				3A9533412203F1E900E4DC70 /* LBFMMineController.swift in Sources */,
 				3A95338C2204274500E4DC70 /* ViewController.swift in Sources */,
+				3ACA6E2322236A0E00202E98 /* LBFMListenChannelCell.swift in Sources */,
 				3A40DAC8221FFE7700A4C734 /* LBFMListenSubscibeController.swift in Sources */,
 				3A9533432203F1F600E4DC70 /* LBFMPlayController.swift in Sources */,
 				3A40DAC1221FE74E00A4C734 /* ReplicatorLayer.swift in Sources */,
+				3ACA6E21222368D100202E98 /* LBFMListenChannelViewModel.swift in Sources */,
 				3A9533512203FB9500E4DC70 /* WRCustomNavigationBar.swift in Sources */,
 				3A26D5E32216BB5D0080A362 /* LBFMRecommendFooterView.swift in Sources */,
 				3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */,
@@ -781,6 +820,7 @@
 				3A40DAA9221FD4F300A4C734 /* LBFMGuessYouLikeCell.swift in Sources */,
 				3A95337B2204207A00E4DC70 /* AppDelegate.swift in Sources */,
 				3A953356220408C900E4DC70 /* LBFMBasicContentView.swift in Sources */,
+				3ACA6E2622237A5800202E98 /* LBFMListenMoreChannelController.swift in Sources */,
 				3A40DAD4222000D500A4C734 /* LBFMListenAPI.swift in Sources */,
 				3A40DAD82220014300A4C734 /* LBFMListenModel.swift in Sources */,
 				3A9533502203FB9500E4DC70 /* WRNavigationBar.swift in Sources */,
