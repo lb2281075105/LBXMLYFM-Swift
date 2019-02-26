@@ -48,7 +48,7 @@ class LBFMLiveCategoryListController: UIViewController {
         setupLoadData()
     }
     func setupLoadData(){
-        // 首页广播接口请求
+           // 首页广播接口请求
         LBFMHomeLiveAPIProvider.request(.categoryLiveList(channelId:self.channelId)) { result in
             if case let .success(response) = result {
                 //解析数据
@@ -61,10 +61,6 @@ class LBFMLiveCategoryListController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }
 

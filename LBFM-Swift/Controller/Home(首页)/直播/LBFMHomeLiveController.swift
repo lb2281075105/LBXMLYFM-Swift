@@ -20,11 +20,11 @@ class LBFMHomeLiveController: UIViewController {
     var lives:[LBFMLivesModel]?
     
     private let LBFMHomeLiveHeaderViewID = "LBFMHomeLiveHeaderView"
-    private let LBFMRecommendLiveCellID = "LBFMRecommendLiveCell"
     private let LBFMHomeLiveGridCellID   = "LBFMHomeLiveGridCell"
     private let LBFMHomeLiveBannerCellID = "LBFMHomeLiveBannerCell"
     private let LBFMHomeLiveRankCellID   = "LBFMHomeLiveRankCell"
-    
+    private let LBFMRecommendLiveCellID = "LBFMRecommendLiveCell"
+
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
         let collection = UICollectionView.init(frame:.zero, collectionViewLayout: layout)
@@ -47,7 +47,6 @@ class LBFMHomeLiveController: UIViewController {
         return LBFMHomeLiveViewModel()
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -57,7 +56,7 @@ class LBFMHomeLiveController: UIViewController {
             make.top.bottom.equalToSuperview()
             make.right.equalToSuperview().offset(-15)
         }
-        //刚进页面进行刷新
+        // 刚进页面进行刷新
         self.collectionView.uHead.beginRefreshing()
         loadLiveData()
     }

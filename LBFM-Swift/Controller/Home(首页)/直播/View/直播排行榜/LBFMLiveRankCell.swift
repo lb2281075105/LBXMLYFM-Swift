@@ -59,18 +59,18 @@ class LBFMLiveRankCell: UICollectionViewCell {
     }
     
     var multidimensionalRankVos:LBFMMultidimensionalRankVosModel? {
-    didSet {
-        guard let model = multidimensionalRankVos else { return }
-            self.titleLabel.text = model.dimensionName
-        let num:Int = (model.ranks?.count)!
-        let margin:CGFloat = 50
-        for index in 0..<num {
-                let picView = UIImageView.init(frame: CGRect(x:margin*CGFloat(index)+5*CGFloat(index),y:5,width:margin,height:margin))
-                picView.layer.masksToBounds = true
-                picView.layer.cornerRadius = picView.frame.size.width/2
-                picView.kf.setImage(with: URL(string: (model.ranks?[index].coverSmall!)!))
-                self.imageView.addSubview(picView)
-                }
+        didSet {
+            guard let model = multidimensionalRankVos else { return }
+                self.titleLabel.text = model.dimensionName
+            let num:Int = (model.ranks?.count)!
+            let margin:CGFloat = 50
+            for index in 0..<num {
+                    let picView = UIImageView.init(frame: CGRect(x:margin*CGFloat(index)+5*CGFloat(index),y:5,width:margin,height:margin))
+                    picView.layer.masksToBounds = true
+                    picView.layer.cornerRadius = picView.frame.size.width/2
+                    picView.kf.setImage(with: URL(string: (model.ranks?[index].coverSmall!)!))
+                    self.imageView.addSubview(picView)
             }
-        }
+         }
+     }
 }

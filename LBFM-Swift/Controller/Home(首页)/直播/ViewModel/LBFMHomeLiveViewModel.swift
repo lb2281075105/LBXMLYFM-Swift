@@ -11,7 +11,7 @@ import SwiftyJSON
 import HandyJSON
 
 class LBFMHomeLiveViewModel: NSObject {
-    // 外部传值请求接口如此那
+    // 外部传值请求接口
     var categoryType :Int = 0
     convenience init(categoryType: Int = 0) {
         self.init()
@@ -24,12 +24,12 @@ class LBFMHomeLiveViewModel: NSObject {
     var homeLiveBanerList:[LBFMHomeLiveBanerList]?
     var multidimensionalRankVos: [LBFMMultidimensionalRankVosModel]?
     
-    // Mark: -数据源更新
+    // - 数据源更新
     typealias LBFMAddDataBlock = () ->Void
     var updataBlock:LBFMAddDataBlock?
 }
 
-// Mark:-请求数据
+// - 请求数据
 extension LBFMHomeLiveViewModel {
     func refreshDataSource() {
         loadLiveData()
@@ -57,10 +57,10 @@ extension LBFMHomeLiveViewModel {
         }
         
         grpup.enter()
-        //首页直播滚动图接口请求
+        // 首页直播滚动图接口请求
         LBFMHomeLiveAPIProvider.request(.liveBannerList) { result in
             if case let .success(response) = result {
-                //解析数据
+                // 解析数据
                 let data = try? response.mapJSON()
                 let json = JSON(data!)
                 if let mappedObject = JSONDeserializer<LBFMHomeLiveBanerModel>.deserializeFrom(json: json.description) { // 从字符串转换为对象实例
@@ -75,7 +75,7 @@ extension LBFMHomeLiveViewModel {
         }
         
         grpup.enter()
-        //首页直播排行榜接口请求
+        // 首页直播排行榜接口请求
         LBFMHomeLiveAPIProvider.request(.liveRankList) { result in
             if case let .success(response) = result {
                 // 解析数据
@@ -99,7 +99,7 @@ extension LBFMHomeLiveViewModel {
     }
 }
 
-// Mark:-点击分类刷新主页数据请求数据
+// - 点击分类刷新主页数据请求数据
 extension LBFMHomeLiveViewModel {
     func refreshCategoryLiveData() {
         loadCategoryLiveData()
@@ -107,7 +107,7 @@ extension LBFMHomeLiveViewModel {
     func loadCategoryLiveData(){
         LBFMHomeLiveAPIProvider.request(.categoryTypeList(categoryType:self.categoryType)) { result in
             if case let .success(response) = result {
-                //解析数据
+                // 解析数据
                 let data = try? response.mapJSON()
                 let json = JSON(data!)
                 if let mappedObject = JSONDeserializer<LBFMLivesModel>.deserializeModelArrayFrom(json: json["data"]["lives"].description) {
@@ -120,7 +120,7 @@ extension LBFMHomeLiveViewModel {
 }
 
 
-// Mark:-collectionview数据
+// - collectionview数据
 extension LBFMHomeLiveViewModel {
     // 每个分区显示item数量
     func numberOfItemsIn(section: NSInteger) -> NSInteger {

@@ -14,7 +14,7 @@ class LBFMHomeLiveRankCell: UICollectionViewCell {
 
     
     private let LBFMLiveRankCellID = "LBFMLiveRankCell"
-    // MARK: - 滚动排行榜
+    // - 滚动排行榜
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
         layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
@@ -95,15 +95,6 @@ extension LBFMHomeLiveRankCell: UICollectionViewDataSource, UICollectionViewDele
         // 2.滚动该位置
         collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
     }
-    
-//    // 监听collectionView的滚到
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        // 1、获取滚动的偏移量 + scrollView.bounds.width * 0.5给偏移量加一半，当滑动一般就滚动pageControl的当前选中
-//        let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
-//        // 2、计算pageContra的currentIndex。这 % (cycleModelArr?.count ?? 1)也是跟上同样道理
-//        pageControl.currentPage = Int(offsetX / scrollView.bounds.width) % (imageArray?.count ?? 1)
-//    }
-//
     /// 当collectionView开始拖动的时候,取消定时器
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.timer?.invalidate()
