@@ -37,7 +37,7 @@ class LBFMHomeBroadcastController: UIViewController {
         // collection.register(RadioCategoriesCell.self, forCellWithReuseIdentifier:RadioCategoriesCellID)
         collection.register(LBFMRadioSquareResultsCell.self, forCellWithReuseIdentifier:LBFMRadioSquareResultsCellID)
         
-        collection.uHead = URefreshHeader{ [weak self] in self?.loadData() }
+        collection.uHead = URefreshHeader{ [weak self] in self?.setupLoadData() }
         return collection
     }()
     
@@ -55,10 +55,10 @@ class LBFMHomeBroadcastController: UIViewController {
             make.height.equalToSuperview()
         }
         self.collectionView.uHead.beginRefreshing()
-        loadData()
+        setupLoadData()
     }
     
-    func loadData() {
+    func setupLoadData() {
         // 加载数据
         viewModel.updataBlock = { [unowned self] in
             self.collectionView.uHead.endRefreshing()
@@ -80,23 +80,23 @@ extension LBFMHomeBroadcastController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
-        case HomeBroadcastSectionTel: // 顶部电台
-            let cell:RadioSquareResultsCell = collectionView.dequeueReusableCell(withReuseIdentifier: RadioSquareResultsCellID, for: indexPath) as! RadioSquareResultsCell
+        case LBFMHomeBroadcastSectionTel: // 顶部电台
+            let cell:LBFMRadioSquareResultsCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMRadioSquareResultsCellID, for: indexPath) as! LBFMRadioSquareResultsCell
             cell.radioSquareResultsModel = viewModel.radioSquareResults
             cell.delegate = self
             return cell
-        case HomeBroadcastSectionMoreTel: // 可展开更多的电台
+        case LBFMHomeBroadcastSectionMoreTel: // 可展开更多的电台
             let identifier:String = "\(indexPath.section)\(indexPath.row)"
-            self.collectionView.register(RadioCategoriesCell.self, forCellWithReuseIdentifier: identifier)
-            let cell:RadioCategoriesCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! RadioCategoriesCell
+            self.collectionView.register(LBFMRadioCategoriesCell.self, forCellWithReuseIdentifier: identifier)
+            let cell:LBFMRadioCategoriesCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! LBFMRadioCategoriesCell
             cell.backgroundColor = UIColor.init(red: 248/255.0, green: 245/255.0, blue: 246/255.0, alpha: 1)
             cell.dataSource = viewModel.categories?[indexPath.row].name
             cell.layer.masksToBounds = true
             cell.layer.cornerRadius = 2
             return cell
         default:
-            let cell:HomeRadiosCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRadiosCellID, for: indexPath) as! HomeRadiosCell
-            if indexPath.section == HomeBroadcastSectionLocal{ // 本地电台
+            let cell:LBFMHomeRadiosCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMHomeRadiosCellID, for: indexPath) as! LBFMHomeRadiosCell
+            if indexPath.section == LBFMHomeBroadcastSectionLocal{ // 本地电台
                 cell.localRadioModel = viewModel.localRadios?[indexPath.row]
             }else {
                 cell.topRadioModel = viewModel.topRadios?[indexPath.row]
@@ -109,11 +109,11 @@ extension LBFMHomeBroadcastController: UICollectionViewDelegate, UICollectionVie
         if indexPath.section == 1 {
             if indexPath.row == 7 {
                 if viewModel.isUnfold {
-                    let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
-                    let title = viewModel.categories?[indexPath.row].name
-                    let vc = BroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
-                    vc.title = title
-                    self.navigationController?.pushViewController(vc, animated: true)
+//                    let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
+//                    let title = viewModel.categories?[indexPath.row].name
+//                    let vc = LBFMBroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
+//                    vc.title = title
+//                    self.navigationController?.pushViewController(vc, animated: true)
                 }else {
                     viewModel.isUnfold = true
                     viewModel.categories?.remove(at: 7)
@@ -130,11 +130,11 @@ extension LBFMHomeBroadcastController: UICollectionViewDelegate, UICollectionVie
                     
                 }
             }else{
-                let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
-                let title = viewModel.categories?[indexPath.row].name
-                let vc = BroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
-                vc.title = title
-                self.navigationController?.pushViewController(vc, animated: true)
+//                let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
+//                let title = viewModel.categories?[indexPath.row].name
+//                let vc = LBFMBroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
+//                vc.title = title
+//                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
         
@@ -167,12 +167,12 @@ extension LBFMHomeBroadcastController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionHeader {
-            let headerView :RadioHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: RadioHeaderViewID, for: indexPath) as! RadioHeaderView
+            let headerView :LBFMRadioHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRadioHeaderViewID, for: indexPath) as! LBFMRadioHeaderView
             headerView.backgroundColor = UIColor.white
             headerView.titStr = viewModel.titleArray[indexPath.section-2]
             return headerView
         }else {
-            let footerView :RadioFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: RadioFooterViewID, for: indexPath) as! RadioFooterView
+            let footerView :LBFMRadioFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRadioFooterViewID, for: indexPath) as! LBFMRadioFooterView
             return footerView
             
         }
@@ -183,21 +183,21 @@ extension LBFMHomeBroadcastController: UICollectionViewDelegate, UICollectionVie
     }
 }
 // 点击最上层电台分类 Delegate
-extension LBFMHomeBroadcastController:RadioSquareResultsCellDelegate {
+extension LBFMHomeBroadcastController:LBFMRadioSquareResultsCellDelegate {
     func radioSquareResultsCellItemClick(url: String,title:String) {
         if title == "主播直播" {
-            let vc = HomeLiveController()
+            let vc = LBFMHomeLiveController()
             vc.title = title
             self.navigationController?.pushViewController(vc, animated: true)
         }else if title == "省市台"{
             
         }else {
             // 截取参数
-            var split = url.components(separatedBy: ".com")
-            let string = split[1]
-            let vc = BroadcastListController(url: string, categoryId: 0,isMoreCategory:false)
-            vc.title = title
-            self.navigationController?.pushViewController(vc, animated: true)
+//            var split = url.components(separatedBy: ".com")
+//            let string = split[1]
+//            let vc = LBFMBroadcastListController(url: string, categoryId: 0,isMoreCategory:false)
+//            vc.title = title
+//            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

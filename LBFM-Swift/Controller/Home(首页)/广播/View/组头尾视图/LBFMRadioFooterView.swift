@@ -11,7 +11,7 @@ import UIKit
 class LBFMRadioFooterView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = LBFMButtonColor
+        self.backgroundColor = LBFMDownColor
     }
     
     required init?(coder aDecoder: NSCoder) {
