@@ -108,11 +108,11 @@ extension LBFMHomeBroadcastController: UICollectionViewDelegate, UICollectionVie
         if indexPath.section == 1 {
             if indexPath.row == 7 {
                 if viewModel.isUnfold {
-//                    let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
-//                    let title = viewModel.categories?[indexPath.row].name
-//                    let vc = LBFMBroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
-//                    vc.title = title
-//                    self.navigationController?.pushViewController(vc, animated: true)
+                    let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
+                    let title = viewModel.categories?[indexPath.row].name
+                    let vc = LBFMBroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
+                    vc.title = title
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }else {
                     viewModel.isUnfold = true
                     viewModel.categories?.remove(at: 7)
@@ -129,11 +129,11 @@ extension LBFMHomeBroadcastController: UICollectionViewDelegate, UICollectionVie
                     
                 }
             }else{
-//                let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
-//                let title = viewModel.categories?[indexPath.row].name
-//                let vc = LBFMBroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
-//                vc.title = title
-//                self.navigationController?.pushViewController(vc, animated: true)
+                let categoryId:Int = (viewModel.categories?[indexPath.row].id)!
+                let title = viewModel.categories?[indexPath.row].name
+                let vc = LBFMBroadcastListController(url: nil, categoryId: categoryId,isMoreCategory:true)
+                vc.title = title
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
         
@@ -192,11 +192,11 @@ extension LBFMHomeBroadcastController:LBFMRadioSquareResultsCellDelegate {
             
         }else {
             // 截取参数
-//            var split = url.components(separatedBy: ".com")
-//            let string = split[1]
-//            let vc = LBFMBroadcastListController(url: string, categoryId: 0,isMoreCategory:false)
-//            vc.title = title
-//            self.navigationController?.pushViewController(vc, animated: true)
+            var split = url.components(separatedBy: ".com")
+            let string = split[1]
+            let vc = LBFMBroadcastListController(url: string, categoryId: 0,isMoreCategory:false)
+            vc.title = title
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
