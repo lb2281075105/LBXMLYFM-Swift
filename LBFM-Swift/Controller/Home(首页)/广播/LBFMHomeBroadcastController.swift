@@ -34,7 +34,6 @@ class LBFMHomeBroadcastController: UIViewController {
         collection.register(LBFMRadioFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRadioFooterViewID)
         // 注册不同分区cell
         collection.register(LBFMHomeRadiosCell.self, forCellWithReuseIdentifier:LBFMHomeRadiosCellID)
-        // collection.register(RadioCategoriesCell.self, forCellWithReuseIdentifier:RadioCategoriesCellID)
         collection.register(LBFMRadioSquareResultsCell.self, forCellWithReuseIdentifier:LBFMRadioSquareResultsCellID)
         
         collection.uHead = URefreshHeader{ [weak self] in self?.setupLoadData() }
@@ -169,7 +168,7 @@ extension LBFMHomeBroadcastController: UICollectionViewDelegate, UICollectionVie
         if kind == UICollectionElementKindSectionHeader {
             let headerView :LBFMRadioHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRadioHeaderViewID, for: indexPath) as! LBFMRadioHeaderView
             headerView.backgroundColor = UIColor.white
-            headerView.titStr = viewModel.titleArray[indexPath.section-2]
+            headerView.titStr = viewModel.titleArray[indexPath.section - 2]
             return headerView
         }else {
             let footerView :LBFMRadioFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRadioFooterViewID, for: indexPath) as! LBFMRadioFooterView

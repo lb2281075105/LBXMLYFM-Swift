@@ -66,7 +66,7 @@ extension LBFMHomeBroadcastViewModel {
                 return self.categories?.count ?? 0
             }else {
                 let num:Int = self.categories?.count ?? 0
-                return num/2
+                return num / 2
             }
         }else if section == LBFMHomeBroadcastSectionLocal {
             return self.localRadios?.count ?? 0

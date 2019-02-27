@@ -25,10 +25,10 @@ class LBFMRadioHeaderView: UICollectionReusableView {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpUI()
+        setUpLayout()
     }
     
-    func setUpUI(){
+    func setUpLayout(){
         self.addSubview(self.titleLabel)
         self.titleLabel.text = "最热有声读物"
         self.titleLabel.snp.makeConstraints { (make) in
