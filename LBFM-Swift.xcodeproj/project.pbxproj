@@ -496,6 +496,11 @@
 			isa = PBXGroup;
 			children = (
 				3A95333C2203F1D000E4DC70 /* LBFMFindController.swift */,
+				3A9CF572222638AE0093B36A /* Controller */,
+				3A9CF571222638250093B36A /* API */,
+				3A9CF56F222638250093B36A /* Model */,
+				3A9CF56E222638250093B36A /* View */,
+				3A9CF570222638250093B36A /* ViewModel */,
 			);
 			path = "Find(发现)";
 			sourceTree = "<group>";
@@ -717,6 +722,65 @@
 				3A9CF56C222625220093B36A /* LBFMHomeRadiosCell.swift */,
 			);
 			path = "单元格";
+			sourceTree = "<group>";
+		};
+		3A9CF56E222638250093B36A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A9CF56F222638250093B36A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A9CF570222638250093B36A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3A9CF571222638250093B36A /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3A9CF572222638AE0093B36A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF573222638AE0093B36A /* 关注状态 */,
+				3A9CF574222638AE0093B36A /* 推荐状态 */,
+				3A9CF575222638AE0093B36A /* 趣配音 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3A9CF573222638AE0093B36A /* 关注状态 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "关注状态";
+			sourceTree = "<group>";
+		};
+		3A9CF574222638AE0093B36A /* 推荐状态 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "推荐状态";
+			sourceTree = "<group>";
+		};
+		3A9CF575222638AE0093B36A /* 趣配音 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "趣配音";
 			sourceTree = "<group>";
 		};
 		3ACA6E142223607800202E98 /* View */ = {
