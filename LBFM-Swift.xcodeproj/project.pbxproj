@@ -55,6 +55,12 @@
 		3A9533882204258800E4DC70 /* LBFMHomeLiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533872204258800E4DC70 /* LBFMHomeLiveController.swift */; };
 		3A95338A2204259B00E4DC70 /* LBFMHomeBroadcastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533892204259B00E4DC70 /* LBFMHomeBroadcastController.swift */; };
 		3A95338C2204274500E4DC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95338B2204274500E4DC70 /* ViewController.swift */; };
+		3A9CF55422261DDB0093B36A /* LBFMBroadcastListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF55322261DDB0093B36A /* LBFMBroadcastListController.swift */; };
+		3A9CF55922261E1B0093B36A /* LBFMHomeBroadcastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF55822261E1B0093B36A /* LBFMHomeBroadcastAPI.swift */; };
+		3A9CF55B22261E6E0093B36A /* LBFMHomeBroadcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF55A22261E6E0093B36A /* LBFMHomeBroadcastModel.swift */; };
+		3A9CF55D22261EE00093B36A /* LBFMHomeBroadcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF55C22261EE00093B36A /* LBFMHomeBroadcastViewModel.swift */; };
+		3A9CF5602226216B0093B36A /* LBFMRadioSquareResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF55F2226216B0093B36A /* LBFMRadioSquareResultsCell.swift */; };
+		3A9CF562222621BC0093B36A /* LBFMRadioSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF561222621BC0093B36A /* LBFMRadioSquareCell.swift */; };
 		3ACA6E112222559000202E98 /* LBFMListenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */; };
 		3ACA6E1322225A3700202E98 /* LBFMListenChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */; };
 		3ACA6E162223608900202E98 /* LBFMListenFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */; };
@@ -156,6 +162,12 @@
 		3A9533872204258800E4DC70 /* LBFMHomeLiveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeLiveController.swift; sourceTree = "<group>"; };
 		3A9533892204259B00E4DC70 /* LBFMHomeBroadcastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeBroadcastController.swift; sourceTree = "<group>"; };
 		3A95338B2204274500E4DC70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A9CF55322261DDB0093B36A /* LBFMBroadcastListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMBroadcastListController.swift; sourceTree = "<group>"; };
+		3A9CF55822261E1B0093B36A /* LBFMHomeBroadcastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeBroadcastAPI.swift; sourceTree = "<group>"; };
+		3A9CF55A22261E6E0093B36A /* LBFMHomeBroadcastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeBroadcastModel.swift; sourceTree = "<group>"; };
+		3A9CF55C22261EE00093B36A /* LBFMHomeBroadcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeBroadcastViewModel.swift; sourceTree = "<group>"; };
+		3A9CF55F2226216B0093B36A /* LBFMRadioSquareResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRadioSquareResultsCell.swift; sourceTree = "<group>"; };
+		3A9CF561222621BC0093B36A /* LBFMRadioSquareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRadioSquareCell.swift; sourceTree = "<group>"; };
 		3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenHeaderView.swift; sourceTree = "<group>"; };
 		3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenChannelController.swift; sourceTree = "<group>"; };
 		3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenFooterView.swift; sourceTree = "<group>"; };
@@ -575,6 +587,11 @@
 			isa = PBXGroup;
 			children = (
 				3A9533892204259B00E4DC70 /* LBFMHomeBroadcastController.swift */,
+				3A9CF55722261E0C0093B36A /* API */,
+				3A9CF54F22261DBB0093B36A /* Controller */,
+				3A9CF55022261DBC0093B36A /* Model */,
+				3A9CF55122261DBC0093B36A /* View */,
+				3A9CF55222261DBC0093B36A /* ViewModel */,
 			);
 			path = "广播";
 			sourceTree = "<group>";
@@ -615,6 +632,55 @@
 				3ACA6E4022239D7500202E98 /* ViewModel */,
 			);
 			path = VIP;
+			sourceTree = "<group>";
+		};
+		3A9CF54F22261DBB0093B36A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF55322261DDB0093B36A /* LBFMBroadcastListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3A9CF55022261DBC0093B36A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF55A22261E6E0093B36A /* LBFMHomeBroadcastModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A9CF55122261DBC0093B36A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF55E222621520093B36A /* 头部分类 */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A9CF55222261DBC0093B36A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF55C22261EE00093B36A /* LBFMHomeBroadcastViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3A9CF55722261E0C0093B36A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF55822261E1B0093B36A /* LBFMHomeBroadcastAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3A9CF55E222621520093B36A /* 头部分类 */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF55F2226216B0093B36A /* LBFMRadioSquareResultsCell.swift */,
+				3A9CF561222621BC0093B36A /* LBFMRadioSquareCell.swift */,
+			);
+			path = "头部分类";
 			sourceTree = "<group>";
 		};
 		3ACA6E142223607800202E98 /* View */ = {
@@ -1100,6 +1166,7 @@
 				3A95338C2204274500E4DC70 /* ViewController.swift in Sources */,
 				3ACA6E2322236A0E00202E98 /* LBFMListenChannelCell.swift in Sources */,
 				3A40DAC8221FFE7700A4C734 /* LBFMListenSubscibeController.swift in Sources */,
+				3A9CF55D22261EE00093B36A /* LBFMHomeBroadcastViewModel.swift in Sources */,
 				3ACA6E2C2223892900202E98 /* LBFMListenRecommendViewModel.swift in Sources */,
 				3ACA6E7F2223D1E100202E98 /* LBFMRecommendLiveCell.swift in Sources */,
 				3ACA6E332223931C00202E98 /* LBFMHomeClassifyViewModel.swift in Sources */,
@@ -1107,6 +1174,7 @@
 				3ACA6E612223BD3A00202E98 /* LBFMHomeVIPCell.swift in Sources */,
 				3A40DAC1221FE74E00A4C734 /* ReplicatorLayer.swift in Sources */,
 				3ACA6E372223934100202E98 /* LBFMHomeClassifyAPI.swift in Sources */,
+				3A9CF55422261DDB0093B36A /* LBFMBroadcastListController.swift in Sources */,
 				3ACA6E21222368D100202E98 /* LBFMListenChannelViewModel.swift in Sources */,
 				3ACA6E4B22239ED900202E98 /* LBFMHomeVipBannerCell.swift in Sources */,
 				3A9533512203FB9500E4DC70 /* WRCustomNavigationBar.swift in Sources */,
@@ -1117,6 +1185,7 @@
 				3ACA6E192223613D00202E98 /* LBFMListenSubscibeViewModel.swift in Sources */,
 				3ACA6E6C2223C97700202E98 /* LBFMHomeLiveViewModel.swift in Sources */,
 				3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */,
+				3A9CF55922261E1B0093B36A /* LBFMHomeBroadcastAPI.swift in Sources */,
 				3A95333F2203F1DD00E4DC70 /* LBFMListenController.swift in Sources */,
 				3ACA6E1322225A3700202E98 /* LBFMListenChannelController.swift in Sources */,
 				3AF87044221F9ACD0078F0A8 /* LBFMRecommendNewsCell.swift in Sources */,
@@ -1153,7 +1222,9 @@
 				3A9533532203FB9500E4DC70 /* WRCycleScrollView.swift in Sources */,
 				3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */,
 				3ACA6E792223CC8500202E98 /* LBFMHomeLiveRankCell.swift in Sources */,
+				3A9CF5602226216B0093B36A /* LBFMRadioSquareResultsCell.swift in Sources */,
 				3ACA6E4F22239F1E00202E98 /* LBFMVipCategoryCell.swift in Sources */,
+				3A9CF55B22261E6E0093B36A /* LBFMHomeBroadcastModel.swift in Sources */,
 				3A95335A220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift in Sources */,
 				3ACA6E162223608900202E98 /* LBFMListenFooterView.swift in Sources */,
 				3A95333D2203F1D000E4DC70 /* LBFMFindController.swift in Sources */,
@@ -1169,6 +1240,7 @@
 				3ACA6E2A2223888C00202E98 /* LBFMListenRecommendCell.swift in Sources */,
 				3A40DACA221FFE8F00A4C734 /* LBFMListenRecommendController.swift in Sources */,
 				3A26D5E62216BBAF0080A362 /* LBFMRecommendHeaderCell.swift in Sources */,
+				3A9CF562222621BC0093B36A /* LBFMRadioSquareCell.swift in Sources */,
 				3A40DAC3221FEAA500A4C734 /* LBRecommendForYouCell.swift in Sources */,
 				3A9533822204254800E4DC70 /* LBFMHomeClassifyController.swift in Sources */,
 				3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */,
