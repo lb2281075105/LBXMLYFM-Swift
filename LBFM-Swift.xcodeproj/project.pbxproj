@@ -61,6 +61,7 @@
 		3A9CF55D22261EE00093B36A /* LBFMHomeBroadcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF55C22261EE00093B36A /* LBFMHomeBroadcastViewModel.swift */; };
 		3A9CF5602226216B0093B36A /* LBFMRadioSquareResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF55F2226216B0093B36A /* LBFMRadioSquareResultsCell.swift */; };
 		3A9CF562222621BC0093B36A /* LBFMRadioSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF561222621BC0093B36A /* LBFMRadioSquareCell.swift */; };
+		3A9CF565222623700093B36A /* LBFMRadioCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF564222623700093B36A /* LBFMRadioCategoriesCell.swift */; };
 		3ACA6E112222559000202E98 /* LBFMListenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */; };
 		3ACA6E1322225A3700202E98 /* LBFMListenChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */; };
 		3ACA6E162223608900202E98 /* LBFMListenFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */; };
@@ -168,6 +169,7 @@
 		3A9CF55C22261EE00093B36A /* LBFMHomeBroadcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHomeBroadcastViewModel.swift; sourceTree = "<group>"; };
 		3A9CF55F2226216B0093B36A /* LBFMRadioSquareResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRadioSquareResultsCell.swift; sourceTree = "<group>"; };
 		3A9CF561222621BC0093B36A /* LBFMRadioSquareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRadioSquareCell.swift; sourceTree = "<group>"; };
+		3A9CF564222623700093B36A /* LBFMRadioCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRadioCategoriesCell.swift; sourceTree = "<group>"; };
 		3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenHeaderView.swift; sourceTree = "<group>"; };
 		3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenChannelController.swift; sourceTree = "<group>"; };
 		3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenFooterView.swift; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 		3A9CF55122261DBC0093B36A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3A9CF563222623470093B36A /* 头部更多分类 */,
 				3A9CF55E222621520093B36A /* 头部分类 */,
 			);
 			path = View;
@@ -681,6 +684,14 @@
 				3A9CF561222621BC0093B36A /* LBFMRadioSquareCell.swift */,
 			);
 			path = "头部分类";
+			sourceTree = "<group>";
+		};
+		3A9CF563222623470093B36A /* 头部更多分类 */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF564222623700093B36A /* LBFMRadioCategoriesCell.swift */,
+			);
+			path = "头部更多分类";
 			sourceTree = "<group>";
 		};
 		3ACA6E142223607800202E98 /* View */ = {
@@ -1236,6 +1247,7 @@
 				3ACA6E4D22239EEC00202E98 /* LBFMHomeVipCategoriesCell.swift in Sources */,
 				3ACA6E4722239DAD00202E98 /* LBFMHomeVipAPI.swift in Sources */,
 				3A40DAB7221FE35200A4C734 /* LBFMOneKeyListenCell.swift in Sources */,
+				3A9CF565222623700093B36A /* LBFMRadioCategoriesCell.swift in Sources */,
 				3ACA6E592223B83500202E98 /* LBFMHomeVipHotCell.swift in Sources */,
 				3ACA6E2A2223888C00202E98 /* LBFMListenRecommendCell.swift in Sources */,
 				3A40DACA221FFE8F00A4C734 /* LBFMListenRecommendController.swift in Sources */,
