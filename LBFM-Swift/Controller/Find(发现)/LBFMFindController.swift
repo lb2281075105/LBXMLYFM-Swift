@@ -18,10 +18,10 @@ class LBFMFindController: UIViewController {
     }()
     
     private lazy var viewControllers: [UIViewController] = {
-        let oneVc = LBFMFindAttentionController()
-        let twoVc = LBFMFindRecommendController()
-        let threeVc = LBFMFindDudController()
-        return [oneVc, twoVc, threeVc]
+        let findAttentionVC = LBFMFindAttentionController()
+        let findRecommendVC = LBFMFindRecommendController()
+        let findDuDYVC = LBFMFindDudController()
+        return [findAttentionVC, findRecommendVC, findDuDYVC]
     }()
     
     private lazy var titles: [String] = {

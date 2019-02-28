@@ -9,111 +9,60 @@
 import UIKit
 import LTScrollView
 
-class LBFMFindController: UIViewController {
-    // - headerView
-    private lazy var headerView:LBFMFindHeaderView = {
-        let view = LBFMFindHeaderView.init(frame: CGRect(x:0, y:0, width:LBFMScreenWidth, height:190))
-        view.backgroundColor = UIColor.white
-        return view
+class LBFindAttentionController: UIViewController , LTTableViewProtocal{
+    
+    private let LBFMFindAttentionCellID = "LBFMFindAttentionCell"
+    
+    private lazy var tableView: UITableView = {
+        let tableView = tableViewConfig(CGRect(x: 0, y: 0, width:LBFMScreenWidth, height: LBFMScreenHeight - LBFMNavBarHeight - LBFMTabBarHeight), self, self, nil)
+        tableView.register(LBFMFindAttentionCell.self, forCellReuseIdentifier: LBFMFindAttentionCellID)
+        return tableView
     }()
     
-    private lazy var viewControllers: [UIViewController] = {
-        let oneVc = LBFMFindAttentionController()
-        let twoVc = LBFMFindRecommendController()
-        let threeVc = LBFMFindDudController()
-        return [oneVc, twoVc, threeVc]
-    }()
     
-    private lazy var titles: [String] = {
-        return ["关注动态", "推荐动态", "趣配音"]
-    }()
-    
-    private lazy var layout: LTLayout = {
-        let layout = LTLayout()
-        layout.isAverage = true
-        layout.sliderWidth = 80
-        layout.titleViewBgColor = UIColor.white
-        layout.titleColor = UIColor(r: 178, g: 178, b: 178)
-        layout.titleSelectColor = UIColor(r: 16, g: 16, b: 16)
-        layout.bottomLineColor = UIColor.red
-        layout.sliderHeight = 56
-        /* 更多属性设置请参考 LTLayout 中 public 属性说明 */
-        return layout
-    }()
-    
-    private lazy var advancedManager: LTAdvancedManager = {
-        let statusBarH = UIApplication.shared.statusBarFrame.size.height
-        let advancedManager = LTAdvancedManager(frame: CGRect(x: 0, y: navigationBarHeight, width: YYScreenWidth, height: YYScreenHeigth-navigationBarHeight), viewControllers: viewControllers, titles: titles, currentViewController: self, layout: layout, headerViewHandle: {[weak self] in
-            guard let strongSelf = self else { return UIView() }
-            let headerView = strongSelf.headerView
-            return headerView
-        })
-        /* 设置代理 监听滚动 */
-        advancedManager.delegate = self
-        /* 设置悬停位置 */
-        //        advancedManager.hoverY = navigationBarHeight
-        /* 点击切换滚动过程动画 */
-        //        advancedManager.isClickScrollAnimation = true
-        /* 代码设置滚动到第几个位置 */
-        //        advancedManager.scrollToIndex(index: viewControllers.count - 1)
-        return advancedManager
-    }()
-    
-    //Mark: - 导航栏左边按钮
-    private lazy var leftBarButton:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "msg"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(leftBarButtonClick), for: UIControlEvents.touchUpInside)
-        return button
-    }()
-    //Mark: - 导航栏右边按钮
-    private lazy var rightBarButton:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "搜索"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(rightBarButtonClick), for: UIControlEvents.touchUpInside)
-        return button
+    lazy var viewModel: LBFMFindAttentionViewModel = {
+        return LBFMFindAttentionViewModel()
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-        self.automaticallyAdjustsScrollViewInsets = false
-        view.addSubview(advancedManager)
-        advancedManagerConfig()
+        self.view.backgroundColor = UIColor.white
+        self.view.addSubview(tableView)
+        glt_scrollView = tableView
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         
-        // 导航栏左右item
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: leftBarButton)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: rightBarButton)
-        
+        setupLoadData()
     }
     
-    deinit {
-        print("FMFindController < --> deinit")
+    func setupLoadData() {
+        // 加载数据
+        viewModel.updataBlock = { [unowned self] in
+            // 更新列表数据
+            self.tableView.reloadData()
+        }
+        viewModel.refreshDataSource()
     }
     
-    //Mark: - 导航栏左边消息点击事件
-    @objc func leftBarButtonClick() {
-        
-    }
-    //Mark: - 导航栏左边消息点击事件
-    @objc func rightBarButtonClick() {
-        
-    }
 }
 
-extension FMFindController : LTAdvancedScrollViewDelegate {
-    //MARK: 具体使用请参考以下
-    private func advancedManagerConfig() {
-        //MARK: 选中事件
-        advancedManager.advancedDidSelectIndexHandle = {
-            print("选中了 -> \($0)")
-        }
+extension LBFindAttentionController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection(section: section)
     }
     
-    func glt_scrollViewOffsetY(_ offsetY: CGFloat) {
-        //        print("offset --> ", offsetY)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRowAt(indexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:LBFMFindAttentionCell = tableView.dequeueReusableCell(withIdentifier: LBFMFindAttentionCellID, for: indexPath) as! LBFMFindAttentionCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.eventInfosModel = viewModel.eventInfos?[indexPath.row]
+        return cell
     }
 }
 
