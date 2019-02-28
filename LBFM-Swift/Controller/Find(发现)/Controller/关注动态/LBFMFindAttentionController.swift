@@ -9,7 +9,7 @@
 import UIKit
 import LTScrollView
 
-class LBFindAttentionController: UIViewController , LTTableViewProtocal{
+class LBFMFindAttentionController: UIViewController , LTTableViewProtocal{
     
     private let LBFMFindAttentionCellID = "LBFMFindAttentionCell"
     
@@ -49,7 +49,7 @@ class LBFindAttentionController: UIViewController , LTTableViewProtocal{
     
 }
 
-extension LBFindAttentionController : UITableViewDelegate, UITableViewDataSource {
+extension LBFMFindAttentionController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection(section: section)
     }

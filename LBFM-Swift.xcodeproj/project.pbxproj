@@ -78,6 +78,7 @@
 		3A9CF5DA2227782B0093B36A /* LBFMFindAttentionPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5D92227782B0093B36A /* LBFMFindAttentionPicCell.swift */; };
 		3A9CF5DC222779640093B36A /* LBFMFindDudCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5DB222779640093B36A /* LBFMFindDudCell.swift */; };
 		3A9CF5DF22277A080093B36A /* LBFMFindAttentionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5DE22277A080093B36A /* LBFMFindAttentionViewModel.swift */; };
+		3A9CF5E322277F110093B36A /* LBFMCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5E222277F110093B36A /* LBFMCustomLabel.swift */; };
 		3ACA6E112222559000202E98 /* LBFMListenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */; };
 		3ACA6E1322225A3700202E98 /* LBFMListenChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */; };
 		3ACA6E162223608900202E98 /* LBFMListenFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */; };
@@ -202,6 +203,7 @@
 		3A9CF5D92227782B0093B36A /* LBFMFindAttentionPicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindAttentionPicCell.swift; sourceTree = "<group>"; };
 		3A9CF5DB222779640093B36A /* LBFMFindDudCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindDudCell.swift; sourceTree = "<group>"; };
 		3A9CF5DE22277A080093B36A /* LBFMFindAttentionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindAttentionViewModel.swift; sourceTree = "<group>"; };
+		3A9CF5E222277F110093B36A /* LBFMCustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMCustomLabel.swift; sourceTree = "<group>"; };
 		3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenHeaderView.swift; sourceTree = "<group>"; };
 		3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenChannelController.swift; sourceTree = "<group>"; };
 		3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenFooterView.swift; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 		3A9533332203F11D00E4DC70 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3A9CF5E122277F110093B36A /* CustomLabel */,
 				3A40DABF221FE74E00A4C734 /* ReplicatorLayer */,
 				3A26D5DC22169F3B0080A362 /* Refresh */,
 				3A9533492203FB9500E4DC70 /* WRNavigationBar */,
@@ -806,10 +809,9 @@
 		3A9CF5CB222774E70093B36A /* 关注动态 */ = {
 			isa = PBXGroup;
 			children = (
+				3A9CF5E022277E120093B36A /* View */,
 				3A9CF5DD222779F00093B36A /* ViewModel */,
 				3A9CF5CD222774F70093B36A /* LBFMFindAttentionController.swift */,
-				3A9CF5D7222777EA0093B36A /* LBFMFindAttentionCell.swift */,
-				3A9CF5D92227782B0093B36A /* LBFMFindAttentionPicCell.swift */,
 			);
 			path = "关注动态";
 			sourceTree = "<group>";
@@ -828,6 +830,23 @@
 				3A9CF5DE22277A080093B36A /* LBFMFindAttentionViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3A9CF5E022277E120093B36A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF5D7222777EA0093B36A /* LBFMFindAttentionCell.swift */,
+				3A9CF5D92227782B0093B36A /* LBFMFindAttentionPicCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A9CF5E122277F110093B36A /* CustomLabel */ = {
+			isa = PBXGroup;
+			children = (
+				3A9CF5E222277F110093B36A /* LBFMCustomLabel.swift */,
+			);
+			path = CustomLabel;
 			sourceTree = "<group>";
 		};
 		3ACA6E142223607800202E98 /* View */ = {
@@ -1361,6 +1380,7 @@
 				3ACA6E3B222395FE00202E98 /* LBFMHomeClassifyFooterView.swift in Sources */,
 				3A9CF5DC222779640093B36A /* LBFMFindDudCell.swift in Sources */,
 				3A40DAA9221FD4F300A4C734 /* LBFMGuessYouLikeCell.swift in Sources */,
+				3A9CF5E322277F110093B36A /* LBFMCustomLabel.swift in Sources */,
 				3A95337B2204207A00E4DC70 /* AppDelegate.swift in Sources */,
 				3A953356220408C900E4DC70 /* LBFMBasicContentView.swift in Sources */,
 				3ACA6E2622237A5800202E98 /* LBFMListenMoreChannelController.swift in Sources */,

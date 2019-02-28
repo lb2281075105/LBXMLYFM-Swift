@@ -18,6 +18,8 @@ class LBFMFindAttentionPicCell: UICollectionViewCell {
         self.addSubview(self.imageView)
         self.imageView.layer.masksToBounds = true
         self.imageView.layer.cornerRadius = 5
+        self.imageView.contentMode = UIView.ContentMode.scaleToFill
+        self.imageView.clipsToBounds = true
         self.imageView.snp.makeConstraints { (make) in
             make.left.top.right.bottom.equalToSuperview()
         }
