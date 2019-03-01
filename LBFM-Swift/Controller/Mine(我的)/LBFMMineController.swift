@@ -91,14 +91,14 @@ class LBFMMineController: UIViewController {
     }
     // - 导航栏右边设置点击事件
     @objc func rightBarButtonClick() {
-//        let setVC = LBMineSetController()
-//        self.navigationController?.pushViewController(setVC, animated: true)
+        let setVC = LBFMMineSetController()
+        self.navigationController?.pushViewController(setVC, animated: true)
     }
 }
 
 
 
-// -TableView Delegate
+// - TableView Delegate
 extension LBFMMineController : UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4

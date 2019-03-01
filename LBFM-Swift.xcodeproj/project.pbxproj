@@ -83,6 +83,7 @@
 		3AB649022228C15800733761 /* LBFMVipAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB649012228C15800733761 /* LBFMVipAnimationView.swift */; };
 		3AB649042228C17300733761 /* LBFMMineMakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB649032228C17300733761 /* LBFMMineMakeCell.swift */; };
 		3AB649062228C1B300733761 /* LBFMCVLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB649052228C1B300733761 /* LBFMCVLayerView.swift */; };
+		3AB649092228C4CA00733761 /* LBFMMineSetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB649082228C4CA00733761 /* LBFMMineSetController.swift */; };
 		3ACA6E112222559000202E98 /* LBFMListenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */; };
 		3ACA6E1322225A3700202E98 /* LBFMListenChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */; };
 		3ACA6E162223608900202E98 /* LBFMListenFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */; };
@@ -212,6 +213,7 @@
 		3AB649012228C15800733761 /* LBFMVipAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMVipAnimationView.swift; sourceTree = "<group>"; };
 		3AB649032228C17300733761 /* LBFMMineMakeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMMineMakeCell.swift; sourceTree = "<group>"; };
 		3AB649052228C1B300733761 /* LBFMCVLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMCVLayerView.swift; sourceTree = "<group>"; };
+		3AB649082228C4CA00733761 /* LBFMMineSetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMMineSetController.swift; sourceTree = "<group>"; };
 		3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenHeaderView.swift; sourceTree = "<group>"; };
 		3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenChannelController.swift; sourceTree = "<group>"; };
 		3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenFooterView.swift; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9533402203F1E900E4DC70 /* LBFMMineController.swift */,
+				3AB649072228C4B400733761 /* Controller */,
 				3AB648FC2228BFE100733761 /* API */,
 				3AB648FB2228BFE100733761 /* Model */,
 				3AB648FD2228BFE100733761 /* View */,
@@ -891,6 +894,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3AB649072228C4B400733761 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3AB649082228C4CA00733761 /* LBFMMineSetController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3ACA6E142223607800202E98 /* View */ = {
@@ -1397,6 +1408,7 @@
 				3A9CF5D42227761E0093B36A /* LBFMFindHeaderView.swift in Sources */,
 				3AB649002228C0F100733761 /* LBFMMineHeaderView.swift in Sources */,
 				3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */,
+				3AB649092228C4CA00733761 /* LBFMMineSetController.swift in Sources */,
 				3ACA6E7C2223CC8500202E98 /* LBFMHomeLiveGridCell.swift in Sources */,
 				3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */,
 				3ACA6E192223613D00202E98 /* LBFMListenSubscibeViewModel.swift in Sources */,
