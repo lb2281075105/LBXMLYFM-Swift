@@ -16,10 +16,8 @@ class LBFMMineController: UIViewController {
     private lazy var dataSource: Array = {
         return [[["icon":"钱数", "title": "分享赚钱"],
                  ["icon":"沙漏", "title": "免流量服务"]],
-                
                 [["icon":"扫一扫", "title": "扫一扫"],
                  ["icon":"月亮", "title": "夜间模式"]],
-                
                 [["icon":"意见反馈", "title": "帮助与反馈"]]]
     }()
     

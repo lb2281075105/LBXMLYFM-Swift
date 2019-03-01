@@ -31,8 +31,10 @@ class LBFMCVLayerView: UIView {
         let replicatorLayer = CAReplicatorLayer()
         replicatorLayer.bounds = CGRect(x: 0, y: 0, width: width, height: width)
         replicatorLayer.position = CGPoint(x: width/2, y: width/2)
-        replicatorLayer.instanceCount = 3  // 三个复制图层
-        replicatorLayer.instanceDelay = 1  // 频率
+        // 三个复制图层
+        replicatorLayer.instanceCount = 3
+        // 频率
+        replicatorLayer.instanceDelay = 1
         replicatorLayer.addSublayer(pulseLayer)
         self.layer.addSublayer(replicatorLayer)
         self.layer.insertSublayer(replicatorLayer, at: 0)
@@ -41,8 +43,10 @@ class LBFMCVLayerView: UIView {
     func starAnimation() {
         // 透明
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        opacityAnimation.fromValue = 1.0  // 起始值
-        opacityAnimation.toValue = 0     // 结束值
+        // 起始值
+        opacityAnimation.fromValue = 1.0
+        // 结束值
+        opacityAnimation.toValue = 0
         
         // 扩散动画
         let scaleAnimation = CABasicAnimation(keyPath: "transform")
@@ -53,13 +57,14 @@ class LBFMCVLayerView: UIView {
         // 给CAShapeLayer添加组合动画
         let groupAnimation = CAAnimationGroup()
         groupAnimation.animations = [opacityAnimation,scaleAnimation]
-        groupAnimation.duration = 3   //持续时间
-        groupAnimation.autoreverses = false //循环效果
+        // 持续时间
+        groupAnimation.duration = 3
+        // 循环效果
+        groupAnimation.autoreverses = false
         groupAnimation.repeatCount = HUGE
         groupAnimation.isRemovedOnCompletion = false
         pulseLayer.add(groupAnimation, forKey: nil)
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
