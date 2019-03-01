@@ -79,6 +79,10 @@
 		3A9CF5DC222779640093B36A /* LBFMFindDudCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5DB222779640093B36A /* LBFMFindDudCell.swift */; };
 		3A9CF5DF22277A080093B36A /* LBFMFindAttentionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5DE22277A080093B36A /* LBFMFindAttentionViewModel.swift */; };
 		3A9CF5E322277F110093B36A /* LBFMCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5E222277F110093B36A /* LBFMCustomLabel.swift */; };
+		3AB649002228C0F100733761 /* LBFMMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB648FF2228C0F100733761 /* LBFMMineHeaderView.swift */; };
+		3AB649022228C15800733761 /* LBFMVipAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB649012228C15800733761 /* LBFMVipAnimationView.swift */; };
+		3AB649042228C17300733761 /* LBFMMineMakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB649032228C17300733761 /* LBFMMineMakeCell.swift */; };
+		3AB649062228C1B300733761 /* LBFMCVLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB649052228C1B300733761 /* LBFMCVLayerView.swift */; };
 		3ACA6E112222559000202E98 /* LBFMListenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */; };
 		3ACA6E1322225A3700202E98 /* LBFMListenChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */; };
 		3ACA6E162223608900202E98 /* LBFMListenFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */; };
@@ -204,6 +208,10 @@
 		3A9CF5DB222779640093B36A /* LBFMFindDudCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindDudCell.swift; sourceTree = "<group>"; };
 		3A9CF5DE22277A080093B36A /* LBFMFindAttentionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindAttentionViewModel.swift; sourceTree = "<group>"; };
 		3A9CF5E222277F110093B36A /* LBFMCustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMCustomLabel.swift; sourceTree = "<group>"; };
+		3AB648FF2228C0F100733761 /* LBFMMineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMMineHeaderView.swift; sourceTree = "<group>"; };
+		3AB649012228C15800733761 /* LBFMVipAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMVipAnimationView.swift; sourceTree = "<group>"; };
+		3AB649032228C17300733761 /* LBFMMineMakeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMMineMakeCell.swift; sourceTree = "<group>"; };
+		3AB649052228C1B300733761 /* LBFMCVLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMCVLayerView.swift; sourceTree = "<group>"; };
 		3ACA6E102222559000202E98 /* LBFMListenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenHeaderView.swift; sourceTree = "<group>"; };
 		3ACA6E1222225A3700202E98 /* LBFMListenChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenChannelController.swift; sourceTree = "<group>"; };
 		3ACA6E152223608900202E98 /* LBFMListenFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMListenFooterView.swift; sourceTree = "<group>"; };
@@ -561,6 +569,10 @@
 			isa = PBXGroup;
 			children = (
 				3A9533402203F1E900E4DC70 /* LBFMMineController.swift */,
+				3AB648FC2228BFE100733761 /* API */,
+				3AB648FB2228BFE100733761 /* Model */,
+				3AB648FD2228BFE100733761 /* View */,
+				3AB648FE2228BFE100733761 /* ViewModel */,
 			);
 			path = "Mine(我的)";
 			sourceTree = "<group>";
@@ -847,6 +859,38 @@
 				3A9CF5E222277F110093B36A /* LBFMCustomLabel.swift */,
 			);
 			path = CustomLabel;
+			sourceTree = "<group>";
+		};
+		3AB648FB2228BFE100733761 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AB648FC2228BFE100733761 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3AB648FD2228BFE100733761 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AB648FF2228C0F100733761 /* LBFMMineHeaderView.swift */,
+				3AB649012228C15800733761 /* LBFMVipAnimationView.swift */,
+				3AB649032228C17300733761 /* LBFMMineMakeCell.swift */,
+				3AB649052228C1B300733761 /* LBFMCVLayerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AB648FE2228BFE100733761 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3ACA6E142223607800202E98 /* View */ = {
@@ -1337,6 +1381,7 @@
 				3A40DAC8221FFE7700A4C734 /* LBFMListenSubscibeController.swift in Sources */,
 				3A9CF55D22261EE00093B36A /* LBFMHomeBroadcastViewModel.swift in Sources */,
 				3ACA6E2C2223892900202E98 /* LBFMListenRecommendViewModel.swift in Sources */,
+				3AB649022228C15800733761 /* LBFMVipAnimationView.swift in Sources */,
 				3A9CF5C4222774090093B36A /* LBFMFindModel.swift in Sources */,
 				3ACA6E7F2223D1E100202E98 /* LBFMRecommendLiveCell.swift in Sources */,
 				3ACA6E332223931C00202E98 /* LBFMHomeClassifyViewModel.swift in Sources */,
@@ -1350,6 +1395,7 @@
 				3A9533512203FB9500E4DC70 /* WRCustomNavigationBar.swift in Sources */,
 				3A26D5E32216BB5D0080A362 /* LBFMRecommendFooterView.swift in Sources */,
 				3A9CF5D42227761E0093B36A /* LBFMFindHeaderView.swift in Sources */,
+				3AB649002228C0F100733761 /* LBFMMineHeaderView.swift in Sources */,
 				3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */,
 				3ACA6E7C2223CC8500202E98 /* LBFMHomeLiveGridCell.swift in Sources */,
 				3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */,
@@ -1398,6 +1444,7 @@
 				3A9533532203FB9500E4DC70 /* WRCycleScrollView.swift in Sources */,
 				3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */,
 				3ACA6E792223CC8500202E98 /* LBFMHomeLiveRankCell.swift in Sources */,
+				3AB649062228C1B300733761 /* LBFMCVLayerView.swift in Sources */,
 				3A9CF5DF22277A080093B36A /* LBFMFindAttentionViewModel.swift in Sources */,
 				3A9CF568222624070093B36A /* LBFMRadioHeaderView.swift in Sources */,
 				3A9CF5602226216B0093B36A /* LBFMRadioSquareResultsCell.swift in Sources */,
@@ -1422,6 +1469,7 @@
 				3A9CF5D0222775070093B36A /* LBFMFindRecommendController.swift in Sources */,
 				3ACA6E2A2223888C00202E98 /* LBFMListenRecommendCell.swift in Sources */,
 				3A40DACA221FFE8F00A4C734 /* LBFMListenRecommendController.swift in Sources */,
+				3AB649042228C17300733761 /* LBFMMineMakeCell.swift in Sources */,
 				3A9CF5D8222777EA0093B36A /* LBFMFindAttentionCell.swift in Sources */,
 				3A26D5E62216BBAF0080A362 /* LBFMRecommendHeaderCell.swift in Sources */,
 				3A9CF562222621BC0093B36A /* LBFMRadioSquareCell.swift in Sources */,
