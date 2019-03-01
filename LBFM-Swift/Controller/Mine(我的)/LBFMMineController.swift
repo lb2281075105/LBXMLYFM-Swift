@@ -98,7 +98,7 @@ class LBFMMineController: UIViewController {
 
 
 
-// - TableView Delegate
+// - 代理
 extension LBFMMineController : UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
