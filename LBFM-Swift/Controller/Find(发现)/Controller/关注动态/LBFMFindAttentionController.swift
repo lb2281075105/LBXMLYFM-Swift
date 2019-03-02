@@ -19,7 +19,7 @@ class LBFMFindAttentionController: UIViewController , LTTableViewProtocal{
         return tableView
     }()
     
-    
+    // 懒加载
     lazy var viewModel: LBFMFindAttentionViewModel = {
         return LBFMFindAttentionViewModel()
     }()
@@ -37,7 +37,7 @@ class LBFMFindAttentionController: UIViewController , LTTableViewProtocal{
         
         setupLoadData()
     }
-    
+    // 加载数据
     func setupLoadData() {
         // 加载数据
         viewModel.updataBlock = { [unowned self] in
