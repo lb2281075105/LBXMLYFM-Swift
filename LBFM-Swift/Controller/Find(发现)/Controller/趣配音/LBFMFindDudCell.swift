@@ -11,6 +11,8 @@ import UIKit
 class LBFMFindDudCell: UITableViewCell {
     lazy var picView : UIImageView = {
         let imageView = UIImageView()
+        imageView.clipsToBounds = true;
+        imageView.contentMode = UIView.ContentMode.scaleAspectFill
         return imageView
     }()
     
