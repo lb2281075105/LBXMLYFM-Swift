@@ -112,7 +112,7 @@ class LBFMFindAttentionCell: UITableViewCell {
         self.dateLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.picView)
             make.bottom.equalToSuperview().offset(-15)
-            make.width.equalTo(100)
+            make.width.equalTo(160)
             make.height.equalTo(20)
         }
         
