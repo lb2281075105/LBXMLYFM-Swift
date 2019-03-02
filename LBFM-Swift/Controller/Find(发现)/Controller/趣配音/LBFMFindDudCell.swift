@@ -9,6 +9,7 @@
 import UIKit
 
 class LBFMFindDudCell: UITableViewCell {
+    // 图片
     lazy var picView : UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true;
@@ -16,6 +17,7 @@ class LBFMFindDudCell: UITableViewCell {
         return imageView
     }()
     
+    // 头像
     lazy var iconView : UIImageView = {
         let imageView = UIImageView()
         return imageView
@@ -28,7 +30,6 @@ class LBFMFindDudCell: UITableViewCell {
         label.textColor = UIColor.white
         return label
     }()
-    
     
     // 昵称
     lazy var nameLabel : UILabel = {
