@@ -15,6 +15,12 @@ class LBFMFindAttentionPicCell: UICollectionViewCell {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        // 布局
+        setupLayout()
+    }
+    // 布局
+    func setupLayout() {
         self.addSubview(self.imageView)
         self.imageView.layer.masksToBounds = true
         self.imageView.layer.cornerRadius = 5

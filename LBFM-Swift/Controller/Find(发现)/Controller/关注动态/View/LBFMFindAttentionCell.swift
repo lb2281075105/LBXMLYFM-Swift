@@ -79,6 +79,7 @@ class LBFMFindAttentionCell: UITableViewCell {
     }
     
     func setUpLayout(){
+        // 头像
         self.addSubview(self.picView)
         self.picView.image = UIImage(named: "news.png")
         self.picView.layer.masksToBounds = true
@@ -88,7 +89,7 @@ class LBFMFindAttentionCell: UITableViewCell {
             make.top.equalToSuperview().offset(10)
             make.width.height.equalTo(40)
         }
-        
+        // 标题
         self.addSubview(self.nameLabel)
         self.nameLabel.text = "喜马拉雅好声音"
         self.nameLabel.snp.makeConstraints { (make) in
@@ -97,7 +98,7 @@ class LBFMFindAttentionCell: UITableViewCell {
             make.height.equalTo(30)
             make.centerY.equalTo(self.picView)
         }
-        
+        // 描述
         self.addSubview(self.desLabel)
         self.desLabel.text = "啦啦啦啦啦啦啦啦四六级发送到了解放塑料袋就分手发熟练度家纺"
         self.desLabel.snp.makeConstraints { (make) in
@@ -106,7 +107,7 @@ class LBFMFindAttentionCell: UITableViewCell {
             make.right.equalToSuperview().offset(-15)
             make.height.equalTo(50)
         }
-        
+        // 时间
         self.addSubview(self.dateLabel)
         self.dateLabel.text = "一天前"
         self.dateLabel.snp.makeConstraints { (make) in
@@ -115,7 +116,7 @@ class LBFMFindAttentionCell: UITableViewCell {
             make.width.equalTo(160)
             make.height.equalTo(20)
         }
-        
+        //
         self.addSubview(self.commnetLabel)
         self.commnetLabel.text = "8494"
         self.commnetLabel.snp.makeConstraints { (make) in
@@ -155,7 +156,7 @@ class LBFMFindAttentionCell: UITableViewCell {
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().offset(-10)
             make.top.equalTo(self.desLabel.snp.bottom).offset(5)
-            make.height.equalTo((LBFMScreenWidth - 30) / 3+20)
+            make.height.equalTo((LBFMScreenWidth - 30) / 3 + 20)
         }
     }
     
