@@ -264,14 +264,14 @@ extension LBFMHomeRecommendController:LBFMRecommendHeaderCellDelegate {
                 warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
                 SwiftMessages.show(config: warningConfig, view: warning)
             }else{
-//                let vc = ClassifySubMenuController(categoryId:Int(categoryId)!)
+//                let vc = LBFMClassifySubMenuController(categoryId:Int(categoryId)!)
 //                vc.title = title
 //                self.navigationController?.pushViewController(vc, animated: true)
             }
         }else{
-//            let vc = FMWebViewController(url:url)
-//            vc.title = title
-//            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = LBFMWebViewController(url:url)
+            vc.title = title
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
