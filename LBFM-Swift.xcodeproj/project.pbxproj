@@ -132,6 +132,8 @@
 		3AD3A9AD222A38D400367138 /* LBFMFindRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3A9AC222A38D400367138 /* LBFMFindRecommendCell.swift */; };
 		3AD3A9AF222A399600367138 /* LBFMFindRecommendPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3A9AE222A399600367138 /* LBFMFindRecommendPicCell.swift */; };
 		3AD3A9B1222C068100367138 /* LBFMWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3A9B0222C068100367138 /* LBFMWebViewController.swift */; };
+		3AD3A9B7222C087000367138 /* LBFMClassifySubRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3A9B6222C087000367138 /* LBFMClassifySubRecommendViewModel.swift */; };
+		3AD3A9B9222C088100367138 /* LBFMClassifySubMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3A9B8222C088100367138 /* LBFMClassifySubMenuModel.swift */; };
 		3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */; };
 		3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */; };
 		3AEFE58E2211471C00B88942 /* LBFMRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */; };
@@ -269,6 +271,8 @@
 		3AD3A9AC222A38D400367138 /* LBFMFindRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindRecommendCell.swift; sourceTree = "<group>"; };
 		3AD3A9AE222A399600367138 /* LBFMFindRecommendPicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindRecommendPicCell.swift; sourceTree = "<group>"; };
 		3AD3A9B0222C068100367138 /* LBFMWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMWebViewController.swift; sourceTree = "<group>"; };
+		3AD3A9B6222C087000367138 /* LBFMClassifySubRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMClassifySubRecommendViewModel.swift; sourceTree = "<group>"; };
+		3AD3A9B8222C088100367138 /* LBFMClassifySubMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMClassifySubMenuModel.swift; sourceTree = "<group>"; };
 		3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendAPI.swift; sourceTree = "<group>"; };
 		3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendModel.swift; sourceTree = "<group>"; };
 		3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendViewModel.swift; sourceTree = "<group>"; };
@@ -1019,6 +1023,10 @@
 		3ACA6E312223930000202E98 /* 二级分类 */ = {
 			isa = PBXGroup;
 			children = (
+				3AD3A9B2222C084B00367138 /* API */,
+				3AD3A9B5222C084B00367138 /* Model */,
+				3AD3A9B3222C084B00367138 /* View */,
+				3AD3A9B4222C084B00367138 /* ViewModel */,
 			);
 			path = "二级分类";
 			sourceTree = "<group>";
@@ -1204,6 +1212,36 @@
 				3AD3A9AE222A399600367138 /* LBFMFindRecommendPicCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3AD3A9B2222C084B00367138 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3AD3A9B3222C084B00367138 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AD3A9B4222C084B00367138 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3AD3A9B6222C087000367138 /* LBFMClassifySubRecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3AD3A9B5222C084B00367138 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AD3A9B8222C088100367138 /* LBFMClassifySubMenuModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3AEAA622221106BA00B46FA7 /* Controller */ = {
@@ -1496,6 +1534,7 @@
 				3ACA6E5D2223B97D00202E98 /* LBFMVipEnjoyCell.swift in Sources */,
 				3AD3A9B1222C068100367138 /* LBFMWebViewController.swift in Sources */,
 				3A40DAD82220014300A4C734 /* LBFMListenModel.swift in Sources */,
+				3AD3A9B9222C088100367138 /* LBFMClassifySubMenuModel.swift in Sources */,
 				3A9CF5D22227751D0093B36A /* LBFMFindDudController.swift in Sources */,
 				3A9533502203FB9500E4DC70 /* WRNavigationBar.swift in Sources */,
 				3A95338A2204259B00E4DC70 /* LBFMHomeBroadcastController.swift in Sources */,
@@ -1528,6 +1567,7 @@
 				3A40DAB7221FE35200A4C734 /* LBFMOneKeyListenCell.swift in Sources */,
 				3A9CF565222623700093B36A /* LBFMRadioCategoriesCell.swift in Sources */,
 				3ACA6E592223B83500202E98 /* LBFMHomeVipHotCell.swift in Sources */,
+				3AD3A9B7222C087000367138 /* LBFMClassifySubRecommendViewModel.swift in Sources */,
 				3A9CF5D6222776650093B36A /* LBFMFindCell.swift in Sources */,
 				3A9CF5D0222775070093B36A /* LBFMFindRecommendController.swift in Sources */,
 				3ACA6E2A2223888C00202E98 /* LBFMListenRecommendCell.swift in Sources */,
