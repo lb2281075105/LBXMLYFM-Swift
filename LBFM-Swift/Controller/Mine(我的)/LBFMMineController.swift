@@ -47,7 +47,8 @@ class LBFMMineController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.wr_viewWillAppear(animated)
+        super.viewWillAppear(animated)
+//        super.wr_viewWillAppear(animated)
         self.headerView.setAnimationViewAnimation()
     }
     
@@ -74,7 +75,7 @@ class LBFMMineController: UIViewController {
         navBarBarTintColor = UIColor.init(red: 247/255.0, green: 247/255.0, blue: 247/255.0, alpha: 1.0)
         // 设置初始导航栏透明度
         self.navBarBackgroundAlpha = 0
-        self.navigationItem.title = " "
+        self.navigationItem.title = "我的"
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(self.tableView)
         
