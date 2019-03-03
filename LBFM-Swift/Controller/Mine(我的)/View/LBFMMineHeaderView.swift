@@ -189,7 +189,7 @@ class LBFMMineHeaderView: UIView {
     
     /// 开始动画
     func setAnimationViewAnimation(){
-        let yorig:CGFloat = 100.0+64
+        let yorig:CGFloat = 100.0 + 64
         let opts: UIViewAnimationOptions = [.autoreverse , .repeat]
         UIView.animate(withDuration: 1, delay: 1, options: opts, animations: {
             self.animationView.center.y -= 20
