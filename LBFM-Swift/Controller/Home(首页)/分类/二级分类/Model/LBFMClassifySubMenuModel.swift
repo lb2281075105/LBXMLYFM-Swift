@@ -44,7 +44,7 @@ struct ClassifyCategoryContentsList: HandyJSON {
     var hasMore:Bool = false
     var keywordId:Int = 0
     var keywordName: String?
-    //    var list:[Any]?
+    // var list:[Any]?
     var list:[ClassifyVerticalModel]?
     var loopCount:Int = 0
     var moduleType:Int = 0
@@ -109,46 +109,46 @@ struct ClassifyVerticalModel:HandyJSON {
     var vipFreeType: Int = 0
     
     
-    ////14
+    // 14
     var bubbleText: String?
     var contentType: String?
     var contentUpdatedAt: Int = 0
     var coverPath: String?
     var displayClass: String?
     var enableShare:Bool = false
-    //    var id: Int = 0
+    // var id: Int = 0
     var isExternalUrl: Bool = false
     var properties:PropertiesModel?
     var sharePic: String?
     var subtitle: String?
-    //    var title: String?
+    // var title: String?
     var url: String?
     
     
     
     // 19
-    //    var id: Int = 0
+    // var id: Int = 0
     var list: [ClassifyModuleType19List]?
     
     
     // 20
-    //    var contentType: Int = 0
+    // var contentType: Int = 0
     var albums: [ClassifyModuleType20List]?
     var coverPathBig: String?
     var footnote: String?
-    //    var intro: String?
-    //    var nickname:String?
+    // var intro: String?
+    // var nickname:String?
     var personalSignature:String?
     var smallLogo:String?
     var specialId:Int = 0
-    //    var title:String?
-    //    var uid:Int = 0
+    // var title:String?
+    // var uid:Int = 0
     
     
-    //// 4
+    // 4
     var coverPathSmall:String?
     
-    ///16
+    // 16
     var name:String?
 }
 
