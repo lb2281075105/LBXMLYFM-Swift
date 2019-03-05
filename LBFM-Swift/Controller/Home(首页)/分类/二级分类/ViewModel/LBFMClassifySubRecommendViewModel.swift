@@ -18,15 +18,15 @@ class LBFMClassifySubRecommendViewModel: NSObject {
         self.categoryId = categoryId
     }
     
-    var classifyCategoryContentsList:[ClassifyCategoryContentsList]?
-    var classifyModuleType14List:[ClassifyModuleType14Model]?
-    var classifyModuleType19List:[ClassifyModuleType19Model]?
-    var classifyModuleType20Model:[ClassifyModuleType20Model]?
-    var classifyVerticalModel:[ClassifyVerticalModel]?
+    var classifyCategoryContentsList:[LBFMClassifyCategoryContentsList]?
+    var classifyModuleType14List:[LBFMClassifyModuleType14Model]?
+    var classifyModuleType19List:[LBFMClassifyModuleType19Model]?
+    var classifyModuleType20Model:[LBFMClassifyModuleType20Model]?
+    var classifyVerticalModel:[LBFMClassifyVerticalModel]?
     var focus:LBFMFocusModel?
     // - 数据源更新
-    typealias AddDataBlock = () ->Void
-    var updataBlock:AddDataBlock?
+    typealias LBFMAddDataBlock = () ->Void
+    var updataBlock:LBFMAddDataBlock?
 }
 
 // - 请求数据
@@ -38,8 +38,8 @@ extension LBFMClassifySubRecommendViewModel {
                 //解析数据
                 let data = try? response.mapJSON()
                 let json = JSON(data!)
-                if let mappedObject = JSONDeserializer<ClassifyCategoryContentsList>.deserializeModelArrayFrom(json:json["categoryContents"]["list"].description) { // 从字符串转换为对象实例
-                    self.classifyCategoryContentsList = mappedObject as? [ClassifyCategoryContentsList]
+                if let mappedObject = JSONDeserializer<LBFMClassifyCategoryContentsList>.deserializeModelArrayFrom(json:json["categoryContents"]["list"].description) { // 从字符串转换为对象实例
+                    self.classifyCategoryContentsList = mappedObject as? [LBFMClassifyCategoryContentsList]
                 }
                 // 顶部滚动视图数据
                 // 从字符串转换为对象实例
