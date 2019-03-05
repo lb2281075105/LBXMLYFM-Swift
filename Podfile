@@ -16,7 +16,7 @@ target 'LBFM-Swift' do
   pod 'HandyJSON', '~> 4.2.0'
   pod 'SwiftyJSON'
   # 分页
-  pod 'DNSPageView'
+  pod 'DNSPageView', '~> 1.0.1'
   #跑马灯
   pod 'JXMarqueeView'
   #滚动页

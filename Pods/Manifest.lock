@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.8.0)
-  - DNSPageView (1.1.2)
+  - DNSPageView (1.0.4)
   - ESTabBarController-swift (2.6.4)
   - FSPagerView (0.8.2)
   - HandyJSON (4.2.1)
@@ -23,7 +23,7 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
-  - DNSPageView
+  - DNSPageView (~> 1.0.1)
   - ESTabBarController-swift (~> 2.6.2)
   - FSPagerView
   - HandyJSON (~> 4.2.0)
@@ -59,7 +59,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  DNSPageView: 7bb82f6d666a9c8cfea0865f8fc24424a09b2ba5
+  DNSPageView: 28b2b5a9fb65cdc222d45dc2ce6247cd3f9365b5
   ESTabBarController-swift: 58cca4ab7de980657d99a02181c1ff310983e975
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
@@ -75,6 +75,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 0080be53d5ff8c202f91b250a02f9fd4d2f64112
+PODFILE CHECKSUM: d3df12ac0df3174b6c9f90efc7f3ea24e0a7dc27
 
 COCOAPODS: 1.5.3

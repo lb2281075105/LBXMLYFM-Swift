@@ -3,7 +3,7 @@
 //  DNSPageView
 //
 //  Created by Daniels on 2018/2/24.
-//  Copyright © 2018 Daniels. All rights reserved.
+//  Copyright © 2018年 Daniels. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -35,7 +35,7 @@ public class DNSPageStyle {
     public var titleFont: UIFont = UIFont.systemFont(ofSize: 15)
     public var titleViewBackgroundColor: UIColor = UIColor.white
     public var titleMargin: CGFloat = 30
-    public var titleViewSelectedColor: UIColor = UIColor.clear
+    public var titleViewSelectedColor: UIColor?
 
     
     /// titleView滑动

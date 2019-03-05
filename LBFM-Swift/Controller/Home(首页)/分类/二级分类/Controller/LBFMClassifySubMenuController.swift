@@ -58,8 +58,8 @@ class LBFMClassifySubMenuController: UIViewController {
     func setupHeaderView(){
         // 创建DNSPageStyle，设置样式
         let style = DNSPageStyle()
-//        style.isTitleScrollEnable = true
-//        style.isScaleEnable = true
+        style.isTitleViewScrollEnabled = true
+        style.isTitleScaleEnabled = true
         style.isShowBottomLine = true
         style.titleSelectedColor = UIColor.black
         style.titleColor = UIColor.gray

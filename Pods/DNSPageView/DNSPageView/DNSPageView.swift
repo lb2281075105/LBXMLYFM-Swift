@@ -3,7 +3,7 @@
 //  DNSPageView
 //
 //  Created by Daniels on 2018/2/24.
-//  Copyright © 2018 Daniels. All rights reserved.
+//  Copyright © 2018年 Daniels. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -37,7 +37,7 @@ open class DNSPageView: UIView {
     private (set) public var childViewControllers: [UIViewController]
     private (set) public var startIndex: Int
     private (set) public lazy var titleView = DNSPageTitleView(frame: .zero, style: style, titles: titles, currentIndex: startIndex)
-    private (set) public lazy var contentView = DNSPageContentView(frame: .zero, style: style, childViewControllers: childViewControllers, currentIndex: startIndex)
+    private (set) public lazy var contentView = DNSPageContentView(frame: .zero, style: style, childViewControllers: childViewControllers, startIndex: startIndex)
 
 
     public init(frame: CGRect, style: DNSPageStyle, titles: [String], childViewControllers: [UIViewController], startIndex: Int = 0) {

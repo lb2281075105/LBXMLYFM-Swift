@@ -18,7 +18,6 @@ DNSPageView一个纯Swift的轻量级、灵活且易于使用的pageView框架�
   - [使用DNSPageViewManager初始化，再分别对titleView和contentView进行布局](#使用dnspageviewmanager初始化，再分别对titleview和contentview进行布局)
   - [样式](#样式)
   - [事件监听](#事件监听)
-  - [常见问题](#常见问题)
 - [License](#license)
 
 ## Features:
@@ -34,9 +33,9 @@ DNSPageView一个纯Swift的轻量级、灵活且易于使用的pageView框架�
 
 - iOS 8.0+
 
-- Xcode 10.0+
+- Xcode 9.0+
 
-- Swift 4.2+
+- Swift 4.0+
 
 
 ## Installation
@@ -242,19 +241,6 @@ DNSPageView提供了常见事件监听的代理，它属于DNSPageTitleViewDeleg
 }
 ```
 
-
-
-### 常见问题
-
-- 标签比较少时，`titleView`不固定、会滑动
-
-  当`style.isTitleViewScrollEnabled = true`时，代表标签会比较多，所以默认会滑动。如果标签比较少，建议设置`style.isTitleViewScrollEnabled = false`。
-
-- 标签下划线的宽度跟随文字的宽度
-
-  当`style.isTitleViewScrollEnabled = false`时，表示标签比较少，默认每个标签平分整个`titleView`的宽度，而下划线的宽度等于标签的宽度，这种样式的需求也很常见。
-
-  要想实现标签下划线的宽度跟随文字的宽度，需要设置`style.isTitleViewScrollEnabled = true`，结合第一个问题，如果标签比较少，则需要手动计算标签的宽度，设置对应的`titleView`宽度，详细的代码可以参考demo中的第四种样式。
 
 
 ## License
