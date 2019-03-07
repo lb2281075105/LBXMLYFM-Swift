@@ -4,10 +4,9 @@ Swift项目仿写喜马拉雅App，采用MVC+MVVM设计模式，Moya+SwiftyJSON+
 喜马拉雅App:主要分为 首页 我听 发现 我的 四个大模块,详情可以查看截图
 
 <img src="项目预览图/1. 首页.png" width="375">
-<img src="项目预览图/1.1 首页.png" width="375">
+<img src="项目预览图/1.1首页.png" width="375">
 <img src="项目预览图/2.我听.png" width="375">
 <img src="项目预览图/3.发现.png" width="375">
-<img src="项目预览图/1. 首页.png" width="375">
 <img src="项目预览图/4.我的.png" width="375">
 
 
