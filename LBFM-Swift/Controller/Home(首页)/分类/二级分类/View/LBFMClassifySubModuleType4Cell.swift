@@ -46,10 +46,10 @@ class LBFMClassifySubModuleType4Cell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpUI()
+        setupLayout()
     }
     
-    func setUpUI(){
+    func setupLayout(){
         self.addSubview(self.picView)
         self.picView.image = UIImage(named: "pic1.jpeg")
         self.picView.snp.makeConstraints { (make) in
@@ -89,7 +89,7 @@ class LBFMClassifySubModuleType4Cell: UICollectionViewCell {
         }
     }
     
-    var classifyVerticalModel: ClassifyVerticalModel? {
+    var classifyVerticalModel: LBFMClassifyVerticalModel? {
         didSet {
             guard let model = classifyVerticalModel else {return}
             self.picView.kf.setImage(with: URL(string: model.coverPathSmall!))

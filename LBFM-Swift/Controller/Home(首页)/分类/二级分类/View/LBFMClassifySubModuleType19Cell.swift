@@ -9,7 +9,7 @@
 import UIKit
 
 class LBFMClassifySubModuleType19Cell: UICollectionViewCell {
-    private var classifyModuleType19List:[ClassifyModuleType19List]?
+    private var classifyModuleType19List:[LBFMClassifyModuleType19List]?
     // 细线
     private var lineView:UIView = {
         let view = UIView()
@@ -58,7 +58,7 @@ class LBFMClassifySubModuleType19Cell: UICollectionViewCell {
         }
     }
     
-    var classifyVerticalModel: ClassifyVerticalModel? {
+    var classifyVerticalModel: LBFMClassifyVerticalModel? {
         didSet {
             guard let model = classifyVerticalModel else {return}
             self.classifyModuleType19List = model.list
@@ -70,7 +70,7 @@ class LBFMClassifySubModuleType19Cell: UICollectionViewCell {
     }
 }
 
-extension ClassifySubModuleType19Cell:UITableViewDelegate,UITableViewDataSource {
+extension LBFMClassifySubModuleType19Cell:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }

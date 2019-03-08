@@ -9,7 +9,7 @@
 import UIKit
 
 class LBFMClassifySubModuleType20Cell: UICollectionViewCell {
-    private var albums:[ClassifyModuleType20List]?
+    private var albums:[LBFMClassifyModuleType20List]?
     // 图片
     private lazy var imageView:UIImageView = {
         let imageView = UIImageView()
@@ -40,16 +40,16 @@ class LBFMClassifySubModuleType20Cell: UICollectionViewCell {
         layout.sectionInset = UIEdgeInsetsMake(5, 15, 5, 15)
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 5
-        layout.itemSize = CGSize(width:(YYScreenWidth-40)/3, height:180)
+        layout.itemSize = CGSize(width:(LBFMScreenWidth - 40) / 3, height:180)
         layout.scrollDirection = UICollectionViewScrollDirection.horizontal
         let collectionView = UICollectionView.init(frame:.zero, collectionViewLayout: layout)
-        collectionView.contentSize = CGSize.init(width: YYScreenWidth-40, height: 180)
+        collectionView.contentSize = CGSize.init(width: LBFMScreenWidth - 40, height: 180)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.white
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(ClassifySubHorizontalCell.self, forCellWithReuseIdentifier:"ClassifySubHorizontalCell")
+        collectionView.register(LBFMClassifySubHorizontalCell.self, forCellWithReuseIdentifier:"LBFMClassifySubHorizontalCell")
         
         return collectionView
     }()
@@ -87,7 +87,7 @@ class LBFMClassifySubModuleType20Cell: UICollectionViewCell {
         }
     }
     
-    var classifyVerticalModel: ClassifyVerticalModel? {
+    var classifyVerticalModel: LBFMClassifyVerticalModel? {
         didSet {
             guard let model = classifyVerticalModel else {return}
             self.imageView.kf.setImage(with: URL(string: model.coverPathBig!))
@@ -104,13 +104,13 @@ class LBFMClassifySubModuleType20Cell: UICollectionViewCell {
     
 }
 
-extension ClassifySubModuleType20Cell: UICollectionViewDataSource, UICollectionViewDelegate {
+extension LBFMClassifySubModuleType20Cell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.albums?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:ClassifySubHorizontalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClassifySubHorizontalCell", for: indexPath) as! ClassifySubHorizontalCell
+        let cell:LBFMClassifySubHorizontalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "LBFMClassifySubHorizontalCell", for: indexPath) as! LBFMClassifySubHorizontalCell
         cell.classifyModuleType20Model = self.albums?[indexPath.row]
         return cell
     }

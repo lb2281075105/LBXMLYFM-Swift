@@ -22,7 +22,7 @@ class LBFMClassifySubModuleType17Cell: UICollectionViewCell {
             make.bottom.equalTo(-5)
         }
     }
-    var classifyVerticalModel: ClassifyVerticalModel? {
+    var classifyVerticalModel: LBFMClassifyVerticalModel? {
         didSet {
             guard let model = classifyVerticalModel else {return}
             self.imageView.kf.setImage(with: URL(string: model.coverPath!))

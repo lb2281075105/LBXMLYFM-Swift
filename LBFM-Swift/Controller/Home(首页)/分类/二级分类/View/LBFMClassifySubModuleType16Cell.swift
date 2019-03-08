@@ -40,10 +40,10 @@ class LBFMClassifySubModuleType16Cell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpUI()
+        setUpLayout()
     }
     
-    func setUpUI(){
+    func setUpLayout(){
         self.addSubview(self.imageView)
         self.imageView.layer.masksToBounds = true
         self.imageView.layer.cornerRadius = 8
@@ -77,7 +77,7 @@ class LBFMClassifySubModuleType16Cell: UICollectionViewCell {
         }
     }
     
-    var recommendliveData:LiveModel? {
+    var recommendliveData:LBFMLiveModel? {
         didSet{
             guard let model = recommendliveData else { return }
             if (model.coverMiddle != nil) {
@@ -89,7 +89,7 @@ class LBFMClassifySubModuleType16Cell: UICollectionViewCell {
         }
     }
     
-    var classifyVerticalModel: ClassifyVerticalModel? {
+    var classifyVerticalModel: LBFMClassifyVerticalModel? {
         didSet {
             guard let model = classifyVerticalModel else {return}
             self.imageView.kf.setImage(with: URL(string: model.coverMiddle!))

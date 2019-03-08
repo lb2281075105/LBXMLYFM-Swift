@@ -22,7 +22,7 @@ class LBFMClassifySubContentController: UIViewController {
     // - 定义接收的数据模型
     private var classifyVerticallist:[LBFMClassifyVerticalModel]?
     
-    private let ClassifySubVerticalCellID = "ClassifySubVerticalCell"
+    private let LBFMClassifySubVerticalCellID = "LBFMClassifySubVerticalCell"
     
     // - 懒加载
     private lazy var collectionView : UICollectionView = {

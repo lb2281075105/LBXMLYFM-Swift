@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import FSPagerView
 
 class LBFMClassifySubHeaderCell: UICollectionViewCell {
-    private var focus:FocusModel?
-    private var classifyCategoryContentsList:ClassifyCategoryContentsList?
+    private var focus:LBFMFocusModel?
+    private var classifyCategoryContentsList:LBFMClassifyCategoryContentsList?
     
-    let ClassifySubCategoryCellID = "ClassifySubCategoryCell"
-    // MARK: - 懒加载滚动图片浏览器
+    let LBFMClassifySubCategoryCellID = "LBFMClassifySubCategoryCell"
+    // - 懒加载滚动图片浏览器
     private lazy var pagerView : FSPagerView = {
         let pagerView = FSPagerView()
         pagerView.delegate = self
@@ -27,10 +28,9 @@ class LBFMClassifySubHeaderCell: UICollectionViewCell {
     }()
     private lazy var layout:UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout.init()
-        //        layout.scrollDirection = UICollectionViewScrollDirection.horizontal
         return layout
     }()
-    // MARK: - 懒加载九宫格分类按钮
+    // - 懒加载九宫格分类按钮
     private lazy var gridView: UICollectionView = {
         //        let layout = UICollectionViewFlowLayout.init()
         let collectionView = UICollectionView.init(frame:.zero, collectionViewLayout: layout)
@@ -39,7 +39,7 @@ class LBFMClassifySubHeaderCell: UICollectionViewCell {
         collectionView.backgroundColor = UIColor.white
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(ClassifySubCategoryCell.self, forCellWithReuseIdentifier: ClassifySubCategoryCellID)
+        collectionView.register(LBFMClassifySubCategoryCell.self, forCellWithReuseIdentifier: LBFMClassifySubCategoryCellID)
         return collectionView
     }()
     
@@ -56,10 +56,10 @@ class LBFMClassifySubHeaderCell: UICollectionViewCell {
             make.top.equalTo(self.pagerView.snp.bottom)
             make.height.equalTo(80)
         }
-        self.pagerView.itemSize = CGSize.init(width: YYScreenWidth-60, height: 140)
+        self.pagerView.itemSize = CGSize.init(width: LBFMScreenWidth - 60, height: 140)
     }
     
-    var focusModel:FocusModel? {
+    var focusModel:LBFMFocusModel? {
         didSet{
             guard let model = focusModel else { return }
             self.focus = model
@@ -67,7 +67,7 @@ class LBFMClassifySubHeaderCell: UICollectionViewCell {
         }
     }
     
-    var classifyCategoryContentsListModel:ClassifyCategoryContentsList? {
+    var classifyCategoryContentsListModel:LBFMClassifyCategoryContentsList? {
         didSet{
             guard let model = classifyCategoryContentsListModel else {return}
             self.classifyCategoryContentsList = model
@@ -86,8 +86,8 @@ class LBFMClassifySubHeaderCell: UICollectionViewCell {
     }
 }
 // 顶部循环滚动视图
-extension ClassifySubHeaderCell: FSPagerViewDelegate, FSPagerViewDataSource {
-    // MARK:- FSPagerView Delegate
+extension LBFMClassifySubHeaderCell: FSPagerViewDelegate, FSPagerViewDataSource {
+    // - FSPagerView Delegate
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return self.focus?.data?.count ?? 0
     }
@@ -103,14 +103,14 @@ extension ClassifySubHeaderCell: FSPagerViewDelegate, FSPagerViewDataSource {
     }
 }
 // 顶部分类九宫格视图
-extension ClassifySubHeaderCell:UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+extension LBFMClassifySubHeaderCell:UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.classifyCategoryContentsList?.list?.count ?? 0
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:ClassifySubCategoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: ClassifySubCategoryCellID, for: indexPath) as! ClassifySubCategoryCell
+        let cell:LBFMClassifySubCategoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: LBFMClassifySubCategoryCellID, for: indexPath) as! LBFMClassifySubCategoryCell
         cell.classifyVerticalModel = self.classifyCategoryContentsList?.list?[indexPath.row]
         return cell
     }
@@ -120,33 +120,33 @@ extension ClassifySubHeaderCell:UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     
-    //每个分区的内边距
+    // 每个分区的内边距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
     
-    //最小 item 间距
+    // 最小 item 间距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
-    //最小行间距
+    // 最小行间距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
-    //item 的尺寸
+    // item 的尺寸
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let num:Int = (self.classifyCategoryContentsList?.list?.count)!
         if num <= 6 {
-            return CGSize.init(width: YYScreenWidth/CGFloat(num), height: 80)
+            return CGSize.init(width: LBFMScreenWidth / CGFloat(num), height: 80)
         }else if num < 10 {
-            return CGSize.init(width: YYScreenWidth/6, height: 80)
+            return CGSize.init(width: LBFMScreenWidth / 6, height: 80)
         }else {
             self.gridView.snp.updateConstraints { (make) in
                 make.height.equalTo(160)
             }
-            return CGSize.init(width: YYScreenWidth/5, height: 80)
+            return CGSize.init(width: LBFMScreenWidth / 5, height: 80)
         }
     }
 }
