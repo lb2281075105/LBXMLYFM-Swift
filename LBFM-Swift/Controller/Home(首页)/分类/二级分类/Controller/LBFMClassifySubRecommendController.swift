@@ -156,9 +156,9 @@ extension LBFMClassifySubRecommendController : UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let albumId = viewModel.classifyCategoryContentsList?[indexPath.section].list?[indexPath.row].albumId ?? 0
-//        let vc = LBFMPlayDetailController(albumId:albumId)
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let albumId = viewModel.classifyCategoryContentsList?[indexPath.section].list?[indexPath.row].albumId ?? 0
+        let vc = LBFMPlayDetailController(albumId:albumId)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // 每个分区的内边距

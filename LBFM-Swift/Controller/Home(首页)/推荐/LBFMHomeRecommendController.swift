@@ -41,11 +41,11 @@ class LBFMHomeRecommendController: UIViewController {
         collection.delegate = self
         collection.dataSource = self
         collection.backgroundColor = UIColor.white
-        // MARK -注册头视图和尾视图
+        // - 注册头视图和尾视图
         collection.register(LBFMRecommendHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID)
         collection.register(LBFMRecommendFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID)
 
-        // MARK -注册不同分区cell
+        // - 注册不同分区cell
         // 默认
         collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collection.register(LBFMRecommendHeaderCell.self, forCellWithReuseIdentifier: LBFMRecommendHeaderCellID)
@@ -171,22 +171,22 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
         
     }
     
-    //每个分区的内边距
+    // 每个分区的内边距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return viewModel.insetForSectionAt(section: section)
     }
     
-    //最小item间距
+    // 最小item间距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return viewModel.minimumInteritemSpacingForSectionAt(section: section)
     }
     
-    //最小行间距
+    // 最小行间距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return viewModel.minimumLineSpacingForSectionAt(section: section)
     }
     
-    //item 的尺寸
+    // item 的尺寸
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return viewModel.sizeForItemAt(indexPath: indexPath)
     }
@@ -207,22 +207,22 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
             // 分区头右边更多按钮点击跳转
             headerView.headerMoreBtnClick = {[weak self]() in
                 if moduleType == "guessYouLike"{
-//                    let vc = LBFMHomeGuessYouLikeMoreController()
-//                    self?.navigationController?.pushViewController(vc, animated: true)
+                    let vc = LBFMHomeGuessYouLikeMoreController()
+                    self?.navigationController?.pushViewController(vc, animated: true)
                 }else if moduleType == "paidCategory" {
-//                    let vc = LBFMHomeVIPController(isRecommendPush:true)
-//                    vc.title = "精品"
-//                    self?.navigationController?.pushViewController(vc, animated: true)
+                    let vc = LBFMHomeVIPController(isRecommendPush:true)
+                    vc.title = "精品"
+                    self?.navigationController?.pushViewController(vc, animated: true)
                 }else if moduleType == "live"{
-//                    let vc = LBFMHomeLiveController()
-//                    vc.title = "直播"
-//                    self?.navigationController?.pushViewController(vc, animated: true)
+                    let vc = LBFMHomeLiveController()
+                    vc.title = "直播"
+                    self?.navigationController?.pushViewController(vc, animated: true)
                 }else {
                     guard let categoryId = self?.viewModel.homeRecommendList?[indexPath.section].target?.categoryId else {return}
                     if categoryId != 0 {
-//                        let vc = LBFMClassifySubMenuController(categoryId:categoryId,isVipPush:false)
-//                        vc.title = self?.viewModel.homeRecommendList?[indexPath.section].title
-//                        self?.navigationController?.pushViewController(vc, animated: true)
+                        let vc = LBFMClassifySubMenuController(categoryId:categoryId,isVipPush:false)
+                        vc.title = self?.viewModel.homeRecommendList?[indexPath.section].title
+                        self?.navigationController?.pushViewController(vc, animated: true)
                     }
                 }
             }
@@ -234,7 +234,7 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
         return UICollectionReusableView()
     }
 }
-// Mark:- 点击顶部分类按钮进入相对应界面
+// - 点击顶部分类按钮进入相对应界面
 extension LBFMHomeRecommendController:LBFMRecommendHeaderCellDelegate {
     
     func recommendHeaderBannerClick(url: String) {
@@ -264,9 +264,9 @@ extension LBFMHomeRecommendController:LBFMRecommendHeaderCellDelegate {
                 warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
                 SwiftMessages.show(config: warningConfig, view: warning)
             }else{
-//                let vc = LBFMClassifySubMenuController(categoryId:Int(categoryId)!)
-//                vc.title = title
-//                self.navigationController?.pushViewController(vc, animated: true)
+                let vc = LBFMClassifySubMenuController(categoryId:Int(categoryId)!)
+                vc.title = title
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }else{
             let vc = LBFMWebViewController(url:url)
@@ -275,20 +275,20 @@ extension LBFMHomeRecommendController:LBFMRecommendHeaderCellDelegate {
         }
     }
 }
-// Mark: -点击猜你喜欢cell代理方法
+// - 点击猜你喜欢cell代理方法
 extension LBFMHomeRecommendController:LBFMRecommendGuessLikeCellDelegate {
     func recommendGuessLikeCellItemClick(model: LBFMRecommendListModel) {
-//        let vc = FMPlayDetailController(albumId: model.albumId)
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = LBFMPlayDetailController(albumId: model.albumId)
+        self.navigationController?.pushViewController(vc, animated: true)
         print("点击猜你喜欢")
     }
 }
 
-// Mark: -点击热门有声书等cell代理方法
+// - 点击热门有声书等cell代理方法
 extension LBFMHomeRecommendController:LBFMHotAudiobookCellDelegate {
     func hotAudiobookCellItemClick(model: LBFMRecommendListModel) {
-//        let vc = FMPlayDetailController(albumId: model.albumId)
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = LBFMPlayDetailController(albumId: model.albumId)
+        self.navigationController?.pushViewController(vc, animated: true)
         print("点击热门有声书")
     }
 }
