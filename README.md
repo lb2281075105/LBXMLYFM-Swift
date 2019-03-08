@@ -9,4 +9,5 @@ Swift项目仿写喜马拉雅App，采用MVC+MVVM设计模式，Moya+SwiftyJSON+
 <img src="项目预览图/3.发现.png" width="375">
 <img src="项目预览图/4.我的.png" width="375">
 
-
+<img src="项目预览图/5.分类.png" width="375">
+<img src="项目预览图/6.分类列表.png" width="375">
