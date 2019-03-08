@@ -30,9 +30,10 @@ class LBFMClassifySubMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        // 加载头部分类数据
         loadHeaderCategoryData()
     }
-    
+    // 加载头部分类数据
     func loadHeaderCategoryData(){
         //分类二级界面顶部分类接口请求
         LBFMClassifySubMenuProvider.request(LBFMClassifySubMenuAPI.headerCategoryList(categoryId: self.categoryId)) { result in
