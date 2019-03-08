@@ -26,7 +26,7 @@ class LBFMPlayDetailController: UIViewController {
     private var playDetailTracks:LBFMPlayDetailTracksModel?
     // - headerView
     private lazy var headerView:LBFMPlayDetailHeaderView = {
-        let view = FMPlayDetailHeaderView.init(frame: CGRect(x:0, y:0, width:YYScreenWidth, height:240))
+        let view = LBFMPlayDetailHeaderView.init(frame: CGRect(x:0, y:0, width:LBFMScreenWidth, height:240))
         view.backgroundColor = UIColor.white
         return view
     }()
@@ -57,7 +57,7 @@ class LBFMPlayDetailController: UIViewController {
     
     private lazy var advancedManager: LTAdvancedManager = {
         let statusBarH = UIApplication.shared.statusBarFrame.size.height
-        let advancedManager = LTAdvancedManager(frame: CGRect(x: 0, y: 0, width: YYScreenWidth, height: YYScreenHeigth+navigationBarHeight), viewControllers: viewControllers, titles: titles, currentViewController: self, layout: layout, headerViewHandle: {[weak self] in
+        let advancedManager = LTAdvancedManager(frame: CGRect(x: 0, y: 0, width: LBFMScreenWidth, height: LBFMScreenHeight + LBFMNavBarHeight), viewControllers: viewControllers, titles: titles, currentViewController: self, layout: layout, headerViewHandle: {[weak self] in
             guard let strongSelf = self else { return UIView() }
             let headerView = strongSelf.headerView
             return headerView
@@ -65,7 +65,7 @@ class LBFMPlayDetailController: UIViewController {
         /* 设置代理 监听滚动 */
         advancedManager.delegate = self
         /* 设置悬停位置 */
-        advancedManager.hoverY = navigationBarHeight
+        advancedManager.hoverY = LBFMNavBarHeight
         /* 点击切换滚动过程动画 */
         //        advancedManager.isClickScrollAnimation = true
         /* 代码设置滚动到第几个位置 */

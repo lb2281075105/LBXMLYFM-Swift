@@ -50,7 +50,7 @@ extension LBFMPlayDetailProgramController : UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:PlayDetailProgramCell = tableView.dequeueReusableCell(withIdentifier: LBFMPlayDetailProgramCellID, for: indexPath) as! LBFMPlayDetailProgramCell
+        let cell:LBFMPlayDetailProgramCell = tableView.dequeueReusableCell(withIdentifier: LBFMPlayDetailProgramCellID, for: indexPath) as! LBFMPlayDetailProgramCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.playDetailTracksList = self.playDetailTracks?.list?[indexPath.row]
         cell.indexPath = indexPath
@@ -61,7 +61,7 @@ extension LBFMPlayDetailProgramController : UITableViewDelegate, UITableViewData
         let albumId = self.playDetailTracks?.list?[indexPath.row].albumId ?? 0
         let trackUid = self.playDetailTracks?.list?[indexPath.row].trackId ?? 0
         let uid = self.playDetailTracks?.list?[indexPath.row].uid ?? 0
-        let vc = YYNavigationController.init(rootViewController: LBFMPlayController(albumId:albumId, trackUid:trackUid, uid:uid))
+        let vc = LBFMNavigationController.init(rootViewController: LBFMPlayController(albumId:albumId, trackUid:trackUid, uid:uid))
         self.present(vc, animated: true, completion: nil)
     }
 }
