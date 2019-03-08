@@ -142,6 +142,9 @@
 		3ADC97F62230AD4100CAF62B /* LBFMClassifySubFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC97F52230AD4100CAF62B /* LBFMClassifySubFooterView.swift */; };
 		3ADC97F82230ADF500CAF62B /* LBFMClassifySubCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC97F72230ADF500CAF62B /* LBFMClassifySubCategoryCell.swift */; };
 		3ADC97FA2230AE2000CAF62B /* LBFMClassifySubHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC97F92230AE2000CAF62B /* LBFMClassifySubHorizontalCell.swift */; };
+		3ADC9B4B22320C5F00CAF62B /* LBFMClassifySubVerticalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC9B4A22320C5F00CAF62B /* LBFMClassifySubVerticalCell.swift */; };
+		3ADC9B4D22320CAC00CAF62B /* LBFMClassifySubModuleType20Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC9B4C22320CAC00CAF62B /* LBFMClassifySubModuleType20Cell.swift */; };
+		3ADC9B4F22320CBB00CAF62B /* LBFMClassifySubModuleType19Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC9B4E22320CBB00CAF62B /* LBFMClassifySubModuleType19Cell.swift */; };
 		3AEAA628221106E400B46FA7 /* LBFMRecommendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */; };
 		3AEAA62A22110D1F00B46FA7 /* LBFMRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */; };
 		3AEFE58E2211471C00B88942 /* LBFMRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */; };
@@ -289,6 +292,9 @@
 		3ADC97F52230AD4100CAF62B /* LBFMClassifySubFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMClassifySubFooterView.swift; sourceTree = "<group>"; };
 		3ADC97F72230ADF500CAF62B /* LBFMClassifySubCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMClassifySubCategoryCell.swift; sourceTree = "<group>"; };
 		3ADC97F92230AE2000CAF62B /* LBFMClassifySubHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMClassifySubHorizontalCell.swift; sourceTree = "<group>"; };
+		3ADC9B4A22320C5F00CAF62B /* LBFMClassifySubVerticalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMClassifySubVerticalCell.swift; sourceTree = "<group>"; };
+		3ADC9B4C22320CAC00CAF62B /* LBFMClassifySubModuleType20Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMClassifySubModuleType20Cell.swift; sourceTree = "<group>"; };
+		3ADC9B4E22320CBB00CAF62B /* LBFMClassifySubModuleType19Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMClassifySubModuleType19Cell.swift; sourceTree = "<group>"; };
 		3AEAA627221106E400B46FA7 /* LBFMRecommendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendAPI.swift; sourceTree = "<group>"; };
 		3AEAA62922110D1F00B46FA7 /* LBFMRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendModel.swift; sourceTree = "<group>"; };
 		3AEFE58D2211471C00B88942 /* LBFMRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMRecommendViewModel.swift; sourceTree = "<group>"; };
@@ -1245,6 +1251,9 @@
 				3ADC97F22230ACE500CAF62B /* 头部尾部视图 */,
 				3ADC97F72230ADF500CAF62B /* LBFMClassifySubCategoryCell.swift */,
 				3ADC97F92230AE2000CAF62B /* LBFMClassifySubHorizontalCell.swift */,
+				3ADC9B4A22320C5F00CAF62B /* LBFMClassifySubVerticalCell.swift */,
+				3ADC9B4C22320CAC00CAF62B /* LBFMClassifySubModuleType20Cell.swift */,
+				3ADC9B4E22320CBB00CAF62B /* LBFMClassifySubModuleType19Cell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1522,6 +1531,7 @@
 				3A9CF5C4222774090093B36A /* LBFMFindModel.swift in Sources */,
 				3ACA6E7F2223D1E100202E98 /* LBFMRecommendLiveCell.swift in Sources */,
 				3ADC97F82230ADF500CAF62B /* LBFMClassifySubCategoryCell.swift in Sources */,
+				3ADC9B4F22320CBB00CAF62B /* LBFMClassifySubModuleType19Cell.swift in Sources */,
 				3ACA6E332223931C00202E98 /* LBFMHomeClassifyViewModel.swift in Sources */,
 				3A9533432203F1F600E4DC70 /* LBFMPlayController.swift in Sources */,
 				3ACA6E612223BD3A00202E98 /* LBFMHomeVIPCell.swift in Sources */,
@@ -1578,6 +1588,7 @@
 				3ACA6E5D2223B97D00202E98 /* LBFMVipEnjoyCell.swift in Sources */,
 				3ADC97E6222E031D00CAF62B /* LBFMClassifySubRecommendController.swift in Sources */,
 				3AD3A9B1222C068100367138 /* LBFMWebViewController.swift in Sources */,
+				3ADC9B4D22320CAC00CAF62B /* LBFMClassifySubModuleType20Cell.swift in Sources */,
 				3A40DAD82220014300A4C734 /* LBFMListenModel.swift in Sources */,
 				3AD3A9B9222C088100367138 /* LBFMClassifySubMenuModel.swift in Sources */,
 				3A9CF5D22227751D0093B36A /* LBFMFindDudController.swift in Sources */,
@@ -1626,6 +1637,7 @@
 				3A40DAC3221FEAA500A4C734 /* LBRecommendForYouCell.swift in Sources */,
 				3AB6490F2228C6C000733761 /* LBFMMineViewModel.swift in Sources */,
 				3A9533822204254800E4DC70 /* LBFMHomeClassifyController.swift in Sources */,
+				3ADC9B4B22320C5F00CAF62B /* LBFMClassifySubVerticalCell.swift in Sources */,
 				3A95333B2203F1BF00E4DC70 /* LBFMHomeController.swift in Sources */,
 				3ADC97E4222E030D00CAF62B /* LBFMClassifySubContentController.swift in Sources */,
 			);
