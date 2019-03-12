@@ -125,8 +125,8 @@ extension LBFMHomeVIPController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = FMPlayDetailController(albumId: (viewModel.categoryList?[indexPath.section].list?[indexPath.row].albumId)!)
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = LBFMPlayDetailController(albumId: (viewModel.categoryList?[indexPath.section].list?[indexPath.row].albumId)!)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -164,31 +164,31 @@ extension LBFMHomeVIPController:LBFMHomeVipBannerCellDelegate{
     }
 }
 
-// Mark: - 点击顶部分类按钮 delegate
+// - 点击顶部分类按钮 delegate
 extension LBFMHomeVIPController:LBFMHomeVipCategoriesCellDelegate{
     func homeVipCategoriesCellItemClick(id: String, url: String,title:String) {
         if url == ""{
-//            let vc = ClassifySubMenuController(categoryId: Int(id)!,isVipPush:true)
-//            vc.title = title
-//            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = LBFMClassifySubMenuController(categoryId: Int(id)!,isVipPush:true)
+            vc.title = title
+            self.navigationController?.pushViewController(vc, animated: true)
         }else{
-//            let vc = FMWebViewController(url:url)
-//            vc.title = title
-//            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = LBFMWebViewController(url:url)
+            vc.title = title
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
 // - 点击Vip尊享课item delegate
 extension LBFMHomeVIPController:LBFMHomeVipEnjoyCellDelegate{
     func homeVipEnjoyCellItemClick(model: LBFMCategoryContents) {
-//        let vc = FMPlayDetailController(albumId: model.albumId)
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = LBFMPlayDetailController(albumId: model.albumId)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 // - 点击热播item delegate
 extension LBFMHomeVIPController:LBFMHomeVipHotCellDelegate{
     func homeVipHotCellItemClick(model: LBFMCategoryContents) {
-//        let vc = FMPlayDetailController(albumId: model.albumId)
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = LBFMPlayDetailController(albumId: model.albumId)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
