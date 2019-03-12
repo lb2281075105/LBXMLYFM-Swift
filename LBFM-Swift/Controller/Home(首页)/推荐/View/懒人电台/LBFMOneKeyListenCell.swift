@@ -20,13 +20,13 @@ class LBFMOneKeyListenCell: UICollectionViewCell {
         button.addTarget(self, action: #selector(updataBtnClick(button:)), for: UIControlEvents.touchUpInside)
         return button
     }()
-    // MARK: - 懒加载九宫格分类按钮
+    // - 懒加载九宫格分类按钮
     private lazy var gridView: UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
         layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
-        layout.itemSize = CGSize(width: (LBFMScreenWidth-45)/3, height:120)
+        layout.itemSize = CGSize(width: (LBFMScreenWidth - 45) / 3, height:120)
         let collectionView = UICollectionView.init(frame:.zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self

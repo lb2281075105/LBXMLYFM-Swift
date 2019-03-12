@@ -91,7 +91,7 @@ class LBFMFindAttentionCell: UITableViewCell {
         }
         // 标题
         self.addSubview(self.nameLabel)
-        self.nameLabel.text = "喜马拉雅好声音"
+        self.nameLabel.text = "喜马拉雅"
         self.nameLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.picView.snp.right).offset(8)
             make.width.equalTo(200)
@@ -100,7 +100,7 @@ class LBFMFindAttentionCell: UITableViewCell {
         }
         // 描述
         self.addSubview(self.desLabel)
-        self.desLabel.text = "啦啦啦啦啦啦啦啦四六级发送到了解放塑料袋就分手发熟练度家纺"
+        self.desLabel.text = "四六级发送到了"
         self.desLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.picView)
             make.top.equalTo(self.picView.snp.bottom).offset(8)
