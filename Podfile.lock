@@ -3,7 +3,7 @@ PODS:
   - DNSPageView (1.0.4)
   - ESTabBarController-swift (2.6.4)
   - FSPagerView (0.8.2)
-  - HandyJSON (4.2.1)
+  - HandyJSON (5.0.0-beta.1)
   - JXMarqueeView (0.0.7)
   - Kingfisher (4.10.1)
   - LTScrollView (0.2.1)
@@ -26,7 +26,7 @@ DEPENDENCIES:
   - DNSPageView (~> 1.0.1)
   - ESTabBarController-swift (~> 2.6.2)
   - FSPagerView
-  - HandyJSON (~> 4.2.0)
+  - HandyJSON (~> 5.0.0-beta.1)
   - JXMarqueeView
   - Kingfisher
   - LTScrollView
@@ -62,7 +62,7 @@ SPEC CHECKSUMS:
   DNSPageView: 28b2b5a9fb65cdc222d45dc2ce6247cd3f9365b5
   ESTabBarController-swift: 58cca4ab7de980657d99a02181c1ff310983e975
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
-  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
+  HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
   JXMarqueeView: a318eca76348b1ce8ed3ddc4fc7271ed4262bf30
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   LTScrollView: 93fff4aed9f9545f541a99b320b27808f5307c12
@@ -75,6 +75,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: d3df12ac0df3174b6c9f90efc7f3ea24e0a7dc27
+PODFILE CHECKSUM: 6fc069644cceff330925cab6a4cd019f5a13ac28
 
 COCOAPODS: 1.5.3

@@ -13,7 +13,7 @@ target 'LBFM-Swift' do
   #banner滚动图片
   pod 'FSPagerView'
   pod 'Moya'
-  pod 'HandyJSON', '~> 4.2.0'
+  pod 'HandyJSON', '~> 5.0.0-beta.1'
   pod 'SwiftyJSON'
   # 分页
   pod 'DNSPageView', '~> 1.0.1'
