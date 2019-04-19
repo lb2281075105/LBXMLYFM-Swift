@@ -1,6 +1,10 @@
 # LBXMLYFM-Swift
 Swift5项目仿写喜马拉雅App，采用MVC+MVVM设计模式，Moya+SwiftyJSON+HandyJSON网络框架和数据解析。数据来源抓包及部分本地json文件
 
+# 注意
+Swift5 在xcode10.2上面才能运行成功,如果想在xcode10.1版本上面跑起来,请在Podfile文件中 修改 pod 'HandyJSON' 版本在 '5.0.0-beta.1'以下即可,如果不能运行可issues我。
+
+
 喜马拉雅App:主要分为 首页 我听 发现 我的 四个大模块,详情可以查看截图
 
 [简书地址](https://www.jianshu.com/p/f2be1fcb77d3)
