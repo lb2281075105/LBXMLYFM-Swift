@@ -8,7 +8,7 @@ Swift5项目仿写喜马拉雅App，采用MVC+MVVM设计模式，Moya+SwiftyJSON
 公众号: liubo920205 后期还会有新项目更新,又需要的可以关注一下哦
 
 qq交流群:
-
+<img src="项目预览图/qq.jpeg" width="100">
 
 <img src="项目预览图/1. 首页.png" width="375">
 <img src="项目预览图/1.1首页.png" width="375">
