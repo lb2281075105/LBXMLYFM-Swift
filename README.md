@@ -9,7 +9,7 @@ Swift5 在xcode10.2上面才能运行成功,如果想在xcode10.1版本上面跑
 
 [简书地址](https://www.jianshu.com/p/f2be1fcb77d3)
 
-公众号: liubo920205 后期还会有新项目更新,又需要的可以关注一下哦
+公众号: liubo920205 后期还会有新项目更新,又需要的可以关注一下哦 \n
 <img src="项目预览图/wechat.jpg" width="375">
 
 
