@@ -32,18 +32,18 @@ class LBFMListenController: UIViewController {
     
     // 导航栏左边按钮
     private lazy var leftBarButton:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
         button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "msg"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(leftBarButtonClick), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "msg"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(leftBarButtonClick), for: UIControl.Event.touchUpInside)
         return button
     }()
     // 导航栏右边按钮
     private lazy var rightBarButton:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
         button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "搜索"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(rightBarButtonClick), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "搜索"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(rightBarButtonClick), for: UIControl.Event.touchUpInside)
         return button
     }()
     // 导航栏左边消息点击事件

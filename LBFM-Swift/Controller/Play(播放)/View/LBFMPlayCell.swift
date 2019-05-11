@@ -36,20 +36,20 @@ class LBFMPlayCell: UICollectionViewCell {
     }()
     // 弹幕按钮
     private lazy var barrageBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "NPProDMOff_24x24_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "NPProDMOff_24x24_"), for: UIControl.State.normal)
         return button
     }()
     // 播放机器按钮
     private lazy var machineBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "npXPlay_30x30_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "npXPlay_30x30_"), for: UIControl.State.normal)
         return button
     }()
     // 设置按钮
     private lazy var setBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "NPProSet_25x24_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "NPProSet_25x24_"), for: UIControl.State.normal)
         return button
     }()
     // 进度条
@@ -61,9 +61,9 @@ class LBFMPlayCell: UICollectionViewCell {
         // 滑块滑动停止后才触发ValueChanged事件
         //        slider.isContinuous = false
         
-        slider.addTarget(self, action: #selector(LBFMPlayCell.change(slider:)), for: UIControlEvents.valueChanged)
+        slider.addTarget(self, action: #selector(LBFMPlayCell.change(slider:)), for: UIControl.Event.valueChanged)
         
-        slider.addTarget(self, action: #selector(LBFMPlayCell.sliderDragUp(sender:)), for: UIControlEvents.touchUpInside)
+        slider.addTarget(self, action: #selector(LBFMPlayCell.sliderDragUp(sender:)), for: UIControl.Event.touchUpInside)
         return slider
     }()
     // 当前时间
@@ -83,34 +83,34 @@ class LBFMPlayCell: UICollectionViewCell {
     }()
     // 播放暂停按钮
     private lazy var playBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "toolbar_play_n_p_78x78_"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(playBtn(button:)), for: UIControlEvents.touchUpInside)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "toolbar_play_n_p_78x78_"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(playBtn(button:)), for: UIControl.Event.touchUpInside)
         return button
     }()
     // 上一曲按钮
     private lazy var prevBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "toolbar_prev_n_p_24x24_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "toolbar_prev_n_p_24x24_"), for: UIControl.State.normal)
         return button
     }()
     
     // 下一曲按钮
     private lazy var nextBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "toolbar_next_n_p_24x24_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "toolbar_next_n_p_24x24_"), for: UIControl.State.normal)
         return button
     }()
     // 消息列表按钮
     private lazy var msgBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "playpage_icon_list_24x24_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "playpage_icon_list_24x24_"), for: UIControl.State.normal)
         return button
     }()
     // 定时按钮
     private lazy var timingBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "playpage_icon_timing_24x24_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "playpage_icon_timing_24x24_"), for: UIControl.State.normal)
         return button
     }()
     
@@ -251,7 +251,7 @@ class LBFMPlayCell: UICollectionViewCell {
     @objc func playBtn(button:UIButton){
         button.isSelected = !button.isSelected
         if button.isSelected {
-            button.setImage(UIImage(named: "toolbar_pause_n_p_78x78_"), for: UIControlState.normal)
+            button.setImage(UIImage(named: "toolbar_pause_n_p_78x78_"), for: UIControl.State.normal)
             if isFirstPlay {
                 self.audioPlayer.play(URL(string: self.playUrl!)!)
                 starTimer()
@@ -261,7 +261,7 @@ class LBFMPlayCell: UICollectionViewCell {
                 self.audioPlayer.resume()
             }
         }else{
-            button.setImage(UIImage(named: "toolbar_play_n_p_78x78_"), for: UIControlState.normal)
+            button.setImage(UIImage(named: "toolbar_play_n_p_78x78_"), for: UIControl.State.normal)
             removeTimer()
             self.audioPlayer.pause()
         }
@@ -270,7 +270,8 @@ class LBFMPlayCell: UICollectionViewCell {
     
     func starTimer() {
         displayLink = CADisplayLink(target: self, selector: #selector(updateCurrentLabel))
-        displayLink?.add(to: RunLoop.current, forMode: .commonModes)
+//        displayLink?.add(to: RunLoop.current, forMode: .RunLoop.Mode.common)
+        displayLink?.add(to: RunLoop.current, forMode: RunLoop.Mode.common)
     }
     
     func removeTimer() {

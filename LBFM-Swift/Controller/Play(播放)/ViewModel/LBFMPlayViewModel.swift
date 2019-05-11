@@ -75,7 +75,7 @@ extension LBFMPlayViewModel {
     }
     // 每个分区的内边距
     func insetForSectionAt(section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     // 最小 item 间距

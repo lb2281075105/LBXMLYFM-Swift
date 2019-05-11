@@ -10,11 +10,13 @@ import UIKit
 
 class LBFMMineMakeCell: UITableViewCell {
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = UIColor.white
         setUpLayout()
     }
+
     /// 布局
     func setUpLayout(){
         
@@ -23,7 +25,7 @@ class LBFMMineMakeCell: UITableViewCell {
         let imageArray = ["麦克风","直播","视频","工作台"]
         for index in 0..<4 {
             let button = UIButton.init(frame: CGRect(x:margin*CGFloat(index)*2+margin/2,y:10,width:margin,height:margin))
-            button.setImage(UIImage(named: imageArray[index]), for: UIControlState.normal)
+            button.setImage(UIImage(named: imageArray[index]), for: UIControl.State.normal)
             self.addSubview(button)
             
             let titleLabel = UILabel()

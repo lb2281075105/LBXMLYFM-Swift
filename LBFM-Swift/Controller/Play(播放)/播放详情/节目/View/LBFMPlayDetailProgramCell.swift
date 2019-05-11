@@ -72,12 +72,12 @@ class LBFMPlayDetailProgramCell: UITableViewCell {
     }()
     // 下载按钮
     private lazy var downloadBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "downloadAlbum_30x30_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "downloadAlbum_30x30_"), for: UIControl.State.normal)
         return button
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setUpLayout()
     }

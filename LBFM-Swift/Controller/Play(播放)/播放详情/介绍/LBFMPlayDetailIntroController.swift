@@ -40,7 +40,7 @@ class LBFMPlayDetailIntroController: UIViewController, LTTableViewProtocal{
             self.playDetailAlbum = model
             // 防止刷新分区的时候界面闪烁
             UIView.performWithoutAnimation {
-                self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, with: UITableViewRowAnimation.none)
+                self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, with: UITableView.RowAnimation.none)
             }
         }
     }
@@ -51,7 +51,7 @@ class LBFMPlayDetailIntroController: UIViewController, LTTableViewProtocal{
             self.playDetailUser = model
             // 防止刷新分区的时候界面闪烁
             UIView.performWithoutAnimation {
-                self.tableView.reloadSections(NSIndexSet(index: 1) as IndexSet, with: UITableViewRowAnimation.none)
+                self.tableView.reloadSections(NSIndexSet(index: 1) as IndexSet, with: UITableView.RowAnimation.none)
             }        }
         
     }
@@ -73,12 +73,12 @@ extension LBFMPlayDetailIntroController : UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell:LBFMPlayContentIntroCell = tableView.dequeueReusableCell(withIdentifier: LBFMPlayContentIntroCellID, for: indexPath) as! LBFMPlayContentIntroCell
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.playDetailAlbumModel = self.playDetailAlbum
             return cell
         }else {
             let cell:LBFMPlayAnchorIntroCell = tableView.dequeueReusableCell(withIdentifier: LBFMPlayAnchorIntroCellID, for: indexPath) as! LBFMPlayAnchorIntroCell
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.playDetailUserModel = self.playDetailUser
             return cell
         }

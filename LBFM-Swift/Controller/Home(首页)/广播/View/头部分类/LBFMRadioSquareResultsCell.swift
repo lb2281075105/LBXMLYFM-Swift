@@ -19,7 +19,7 @@ class LBFMRadioSquareResultsCell: UICollectionViewCell {
     // 懒加载九宫格分类按钮
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
-        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.itemSize = CGSize(width:LBFMScreenWidth/5, height:self.frame.size.height)

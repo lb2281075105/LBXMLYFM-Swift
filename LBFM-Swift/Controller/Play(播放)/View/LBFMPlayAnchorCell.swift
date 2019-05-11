@@ -43,8 +43,8 @@ class LBFMPlayAnchorCell: UICollectionViewCell {
     
     // 赞助按钮
     private lazy var sponsorBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "sponsorBtn_41x30_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "sponsorBtn_41x30_"), for: UIControl.State.normal)
         //        button.addTarget(self, action: #selector(playBtn(button:)), for: UIControlEvents.touchUpInside)
         return button
     }()

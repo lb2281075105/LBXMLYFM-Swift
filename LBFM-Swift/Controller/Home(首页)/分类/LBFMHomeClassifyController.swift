@@ -20,8 +20,8 @@ class LBFMHomeClassifyController: UIViewController {
         collection.delegate = self
         collection.dataSource = self
         collection.showsVerticalScrollIndicator = false
-        collection.register(LBFMHomeClassifyHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMHomeClassifyHeaderViewID)
-        collection.register(LBFMHomeClassifyFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMHomeClassifyFooterViewID)
+        collection.register(LBFMHomeClassifyHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMHomeClassifyHeaderViewID)
+        collection.register(LBFMHomeClassifyFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMHomeClassifyFooterViewID)
         
         collection.backgroundColor = LBFMDownColor
         return collection
@@ -114,12 +114,12 @@ extension LBFMHomeClassifyController: UICollectionViewDelegateFlowLayout, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionElementKindSectionHeader {
-            let headerView : LBFMHomeClassifyHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMHomeClassifyHeaderViewID, for: indexPath) as! LBFMHomeClassifyHeaderView
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView : LBFMHomeClassifyHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMHomeClassifyHeaderViewID, for: indexPath) as! LBFMHomeClassifyHeaderView
             headerView.titleString = viewModel.classifyModel?[indexPath.section].groupName
             return headerView
-        }else if kind == UICollectionElementKindSectionFooter {
-            let footerView : LBFMHomeClassifyFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMHomeClassifyFooterViewID, for: indexPath) as! LBFMHomeClassifyFooterView
+        }else if kind == UICollectionView.elementKindSectionFooter {
+            let footerView : LBFMHomeClassifyFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMHomeClassifyFooterViewID, for: indexPath) as! LBFMHomeClassifyFooterView
             return footerView
         }
         return UICollectionReusableView()

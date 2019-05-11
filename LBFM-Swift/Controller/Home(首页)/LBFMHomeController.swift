@@ -31,7 +31,7 @@ class LBFMHomeController: UIViewController {
         let titles = ["推荐","分类","VIP","直播","广播"]
         let viewControllers:[UIViewController] = [LBFMHomeRecommendController(),LBFMHomeClassifyController(),LBFMHomeVIPController(),LBFMHomeLiveController(),LBFMHomeBroadcastController()]
         for vc in viewControllers{
-            self.addChildViewController(vc)
+            self.addChild(vc)
         }
         let pageView = DNSPageView(frame: CGRect(x: 0, y: LBFMNavBarHeight, width: LBFMScreenWidth, height: LBFMScreenHeight - LBFMNavBarHeight - 44), style: style, titles: titles, childViewControllers: viewControllers)
         pageView.contentView.backgroundColor = UIColor.red

@@ -14,13 +14,13 @@ class LBFMHomeRecommendLiveCell: UICollectionViewCell {
     private var live:[LBFMLiveModel]?
     private let LBRecommendLiveCellID = "LBRecommendLiveCell"
     private lazy var changeBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setTitle("换一批", for: UIControlState.normal)
-        button.setTitleColor(LBFMButtonColor, for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setTitle("换一批", for: UIControl.State.normal)
+        button.setTitleColor(LBFMButtonColor, for: UIControl.State.normal)
         button.backgroundColor = UIColor.init(red: 254/255.0, green: 232/255.0, blue: 227/255.0, alpha: 1)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 5.0
-        button.addTarget(self, action: #selector(updataBtnClick(button:)), for: UIControlEvents.touchUpInside)
+        button.addTarget(self, action: #selector(updataBtnClick(button:)), for: UIControl.Event.touchUpInside)
         return button
     }()
     
@@ -105,7 +105,7 @@ extension LBFMHomeRecommendLiveCell: UICollectionViewDelegate, UICollectionViewD
     
     //每个分区的内边距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(5, 0, 5, 0);
+        return UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0);
     }
     
     //最小 item 间距

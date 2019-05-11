@@ -42,8 +42,8 @@ class LBFMHomeRecommendController: UIViewController {
         collection.dataSource = self
         collection.backgroundColor = UIColor.white
         // - 注册头视图和尾视图
-        collection.register(LBFMRecommendHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID)
-        collection.register(LBFMRecommendFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID)
+        collection.register(LBFMRecommendHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID)
+        collection.register(LBFMRecommendFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID)
 
         // - 注册不同分区cell
         // 默认
@@ -201,8 +201,8 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let moduleType = viewModel.homeRecommendList?[indexPath.section].moduleType
-        if kind == UICollectionElementKindSectionHeader {
-            let headerView : LBFMRecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID, for: indexPath) as! LBFMRecommendHeaderView
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView : LBFMRecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMRecommendHeaderViewID, for: indexPath) as! LBFMRecommendHeaderView
             headerView.homeRecommendList = viewModel.homeRecommendList?[indexPath.section]
             // 分区头右边更多按钮点击跳转
             headerView.headerMoreBtnClick = {[weak self]() in
@@ -227,8 +227,8 @@ extension LBFMHomeRecommendController: UICollectionViewDelegateFlowLayout, UICol
                 }
             }
             return headerView
-        }else if kind == UICollectionElementKindSectionFooter {
-            let footerView : LBFMRecommendFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID, for: indexPath) as! LBFMRecommendFooterView
+        }else if kind == UICollectionView.elementKindSectionFooter {
+            let footerView : LBFMRecommendFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMRecommendFooterViewID, for: indexPath) as! LBFMRecommendFooterView
             return footerView
         }
         return UICollectionReusableView()
@@ -244,7 +244,7 @@ extension LBFMHomeRecommendController:LBFMRecommendHeaderCellDelegate {
         status2.bodyLabel?.textColor = UIColor.white
         status2.configureContent(body: "暂时没有点击功能")
         var status2Config = SwiftMessages.defaultConfig
-        status2Config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        status2Config.presentationContext = .window(windowLevel: UIWindow.Level.normal)
         status2Config.preferredStatusBarStyle = .lightContent
         SwiftMessages.show(config: status2Config, view: status2)
 
@@ -261,7 +261,7 @@ extension LBFMHomeRecommendController:LBFMRecommendHeaderCellDelegate {
                 warning.configureContent(title: "Warning", body: "暂时没有数据!!!", iconText: iconText)
                 warning.button?.isHidden = true
                 var warningConfig = SwiftMessages.defaultConfig
-                warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+                warningConfig.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
                 SwiftMessages.show(config: warningConfig, view: warning)
             }else{
                 let vc = LBFMClassifySubMenuController(categoryId:Int(categoryId)!)

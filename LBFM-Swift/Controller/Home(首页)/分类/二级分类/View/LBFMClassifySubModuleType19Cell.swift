@@ -19,9 +19,9 @@ class LBFMClassifySubModuleType19Cell: UICollectionViewCell {
     // 查看全部
     private lazy var moreBtn:UIButton = {
         let button = UIButton.init(type: .custom)
-        button.setTitle("查看全部 >", for: UIControlState.normal)
+        button.setTitle("查看全部 >", for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        button.setTitleColor(UIColor.black, for: UIControlState.normal)
+        button.setTitleColor(UIColor.black, for: UIControl.State.normal)
         button.titleLabel?.textAlignment = NSTextAlignment.center
         return button
     }()
@@ -31,7 +31,7 @@ class LBFMClassifySubModuleType19Cell: UICollectionViewCell {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         return tableView
     }()
     

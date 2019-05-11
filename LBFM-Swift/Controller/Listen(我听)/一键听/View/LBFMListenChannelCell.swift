@@ -36,16 +36,17 @@ class LBFMListenChannelCell: UITableViewCell {
     
     // 播放按钮
     private var playBtn : UIButton = {
-        let btn = UIButton.init(type: UIButtonType.custom)
-        btn.setImage(UIImage(named: "whitePlay"), for: UIControlState.normal)
+        let btn = UIButton.init(type: UIButton.ButtonType.custom)
+        btn.setImage(UIImage(named: "whitePlay"), for: UIControl.State.normal)
         return btn
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpLayout()
+
     }
-    
+
     func setUpLayout(){
         self.addSubview(self.picView)
         self.picView.snp.makeConstraints { (make) in

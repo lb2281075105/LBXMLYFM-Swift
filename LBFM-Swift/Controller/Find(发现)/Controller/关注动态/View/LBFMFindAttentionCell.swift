@@ -73,7 +73,7 @@ class LBFMFindAttentionCell: UITableViewCell {
     }()
     
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setUpLayout()
     }
@@ -257,7 +257,7 @@ extension LBFMFindAttentionCell: UICollectionViewDelegate, UICollectionViewDataS
     
     // 每个分区的内边距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     // 最小 item 间距

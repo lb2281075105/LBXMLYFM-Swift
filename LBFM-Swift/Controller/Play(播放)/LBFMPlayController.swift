@@ -35,8 +35,8 @@ class LBFMPlayController: UIViewController {
         collection.dataSource = self
         collection.backgroundColor = UIColor.white
         // - 注册头视图和尾视图
-        collection.register(LBFMPlayHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMPlayHeaderViewID)
-        collection.register(LBFMPlayFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMPlayFooterViewID)
+        collection.register(LBFMPlayHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMPlayHeaderViewID)
+        collection.register(LBFMPlayFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMPlayFooterViewID)
         // - 注册不同分区cell
         collection.register(LBFMPlayCell.self, forCellWithReuseIdentifier: LBFMPlayCellID)
         collection.register(LBFMPlayCommentCell.self, forCellWithReuseIdentifier: LBFMPlayCommentCellID)
@@ -52,28 +52,28 @@ class LBFMPlayController: UIViewController {
     
     // - 导航栏左边按钮
     private lazy var leftBarButton:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
         button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "playpage_icon_down_black_30x30_"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(leftBarButtonClick), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "playpage_icon_down_black_30x30_"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(leftBarButtonClick), for: UIControl.Event.touchUpInside)
         return button
     }()
     
     // - 导航栏右边按钮
     private lazy var rightBarButton1:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
         button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "playpage_icon_more_black_30x30_"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(rightBarButtonClick1), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "playpage_icon_more_black_30x30_"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(rightBarButtonClick1), for: UIControl.Event.touchUpInside)
         return button
     }()
     
     // - 导航栏右边按钮
     private lazy var rightBarButton2:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
         button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "playpage_icon_share_black_30x30_"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(rightBarButtonClick2), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "playpage_icon_share_black_30x30_"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(rightBarButtonClick2), for: UIControl.Event.touchUpInside)
         return button
     }()
     
@@ -196,11 +196,11 @@ extension LBFMPlayController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionElementKindSectionHeader {
-            let headerView : LBFMPlayHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMPlayHeaderViewID, for: indexPath) as! LBFMPlayHeaderView
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView : LBFMPlayHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMPlayHeaderViewID, for: indexPath) as! LBFMPlayHeaderView
             return headerView
-        }else if kind == UICollectionElementKindSectionFooter {
-            let footerView : LBFMPlayFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMPlayFooterViewID, for: indexPath) as! LBFMPlayFooterView
+        }else if kind == UICollectionView.elementKindSectionFooter {
+            let footerView : LBFMPlayFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMPlayFooterViewID, for: indexPath) as! LBFMPlayFooterView
             return footerView
         }
         return UICollectionReusableView()

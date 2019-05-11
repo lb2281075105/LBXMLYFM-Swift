@@ -42,15 +42,15 @@ class LBFMListenSubscibeCell: UITableViewCell {
     
     // 播放按钮
     private var setBtn : UIButton = {
-        let btn = UIButton.init(type: UIButtonType.custom)
-        btn.setTitle("...", for: UIControlState.normal)
-        btn.setTitleColor(UIColor.gray, for: UIControlState.normal)
+        let btn = UIButton.init(type: UIButton.ButtonType.custom)
+        btn.setTitle("...", for: UIControl.State.normal)
+        btn.setTitleColor(UIColor.gray, for: UIControl.State.normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         return btn
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpLayout()
     }
     

@@ -18,11 +18,11 @@ class LBFMListenFooterView: UIView {
     weak var delegate : LBFMListenFooterViewDelegate?
     
     private var addButton: UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setTitleColor(UIColor.black, for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setTitleColor(UIColor.black, for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.backgroundColor = UIColor.white
-        button.addTarget(self, action: #selector(addButtonClick), for: UIControlEvents.touchUpInside)
+        button.addTarget(self, action: #selector(addButtonClick), for: UIControl.Event.touchUpInside)
         return button
     }()
     
@@ -45,7 +45,7 @@ class LBFMListenFooterView: UIView {
     
     var listenFooterViewTitle:String?{
         didSet {
-            addButton.setTitle(listenFooterViewTitle, for: UIControlState.normal)
+            addButton.setTitle(listenFooterViewTitle, for: UIControl.State.normal)
         }
     }
     

@@ -59,7 +59,7 @@ extension LBFMListenRecommendController : UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:LBFMListenRecommendCell = tableView.dequeueReusableCell(withIdentifier: LBFMListenRecommendCellID, for: indexPath) as! LBFMListenRecommendCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.albums = viewModel.albums?[indexPath.row]
         return cell
     }

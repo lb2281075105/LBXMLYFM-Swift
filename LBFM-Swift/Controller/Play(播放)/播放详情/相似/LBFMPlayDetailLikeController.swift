@@ -62,7 +62,7 @@ extension LBFMPlayDetailLikeController : UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:LBFMPlayDetailLikeCell = tableView.dequeueReusableCell(withIdentifier: LBFMPlayDetailLikeCellID, for: indexPath) as! LBFMPlayDetailLikeCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.classifyVerticalModel = self.albumResults?[indexPath.row]
         return cell
     }

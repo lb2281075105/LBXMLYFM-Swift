@@ -86,8 +86,8 @@ class LBFMVipEnjoyCell: UICollectionViewCell {
             // self.couponLabel.text = model.displayDiscountedPrice
             let text = NSMutableAttributedString(string: "")
             text.append(NSAttributedString(string: " \(model.displayDiscountedPrice ?? "0") ",
-                attributes: [NSAttributedStringKey.foregroundColor: UIColor.red,
-                             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13)]))
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.red,
+                             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
             
             self.couponLabel.attributedText = text
             

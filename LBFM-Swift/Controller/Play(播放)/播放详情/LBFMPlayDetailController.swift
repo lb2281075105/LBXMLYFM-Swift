@@ -75,19 +75,19 @@ class LBFMPlayDetailController: UIViewController {
     
     //Mark: - 导航栏右边按钮
     private lazy var rightBarButton1:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
         button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "icon_more_h_30x31_"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(rightBarButtonClick1), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "icon_more_h_30x31_"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(rightBarButtonClick1), for: UIControl.Event.touchUpInside)
         return button
     }()
     
     //Mark: - 导航栏右边按钮
     private lazy var rightBarButton2:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
         button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "icon_share_h_30x30_"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(rightBarButtonClick2), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "icon_share_h_30x30_"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(rightBarButtonClick2), for: UIControl.Event.touchUpInside)
         return button
     }()
     
@@ -172,12 +172,12 @@ extension LBFMPlayDetailController : LTAdvancedScrollViewDelegate {
         {
             let alpha = offsetY / CGFloat(kNavBarBottom)
             navBarBackgroundAlpha = alpha
-            self.rightBarButton1.setImage(UIImage(named: "icon_more_n_30x31_"), for: UIControlState.normal)
-            self.rightBarButton2.setImage(UIImage(named: "icon_share_n_30x30_"), for: UIControlState.normal)
+            self.rightBarButton1.setImage(UIImage(named: "icon_more_n_30x31_"), for: UIControl.State.normal)
+            self.rightBarButton2.setImage(UIImage(named: "icon_share_n_30x30_"), for: UIControl.State.normal)
         }else{
             navBarBackgroundAlpha = 0
-            self.rightBarButton1.setImage(UIImage(named: "icon_more_h_30x31_"), for: UIControlState.normal)
-            self.rightBarButton2.setImage(UIImage(named: "icon_share_h_30x30_"), for: UIControlState.normal)
+            self.rightBarButton1.setImage(UIImage(named: "icon_more_h_30x31_"), for: UIControl.State.normal)
+            self.rightBarButton2.setImage(UIImage(named: "icon_share_h_30x30_"), for: UIControl.State.normal)
         }
     }
 }

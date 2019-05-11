@@ -72,9 +72,9 @@ class LBFMClassifySubHeaderCell: UICollectionViewCell {
             guard let model = classifyCategoryContentsListModel else {return}
             self.classifyCategoryContentsList = model
             if (self.classifyCategoryContentsList?.list?.count)! == 10 {
-                self.layout.scrollDirection = UICollectionViewScrollDirection.vertical
+                self.layout.scrollDirection = UICollectionView.ScrollDirection.vertical
             }else {
-                self.layout.scrollDirection = UICollectionViewScrollDirection.horizontal
+                self.layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
             }
             self.gridView.reloadData()
         }
@@ -122,7 +122,7 @@ extension LBFMClassifySubHeaderCell:UICollectionViewDelegate, UICollectionViewDa
     
     // 每个分区的内边距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     // 最小 item 间距

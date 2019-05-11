@@ -73,12 +73,12 @@ class LBFMPlayDetailLikeCell: UITableViewCell {
     }()
     // 订阅按钮
     private lazy var subBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "recxx_subscribe_56x28_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "recxx_subscribe_56x28_"), for: UIControl.State.normal)
         return button
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setUpLayout()
     }

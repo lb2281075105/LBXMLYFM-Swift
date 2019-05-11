@@ -183,7 +183,7 @@ extension UINavigationBar:WRAwakeProtocol
         
         var titleColor:UIColor?
         for attribute in originTitleTextAttributes {
-            if attribute.key == NSAttributedStringKey.foregroundColor {
+            if attribute.key == NSAttributedString.Key.foregroundColor {
                 titleColor = attribute.value as? UIColor
                 break
             }
@@ -194,8 +194,8 @@ extension UINavigationBar:WRAwakeProtocol
             return
         }
 
-        if attributes[NSAttributedStringKey.foregroundColor.rawValue] == nil {
-            attributes.updateValue(originTitleColor, forKey: NSAttributedStringKey.foregroundColor.rawValue)
+        if attributes[NSAttributedString.Key.foregroundColor.rawValue] == nil {
+            attributes.updateValue(originTitleColor, forKey: NSAttributedString.Key.foregroundColor.rawValue)
         }
         wr_setTitleTextAttributes(attributes)
     }
@@ -237,12 +237,12 @@ extension UINavigationController: WRFatherAwakeProtocol
     fileprivate func setNeedsNavigationBarUpdate(titleColor: UIColor)
     {
         guard let titleTextAttributes = navigationBar.titleTextAttributes else {
-            navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:titleColor]
+            navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:titleColor]
             return
         }
         
         var newTitleTextAttributes = titleTextAttributes
-        newTitleTextAttributes.updateValue(titleColor, forKey: NSAttributedStringKey.foregroundColor)
+        newTitleTextAttributes.updateValue(titleColor, forKey: NSAttributedString.Key.foregroundColor)
         navigationBar.titleTextAttributes = newTitleTextAttributes
     }
     
@@ -317,7 +317,9 @@ extension UINavigationController: WRFatherAwakeProtocol
         var displayLink:CADisplayLink? = CADisplayLink(target: self, selector: #selector(popNeedDisplay))
         // UITrackingRunLoopMode: 界面跟踪 Mode，用于 ScrollView 追踪触摸滑动，保证界面滑动时不受其他 Mode 影响
         // NSRunLoopCommonModes contains kCFRunLoopDefaultMode and UITrackingRunLoopMode
-        displayLink?.add(to: RunLoop.main, forMode: .commonModes)
+//        displayLink?.add(to: RunLoop.main, forMode: .RunLoop.Mode.common)
+        displayLink?.add(to: RunLoop.current, forMode: RunLoop.Mode.common)
+
         CATransaction.setCompletionBlock {
             displayLink?.invalidate()
             displayLink = nil
@@ -334,7 +336,9 @@ extension UINavigationController: WRFatherAwakeProtocol
     @objc func wr_popToRootViewControllerAnimated(_ animated: Bool) -> [UIViewController]?
     {
         var displayLink:CADisplayLink? = CADisplayLink(target: self, selector: #selector(popNeedDisplay))
-        displayLink?.add(to: RunLoop.main, forMode: .commonModes)
+//        displayLink?.add(to: RunLoop.main, forMode: .RunLoop.Mode.common)
+        displayLink?.add(to: RunLoop.current, forMode: RunLoop.Mode.common)
+
         CATransaction.setCompletionBlock {
             displayLink?.invalidate()
             displayLink = nil
@@ -381,7 +385,9 @@ extension UINavigationController: WRFatherAwakeProtocol
     @objc func wr_pushViewController(_ viewController: UIViewController, animated: Bool)
     {
         var displayLink:CADisplayLink? = CADisplayLink(target: self, selector: #selector(pushNeedDisplay))
-        displayLink?.add(to: RunLoop.main, forMode: .commonModes)
+//        displayLink?.add(to: RunLoop.main.run.Mode.common .commonModes, forMode: RunLoop.Mode.default)
+        displayLink?.add(to: RunLoop.current, forMode: RunLoop.Mode.common)
+
         CATransaction.setCompletionBlock {
             displayLink?.invalidate()
             displayLink = nil

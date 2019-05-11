@@ -30,8 +30,8 @@ class LBFMMineController: UIViewController {
     }()
     // 懒加载TableView
     private lazy var tableView : UITableView = {
-        let tableView = UITableView.init(frame:CGRect(x:0, y:0, width:LBFMScreenWidth, height:LBFMScreenHeight), style: UITableViewStyle.plain)
-        tableView.contentInset = UIEdgeInsetsMake(-CGFloat(kNavBarBottom), 0, 0, 0)
+        let tableView = UITableView.init(frame:CGRect(x:0, y:0, width:LBFMScreenWidth, height:LBFMScreenHeight), style: UITableView.Style.plain)
+        tableView.contentInset = UIEdgeInsets(top: -CGFloat(kNavBarBottom), left: 0, bottom: 0, right: 0)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = LBFMDownColor
@@ -54,18 +54,18 @@ class LBFMMineController: UIViewController {
     
     // - 导航栏左边按钮
     private lazy var leftBarButton:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
         button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "msg"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(leftBarButtonClick), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "msg"), for: .normal)
+        button.addTarget(self, action: #selector(leftBarButtonClick), for: UIControl.Event.touchUpInside)
         return button
     }()
     // - 导航栏右边按钮
     private lazy var rightBarButton:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
         button.frame = CGRect(x:0, y:0, width:30, height: 30)
-        button.setImage(UIImage(named: "set"), for: UIControlState.normal)
-        button.addTarget(self, action: #selector(rightBarButtonClick), for: UIControlEvents.touchUpInside)
+        button.setImage(UIImage(named: "set"), for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(rightBarButtonClick), for: UIControl.Event.touchUpInside)
         return button
     }()
     

@@ -47,7 +47,7 @@ extension LBFMHomeClassifyViewModel {
     }
     // 每个分区的内边距
     func insetForSectionAt(section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 2.5, 0, 2.5)
+        return UIEdgeInsets(top: 0, left: 2.5, bottom: 0, right: 2.5)
     }
     
     // 最小 item 间距

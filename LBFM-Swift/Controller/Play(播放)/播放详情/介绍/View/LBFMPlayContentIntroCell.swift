@@ -20,10 +20,11 @@ class LBFMPlayContentIntroCell: UITableViewCell {
         label.numberOfLines = 0
         return label
     }()
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpUI()
     }
+
     func setUpUI(){
         self.addSubview(self.titleLabel)
         self.titleLabel.snp.makeConstraints { (make) in

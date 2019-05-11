@@ -63,9 +63,9 @@ class LBFMListenRecommendCell: UITableViewCell {
     
     // 订阅按钮
     private var subscibeBtn : UIButton = {
-        let btn = UIButton.init(type: UIButtonType.custom)
-        btn.setTitle("+订阅", for: UIControlState.normal)
-        btn.setTitleColor(LBFMButtonColor, for: UIControlState.normal)
+        let btn = UIButton.init(type: UIButton.ButtonType.custom)
+        btn.setTitle("+订阅", for: UIControl.State.normal)
+        btn.setTitleColor(LBFMButtonColor, for: UIControl.State.normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         btn.backgroundColor = UIColor.init(red: 254/255.0, green: 232/255.0, blue: 227/255.0, alpha: 1)
         btn.layer.masksToBounds = true
@@ -73,7 +73,7 @@ class LBFMListenRecommendCell: UITableViewCell {
         return btn
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setUpLayout()
     }

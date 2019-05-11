@@ -51,7 +51,7 @@ extension LBFMPlayDetailProgramController : UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:LBFMPlayDetailProgramCell = tableView.dequeueReusableCell(withIdentifier: LBFMPlayDetailProgramCellID, for: indexPath) as! LBFMPlayDetailProgramCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.playDetailTracksList = self.playDetailTracks?.list?[indexPath.row]
         cell.indexPath = indexPath
         return cell

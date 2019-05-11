@@ -41,11 +41,11 @@ class LBFMHomeVIPController: UIViewController {
     }()
     
     lazy var tableView : UITableView = {
-        let tableView = UITableView.init(frame: CGRect(x:0, y:0, width: LBFMScreenWidth, height:LBFMScreenHeight - LBFMNavBarHeight - 44 - LBFMTabBarHeight), style: UITableViewStyle.grouped)
+        let tableView = UITableView.init(frame: CGRect(x:0, y:0, width: LBFMScreenWidth, height:LBFMScreenHeight - LBFMNavBarHeight - 44 - LBFMTabBarHeight), style: UITableView.Style.grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.white
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         // 注册头尾视图
         tableView.register(LBFMHomeVipHeaderView.self, forHeaderFooterViewReuseIdentifier: LBFMHomeVipHeaderViewID)
         tableView.register(LBFMHomeVipFooterView.self, forHeaderFooterViewReuseIdentifier: LBFMHomeVipFooterViewID)
@@ -159,7 +159,7 @@ extension LBFMHomeVIPController:LBFMHomeVipBannerCellDelegate{
         warning.configureContent(title: "Warning", body: "暂时没有点击功能", iconText: iconText)
         warning.button?.isHidden = true
         var warningConfig = SwiftMessages.defaultConfig
-        warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+        warningConfig.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
         SwiftMessages.show(config: warningConfig, view: warning)
     }
 }

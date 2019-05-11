@@ -38,7 +38,7 @@ class LBFMListenHeaderView: UIView {
         let numArray = ["暂无","8","暂无","25"]
         for index in 0..<4 {
             let button = UIButton.init(frame: CGRect(x:margin*CGFloat(index)*2+margin/2,y:10,width:margin,height:margin))
-            button.setImage(UIImage(named: imageArray[index]), for: UIControlState.normal)
+            button.setImage(UIImage(named: imageArray[index]), for: UIControl.State.normal)
             self.addSubview(button)
             
             let titleLabel = UILabel()
@@ -65,7 +65,7 @@ class LBFMListenHeaderView: UIView {
                 make.top.equalTo(margin+10+25)
             })
             button.tag = index
-            button.addTarget(self, action: #selector(gridBtnClick(sender:)), for: UIControlEvents.touchUpInside)
+            button.addTarget(self, action: #selector(gridBtnClick(sender:)), for: UIControl.Event.touchUpInside)
             
         }
 

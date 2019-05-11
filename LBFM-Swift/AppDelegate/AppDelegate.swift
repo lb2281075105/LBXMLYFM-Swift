@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 warning.configureContent(title: "Warning", body: "暂时没有此功能", iconText: iconText)
                 warning.button?.isHidden = true
                 var warningConfig = SwiftMessages.defaultConfig
-                warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+                warningConfig.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
                 SwiftMessages.show(config: warningConfig, view: warning)
                 //                let vc = FMPlayController()
                 //                tabBarController?.present(vc, animated: true, completion: nil)

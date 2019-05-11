@@ -41,8 +41,8 @@ class LBFMPlayDetailHeaderView: UIView {
     // 分类
     private lazy var categoryBtn:UIButton = {
         let button = UIButton()
-        button.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
-        button.setTitleColor(UIColor.gray, for: UIControlState.normal)
+        button.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+        button.setTitleColor(UIColor.gray, for: UIControl.State.normal)
         return button
     }()
     // date
@@ -57,8 +57,8 @@ class LBFMPlayDetailHeaderView: UIView {
         let button = UIButton()
         button.backgroundColor = LBFMButtonColor
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        button.setTitle("＋订阅", for: UIControlState.normal)
-        button.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button.setTitle("＋订阅", for: UIControl.State.normal)
+        button.setTitleColor(UIColor.white, for: UIControl.State.normal)
         return button
     }()
     
@@ -143,7 +143,7 @@ class LBFMPlayDetailHeaderView: UIView {
         }
         
         self.addSubview(self.categoryBtn)
-        self.categoryBtn.setTitle("有声书 >", for: UIControlState.normal)
+        self.categoryBtn.setTitle("有声书 >", for: UIControl.State.normal)
         self.categoryBtn.snp.makeConstraints { (make) in
             make.left.equalTo(self.imageView.snp.right).offset(10)
             make.top.equalTo(self.blurImageView.snp.bottom).offset(5)
@@ -180,7 +180,7 @@ class LBFMPlayDetailHeaderView: UIView {
             self.titleLabel.text = model.title
             self.nickLabel.text = model.nickname
             let categoryName:String = model.categoryName!
-            self.categoryBtn.setTitle("\(categoryName)>", for: UIControlState.normal)
+            self.categoryBtn.setTitle("\(categoryName)>", for: UIControl.State.normal)
             // updatedAt
             var tagString:String?
             if model.playTimes > 100000000 {

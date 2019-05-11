@@ -35,8 +35,8 @@ class LBFMClassifySubRecommendController: UIViewController {
         collection.dataSource = self
         collection.backgroundColor = UIColor.white
         // - 注册头视图和尾视图
-        collection.register(LBFMClassifySubHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMClassifySubHeaderViewID)
-        collection.register(LBFMClassifySubFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMClassifySubFooterViewID)
+        collection.register(LBFMClassifySubHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMClassifySubHeaderViewID)
+        collection.register(LBFMClassifySubFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMClassifySubFooterViewID)
         
         // - 注册不同分区cell
         collection.register(LBFMClassifySubHeaderCell.self, forCellWithReuseIdentifier: LBFMClassifySubHeaderCellID)
@@ -190,12 +190,12 @@ extension LBFMClassifySubRecommendController : UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionElementKindSectionHeader {
-            let headerView : LBFMClassifySubHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMClassifySubHeaderViewID, for: indexPath) as! LBFMClassifySubHeaderView
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView : LBFMClassifySubHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMClassifySubHeaderViewID, for: indexPath) as! LBFMClassifySubHeaderView
             headerView.classifyCategoryContents = viewModel.classifyCategoryContentsList?[indexPath.section]
             return headerView
-        }else if kind == UICollectionElementKindSectionFooter {
-            let footerView : LBFMClassifySubFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMClassifySubFooterViewID, for: indexPath) as! LBFMClassifySubFooterView
+        }else if kind == UICollectionView.elementKindSectionFooter {
+            let footerView : LBFMClassifySubFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMClassifySubFooterViewID, for: indexPath) as! LBFMClassifySubFooterView
             return footerView
         }
         return UICollectionReusableView()

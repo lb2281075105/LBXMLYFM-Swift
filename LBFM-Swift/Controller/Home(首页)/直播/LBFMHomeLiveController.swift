@@ -33,7 +33,7 @@ class LBFMHomeLiveController: UIViewController {
         collection.backgroundColor = UIColor.white
         collection.showsVerticalScrollIndicator = false
         // 注册头视图和尾视图
-        collection.register(LBFMHomeLiveHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMHomeLiveHeaderViewID)
+        collection.register(LBFMHomeLiveHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMHomeLiveHeaderViewID)
         // 注册不同分区cell
         collection.register(LBFMRecommendLiveCell.self, forCellWithReuseIdentifier: LBFMRecommendLiveCellID)
         collection.register(LBFMHomeLiveGridCell.self, forCellWithReuseIdentifier:LBFMHomeLiveGridCellID)
@@ -141,8 +141,8 @@ extension LBFMHomeLiveController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionElementKindSectionHeader {
-            let headerView : LBFMHomeLiveHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMHomeLiveHeaderViewID, for: indexPath) as! LBFMHomeLiveHeaderView
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView : LBFMHomeLiveHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMHomeLiveHeaderViewID, for: indexPath) as! LBFMHomeLiveHeaderView
             headerView.delegate = self
             headerView.backgroundColor = UIColor.white
             return headerView

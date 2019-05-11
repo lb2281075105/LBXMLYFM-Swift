@@ -25,7 +25,7 @@ class LBFMListenChannelController: UIViewController,LTTableViewProtocal {
         let tableView = tableViewConfig(CGRect(x: 0, y: 5, width:LBFMScreenWidth, height: LBFMScreenHeight - 64), self, self, nil)
         tableView.register(LBFMListenChannelCell.self, forCellReuseIdentifier: LBFMListenChannelCellID)
         tableView.backgroundColor = UIColor.init(r: 240, g: 241, b: 244)
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.tableFooterView = self.footerView
         return tableView
     }()
@@ -69,7 +69,7 @@ extension LBFMListenChannelController : UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:LBFMListenChannelCell = tableView.dequeueReusableCell(withIdentifier: LBFMListenChannelCellID, for: indexPath) as! LBFMListenChannelCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.backgroundColor = UIColor.init(r: 240, g: 241, b: 244)
         cell.channelResults = viewModel.channelResults?[indexPath.row]
         return cell

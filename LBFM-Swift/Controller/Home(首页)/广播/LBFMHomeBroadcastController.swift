@@ -30,8 +30,8 @@ class LBFMHomeBroadcastController: UIViewController {
         collection.backgroundColor = UIColor.white
         collection.showsVerticalScrollIndicator = false
         // MARK -注册头视图和尾视图
-        collection.register(LBFMRadioHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRadioHeaderViewID)
-        collection.register(LBFMRadioFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRadioFooterViewID)
+        collection.register(LBFMRadioHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMRadioHeaderViewID)
+        collection.register(LBFMRadioFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMRadioFooterViewID)
         // 注册不同分区cell
         collection.register(LBFMHomeRadiosCell.self, forCellWithReuseIdentifier:LBFMHomeRadiosCellID)
         collection.register(LBFMRadioSquareResultsCell.self, forCellWithReuseIdentifier:LBFMRadioSquareResultsCellID)
@@ -165,13 +165,13 @@ extension LBFMHomeBroadcastController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionElementKindSectionHeader {
-            let headerView :LBFMRadioHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LBFMRadioHeaderViewID, for: indexPath) as! LBFMRadioHeaderView
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView :LBFMRadioHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LBFMRadioHeaderViewID, for: indexPath) as! LBFMRadioHeaderView
             headerView.backgroundColor = UIColor.white
             headerView.titStr = viewModel.titleArray[indexPath.section - 2]
             return headerView
         }else {
-            let footerView :LBFMRadioFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LBFMRadioFooterViewID, for: indexPath) as! LBFMRadioFooterView
+            let footerView :LBFMRadioFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LBFMRadioFooterViewID, for: indexPath) as! LBFMRadioFooterView
             return footerView
             
         }

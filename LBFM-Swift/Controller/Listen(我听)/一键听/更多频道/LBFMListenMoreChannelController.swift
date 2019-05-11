@@ -25,7 +25,7 @@ class LBFMListenMoreChannelController: UIViewController {
         let tableView = UITableView.init(frame:CGRect(x:0, y:0, width:LBFMScreenWidth * 0.2, height:LBFMScreenHeight))
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.register(LBFMOneKeyListenLTCell.self, forCellReuseIdentifier: LBFMLeftTableViewCellID)
         // 左边cell默认选中第一个cell
         self.lastPath = IndexPath(row: 0, section: 0)
@@ -34,11 +34,11 @@ class LBFMListenMoreChannelController: UIViewController {
     
     // 懒加载右边tableview
     private lazy var rightTableView : UITableView = {
-        let tableView = UITableView.init(frame:CGRect(x:LBFMScreenWidth * 0.2, y:0, width:LBFMScreenWidth * 0.8, height: LBFMScreenHeight), style: UITableViewStyle.grouped)
+        let tableView = UITableView.init(frame:CGRect(x:LBFMScreenWidth * 0.2, y:0, width:LBFMScreenWidth * 0.8, height: LBFMScreenHeight), style: UITableView.Style.grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.white
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.register(LBFMListenChannelCell.self, forCellReuseIdentifier: LBFMRightTableViewCellID)
         
         return tableView
@@ -92,7 +92,7 @@ extension LBFMListenMoreChannelController : UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == self.leftTableView {
             let cell:LBFMOneKeyListenLTCell = tableView.dequeueReusableCell(withIdentifier: LBFMLeftTableViewCellID, for: indexPath) as! LBFMOneKeyListenLTCell
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.channelClassInfo = self.channelClassInfo?[indexPath.row]
             // 区分选中和未选中改变字体颜色和是否显示竖条
             let row = indexPath.row
@@ -109,7 +109,7 @@ extension LBFMListenMoreChannelController : UITableViewDelegate, UITableViewData
             return cell
         }else {
             let cell:LBFMListenChannelCell = tableView.dequeueReusableCell(withIdentifier: LBFMRightTableViewCellID, for: indexPath) as! LBFMListenChannelCell
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.channelInfoModel = self.channelClassInfo?[indexPath.section].channelInfos?[indexPath.row]
             return cell
         }
@@ -168,7 +168,7 @@ extension LBFMListenMoreChannelController : UITableViewDelegate, UITableViewData
             }
             self.lastPath = indexPath
             let rightMoveToIndexPath  = IndexPath(row: 0, section: indexPath.row)
-            self.rightTableView.selectRow(at: rightMoveToIndexPath, animated: true, scrollPosition: UITableViewScrollPosition.top)
+            self.rightTableView.selectRow(at: rightMoveToIndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.top)
         }
     }
     
@@ -191,7 +191,7 @@ extension LBFMListenMoreChannelController : UITableViewDelegate, UITableViewData
                 oldCell.lineView.isHidden = true
             }
             self.lastPath = leftMoveToIndexPath
-            self.leftTableView.selectRow(at: leftMoveToIndexPath, animated: true, scrollPosition: UITableViewScrollPosition.middle)
+            self.leftTableView.selectRow(at: leftMoveToIndexPath, animated: true, scrollPosition: .middle)
         }
     }
     

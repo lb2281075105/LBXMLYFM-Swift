@@ -31,15 +31,17 @@ class LBFMHomeVipBannerCell: UITableViewCell {
         return pagerView
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.addSubview(self.pagerView)
         self.pagerView.snp.makeConstraints { (make) in
             make.left.top.right.equalToSuperview()
             make.height.equalToSuperview()
         }
         self.pagerView.itemSize = CGSize.init(width: LBFMScreenWidth-60, height: 140)
+        
     }
+
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

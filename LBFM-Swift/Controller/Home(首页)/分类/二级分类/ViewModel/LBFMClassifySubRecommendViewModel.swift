@@ -71,9 +71,9 @@ extension LBFMClassifySubRecommendViewModel {
         let cardClass = self.classifyCategoryContentsList?[section].cardClass
         let moduleType = self.classifyCategoryContentsList?[section].moduleType
         if cardClass == "horizontal" || moduleType == 16 {
-            return UIEdgeInsetsMake(5,15, 5, 15)
+            return UIEdgeInsets(top: 5,left: 15, bottom: 5, right: 15)
         }
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     // 最小 item 间距

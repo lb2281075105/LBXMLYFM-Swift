@@ -40,11 +40,6 @@
 		3A9533432203F1F600E4DC70 /* LBFMPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533422203F1F600E4DC70 /* LBFMPlayController.swift */; };
 		3A9533462203F25000E4DC70 /* LBFMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533452203F25000E4DC70 /* LBFMNavigationController.swift */; };
 		3A9533482203F5A500E4DC70 /* LBFMHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533472203F5A500E4DC70 /* LBFMHeader.swift */; };
-		3A9533502203FB9500E4DC70 /* WRNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95334A2203FB9500E4DC70 /* WRNavigationBar.swift */; };
-		3A9533512203FB9500E4DC70 /* WRCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95334B2203FB9500E4DC70 /* WRCustomNavigationBar.swift */; };
-		3A9533522203FB9500E4DC70 /* WRProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95334D2203FB9500E4DC70 /* WRProxy.swift */; };
-		3A9533532203FB9500E4DC70 /* WRCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95334E2203FB9500E4DC70 /* WRCycleScrollView.swift */; };
-		3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A95334F2203FB9500E4DC70 /* WRCycleCell.swift */; };
 		3A953356220408C900E4DC70 /* LBFMBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A953355220408C900E4DC70 /* LBFMBasicContentView.swift */; };
 		3A9533582204096900E4DC70 /* LBFMBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9533572204096900E4DC70 /* LBFMBouncesContentView.swift */; };
 		3A95335A220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A953359220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift */; };
@@ -79,6 +74,11 @@
 		3A9CF5DC222779640093B36A /* LBFMFindDudCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5DB222779640093B36A /* LBFMFindDudCell.swift */; };
 		3A9CF5DF22277A080093B36A /* LBFMFindAttentionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5DE22277A080093B36A /* LBFMFindAttentionViewModel.swift */; };
 		3A9CF5E322277F110093B36A /* LBFMCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CF5E222277F110093B36A /* LBFMCustomLabel.swift */; };
+		3AB53E0F228653DC00302A5B /* WRNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB53E09228653DC00302A5B /* WRNavigationBar.swift */; };
+		3AB53E10228653DC00302A5B /* WRCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB53E0A228653DC00302A5B /* WRCustomNavigationBar.swift */; };
+		3AB53E11228653DC00302A5B /* WRProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB53E0C228653DC00302A5B /* WRProxy.swift */; };
+		3AB53E12228653DC00302A5B /* WRCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB53E0D228653DC00302A5B /* WRCycleScrollView.swift */; };
+		3AB53E13228653DC00302A5B /* WRCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB53E0E228653DC00302A5B /* WRCycleCell.swift */; };
 		3AB649002228C0F100733761 /* LBFMMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB648FF2228C0F100733761 /* LBFMMineHeaderView.swift */; };
 		3AB649022228C15800733761 /* LBFMVipAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB649012228C15800733761 /* LBFMVipAnimationView.swift */; };
 		3AB649042228C17300733761 /* LBFMMineMakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB649032228C17300733761 /* LBFMMineMakeCell.swift */; };
@@ -218,11 +218,6 @@
 		3A9533422203F1F600E4DC70 /* LBFMPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMPlayController.swift; sourceTree = "<group>"; };
 		3A9533452203F25000E4DC70 /* LBFMNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMNavigationController.swift; sourceTree = "<group>"; };
 		3A9533472203F5A500E4DC70 /* LBFMHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMHeader.swift; sourceTree = "<group>"; };
-		3A95334A2203FB9500E4DC70 /* WRNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNavigationBar.swift; sourceTree = "<group>"; };
-		3A95334B2203FB9500E4DC70 /* WRCustomNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCustomNavigationBar.swift; sourceTree = "<group>"; };
-		3A95334D2203FB9500E4DC70 /* WRProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRProxy.swift; sourceTree = "<group>"; };
-		3A95334E2203FB9500E4DC70 /* WRCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleScrollView.swift; sourceTree = "<group>"; };
-		3A95334F2203FB9500E4DC70 /* WRCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleCell.swift; sourceTree = "<group>"; };
 		3A953355220408C900E4DC70 /* LBFMBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMBasicContentView.swift; sourceTree = "<group>"; };
 		3A9533572204096900E4DC70 /* LBFMBouncesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMBouncesContentView.swift; sourceTree = "<group>"; };
 		3A953359220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMIrregularityBasicContentView.swift; sourceTree = "<group>"; };
@@ -257,6 +252,11 @@
 		3A9CF5DB222779640093B36A /* LBFMFindDudCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindDudCell.swift; sourceTree = "<group>"; };
 		3A9CF5DE22277A080093B36A /* LBFMFindAttentionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMFindAttentionViewModel.swift; sourceTree = "<group>"; };
 		3A9CF5E222277F110093B36A /* LBFMCustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBFMCustomLabel.swift; sourceTree = "<group>"; };
+		3AB53E09228653DC00302A5B /* WRNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNavigationBar.swift; sourceTree = "<group>"; };
+		3AB53E0A228653DC00302A5B /* WRCustomNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCustomNavigationBar.swift; sourceTree = "<group>"; };
+		3AB53E0C228653DC00302A5B /* WRProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRProxy.swift; sourceTree = "<group>"; };
+		3AB53E0D228653DC00302A5B /* WRCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleScrollView.swift; sourceTree = "<group>"; };
+		3AB53E0E228653DC00302A5B /* WRCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleCell.swift; sourceTree = "<group>"; };
 		3AB648FF2228C0F100733761 /* LBFMMineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMMineHeaderView.swift; sourceTree = "<group>"; };
 		3AB649012228C15800733761 /* LBFMVipAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMVipAnimationView.swift; sourceTree = "<group>"; };
 		3AB649032228C17300733761 /* LBFMMineMakeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBFMMineMakeCell.swift; sourceTree = "<group>"; };
@@ -606,10 +606,10 @@
 		3A9533332203F11D00E4DC70 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3AB53E08228653DC00302A5B /* WRNavigationBar */,
 				3A9CF5E122277F110093B36A /* CustomLabel */,
 				3A40DABF221FE74E00A4C734 /* ReplicatorLayer */,
 				3A26D5DC22169F3B0080A362 /* Refresh */,
-				3A9533492203FB9500E4DC70 /* WRNavigationBar */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -697,26 +697,6 @@
 				3A953359220409CD00E4DC70 /* LBFMIrregularityBasicContentView.swift */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		3A9533492203FB9500E4DC70 /* WRNavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				3A95334A2203FB9500E4DC70 /* WRNavigationBar.swift */,
-				3A95334B2203FB9500E4DC70 /* WRCustomNavigationBar.swift */,
-				3A95334C2203FB9500E4DC70 /* WRCycleScrollView */,
-			);
-			path = WRNavigationBar;
-			sourceTree = "<group>";
-		};
-		3A95334C2203FB9500E4DC70 /* WRCycleScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				3A95334D2203FB9500E4DC70 /* WRProxy.swift */,
-				3A95334E2203FB9500E4DC70 /* WRCycleScrollView.swift */,
-				3A95334F2203FB9500E4DC70 /* WRCycleCell.swift */,
-			);
-			path = WRCycleScrollView;
 			sourceTree = "<group>";
 		};
 		3A9533792204207A00E4DC70 /* AppDelegate */ = {
@@ -966,6 +946,26 @@
 				3A9CF5E222277F110093B36A /* LBFMCustomLabel.swift */,
 			);
 			path = CustomLabel;
+			sourceTree = "<group>";
+		};
+		3AB53E08228653DC00302A5B /* WRNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				3AB53E09228653DC00302A5B /* WRNavigationBar.swift */,
+				3AB53E0A228653DC00302A5B /* WRCustomNavigationBar.swift */,
+				3AB53E0B228653DC00302A5B /* WRCycleScrollView */,
+			);
+			path = WRNavigationBar;
+			sourceTree = "<group>";
+		};
+		3AB53E0B228653DC00302A5B /* WRCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				3AB53E0C228653DC00302A5B /* WRProxy.swift */,
+				3AB53E0D228653DC00302A5B /* WRCycleScrollView.swift */,
+				3AB53E0E228653DC00302A5B /* WRCycleCell.swift */,
+			);
+			path = WRCycleScrollView;
 			sourceTree = "<group>";
 		};
 		3AB648FB2228BFE100733761 /* Model */ = {
@@ -1837,7 +1837,6 @@
 				3A40DAA7221FD2E800A4C734 /* LBFMRecommendGuessLikeCell.swift in Sources */,
 				3ACA6E4522239D9E00202E98 /* LBFMHomeVipModel.swift in Sources */,
 				3AD3A9AB222A2F4000367138 /* LBFMFindRecommendViewModel.swift in Sources */,
-				3A9533522203FB9500E4DC70 /* WRProxy.swift in Sources */,
 				3A40DABC221FE70B00A4C734 /* LBFMHomeRecommendLiveCell.swift in Sources */,
 				3ACA6E4322239D8800202E98 /* LBFMHomeVipViewModel.swift in Sources */,
 				3ACA6E1B2223651500202E98 /* LBFMListenSubscibeCell.swift in Sources */,
@@ -1845,6 +1844,7 @@
 				3AB6490B2228C69B00733761 /* LBFMMineAPI.swift in Sources */,
 				3ADC9B66223217B800CAF62B /* LBFMPlayDetailController.swift in Sources */,
 				3ACA6E1F222368BB00202E98 /* LBFMOneKeyListenLTCell.swift in Sources */,
+				3AB53E12228653DC00302A5B /* WRCycleScrollView.swift in Sources */,
 				3ADC9B5922320D6500CAF62B /* LBFMClassifySubHeaderCell.swift in Sources */,
 				3A9533412203F1E900E4DC70 /* LBFMMineController.swift in Sources */,
 				3A95338C2204274500E4DC70 /* ViewController.swift in Sources */,
@@ -1871,7 +1871,6 @@
 				3ACA6E21222368D100202E98 /* LBFMListenChannelViewModel.swift in Sources */,
 				3ADC9BA522324DA900CAF62B /* LBFMPlayDetailCircleController.swift in Sources */,
 				3ACA6E4B22239ED900202E98 /* LBFMHomeVipBannerCell.swift in Sources */,
-				3A9533512203FB9500E4DC70 /* WRCustomNavigationBar.swift in Sources */,
 				3A26D5E32216BB5D0080A362 /* LBFMRecommendFooterView.swift in Sources */,
 				3A9CF5D42227761E0093B36A /* LBFMFindHeaderView.swift in Sources */,
 				3AB649002228C0F100733761 /* LBFMMineHeaderView.swift in Sources */,
@@ -1902,6 +1901,7 @@
 				3A9533482203F5A500E4DC70 /* LBFMHeader.swift in Sources */,
 				3ACA6E522223B71D00202E98 /* LBFMHomeVipHeaderView.swift in Sources */,
 				3ACA6E7D2223CC8500202E98 /* LBFMHomeLiveBannerCell.swift in Sources */,
+				3AB53E10228653DC00302A5B /* WRCustomNavigationBar.swift in Sources */,
 				3ADC9B5322320D3000CAF62B /* LBFMClassifySubModuleType4Cell.swift in Sources */,
 				3ACA6E39222395E900202E98 /* LBFMHomeClassifyHeaderView.swift in Sources */,
 				3ACA6E5B2223B8EE00202E98 /* LBFMVipHotCell.swift in Sources */,
@@ -1915,11 +1915,13 @@
 				3ACA6E782223CC8500202E98 /* LBFMLiveRankCell.swift in Sources */,
 				3ACA6E5F2223BAEE00202E98 /* LBFMHomeVipEnjoyCell.swift in Sources */,
 				3ACA6E6A2223C8FF00202E98 /* LBFMHomeLiveAPI.swift in Sources */,
+				3AB53E13228653DC00302A5B /* WRCycleCell.swift in Sources */,
 				3ADC9B9F22324CC100CAF62B /* LBFMPlayDetailIntroController.swift in Sources */,
 				3A26D5E22216BB5D0080A362 /* LBFMRecommendHeaderView.swift in Sources */,
 				3ADC9B632232166600CAF62B /* LBFMPlayModel.swift in Sources */,
 				3ACA6E3B222395FE00202E98 /* LBFMHomeClassifyFooterView.swift in Sources */,
 				3A9CF5DC222779640093B36A /* LBFMFindDudCell.swift in Sources */,
+				3AB53E0F228653DC00302A5B /* WRNavigationBar.swift in Sources */,
 				3A40DAA9221FD4F300A4C734 /* LBFMGuessYouLikeCell.swift in Sources */,
 				3AB6490D2228C6AA00733761 /* LBFMMineModel.swift in Sources */,
 				3A9CF5E322277F110093B36A /* LBFMCustomLabel.swift in Sources */,
@@ -1936,7 +1938,6 @@
 				3AD3A9B9222C088100367138 /* LBFMClassifySubMenuModel.swift in Sources */,
 				3ADC9B9722324AE400CAF62B /* LBFMPlayDetailLikeCell.swift in Sources */,
 				3A9CF5D22227751D0093B36A /* LBFMFindDudController.swift in Sources */,
-				3A9533502203FB9500E4DC70 /* WRNavigationBar.swift in Sources */,
 				3A95338A2204259B00E4DC70 /* LBFMHomeBroadcastController.swift in Sources */,
 				3A40DAB1221FDD9000A4C734 /* LBHotAudiobookCell.swift in Sources */,
 				3ACA6E542223B73700202E98 /* LBFMHomeVipFooterView.swift in Sources */,
@@ -1945,9 +1946,8 @@
 				3ACA6E682223C8E600202E98 /* LBFMLiveCategoryListController.swift in Sources */,
 				3ADC9B7522321D9600CAF62B /* LBFMHomeGuessYouLikeMoreController.swift in Sources */,
 				3ADC9B9922324BBB00CAF62B /* LBFMPlayDetailProgramController.swift in Sources */,
-				3A9533532203FB9500E4DC70 /* WRCycleScrollView.swift in Sources */,
-				3A9533542203FB9500E4DC70 /* WRCycleCell.swift in Sources */,
 				3ACA6E792223CC8500202E98 /* LBFMHomeLiveRankCell.swift in Sources */,
+				3AB53E11228653DC00302A5B /* WRProxy.swift in Sources */,
 				3AB649062228C1B300733761 /* LBFMCVLayerView.swift in Sources */,
 				3A9CF5DF22277A080093B36A /* LBFMFindAttentionViewModel.swift in Sources */,
 				3A9CF568222624070093B36A /* LBFMRadioHeaderView.swift in Sources */,
@@ -2140,7 +2140,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U2SFWCYMB4;
+				DEVELOPMENT_TEAM = 7L8R6A82W6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LBFM-Swift/Controller/Home(首页)/推荐",
@@ -2153,7 +2153,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liubo.lbfm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2165,7 +2165,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U2SFWCYMB4;
+				DEVELOPMENT_TEAM = 7L8R6A82W6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LBFM-Swift/Controller/Home(首页)/推荐",
@@ -2178,7 +2178,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liubo.lbfm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

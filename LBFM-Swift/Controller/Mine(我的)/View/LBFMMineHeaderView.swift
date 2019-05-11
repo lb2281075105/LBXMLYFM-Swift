@@ -163,10 +163,10 @@ class LBFMMineHeaderView: UIView {
         for index in 0..<5 {
             let button = UIButton.init(frame: CGRect(x:margin*CGFloat(index)*2+margin/2,y:10,width:margin,height:margin))
             if index == 4 {
-                button.setImage(UIImage(named: dataArray[index]), for: UIControlState.normal)
+                button.setImage(UIImage(named: dataArray[index]), for: UIControl.State.normal)
             }else {
-                button.setTitle(dataArray[index], for: UIControlState.normal)
-                button.setTitleColor(UIColor.black, for: UIControlState.normal)
+                button.setTitle(dataArray[index], for: UIControl.State.normal)
+                button.setTitleColor(UIColor.black, for: UIControl.State.normal)
                 button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
             }
             self.shopView.addSubview(button)
@@ -183,14 +183,14 @@ class LBFMMineHeaderView: UIView {
                 make.top.equalTo(button.snp.bottom).offset(10)
             })
             button.tag = index
-            button.addTarget(self, action: #selector(gridBtnClick(button:)), for: UIControlEvents.touchUpInside)
+            button.addTarget(self, action: #selector(gridBtnClick(button:)), for: UIControl.Event.touchUpInside)
         }
     }
     
     /// 开始动画
     func setAnimationViewAnimation(){
         let yorig:CGFloat = 100.0 + 64
-        let opts: UIViewAnimationOptions = [.autoreverse , .repeat]
+        let opts: UIView.AnimationOptions = [.autoreverse , .repeat]
         UIView.animate(withDuration: 1, delay: 1, options: opts, animations: {
             self.animationView.center.y -= 20
         }) { _ in

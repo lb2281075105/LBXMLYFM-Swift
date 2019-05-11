@@ -29,7 +29,7 @@ class LBFMMineSetController: UIViewController {
     
     // 懒加载TableView
     private lazy var tableView : UITableView = {
-        let tableView = UITableView.init(frame:CGRect(x:0, y:0, width:LBFMScreenWidth, height:LBFMScreenHeight), style: UITableViewStyle.plain)
+        let tableView = UITableView.init(frame:CGRect(x:0, y:0, width:LBFMScreenWidth, height:LBFMScreenHeight), style: UITableView.Style.plain)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = LBFMDownColor

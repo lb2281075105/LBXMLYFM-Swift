@@ -82,7 +82,7 @@ extension LBFMLiveCategoryListController: UICollectionViewDelegate, UICollection
     
     // 每个分区的内边距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(5, 0, 5, 0)
+        return UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
     }
     
     // 最小 item 间距

@@ -65,7 +65,7 @@ extension LBFMListenSubscibeController : UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:LBFMListenSubscibeCell = tableView.dequeueReusableCell(withIdentifier: LBFMListenSubscibeCellID, for: indexPath) as! LBFMListenSubscibeCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.albumResults = viewModel.albumResults?[indexPath.row]
         return cell
     }

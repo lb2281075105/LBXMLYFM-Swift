@@ -19,7 +19,7 @@ class LBFMFindDudController:  UIViewController , LTTableViewProtocal{
     private lazy var tableView: UITableView = {
         let tableView = tableViewConfig(CGRect(x: 0, y: 0, width:LBFMScreenWidth, height: LBFMScreenHeight - LBFMNavBarHeight - LBFMTabBarHeight), self, self, nil)
         tableView.register(LBFMFindDudCell.self, forCellReuseIdentifier: LBFMFindDudCellID)
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         return tableView
     }()
     
@@ -61,7 +61,7 @@ extension LBFMFindDudController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:LBFMFindDudCell = tableView.dequeueReusableCell(withIdentifier: LBFMFindDudCellID, for: indexPath) as! LBFMFindDudCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.findDudModel = self.findDudList?[indexPath.row]
         return cell
     }

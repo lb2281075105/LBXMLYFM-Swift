@@ -60,7 +60,7 @@ extension LBFMFindAttentionController : UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:LBFMFindAttentionCell = tableView.dequeueReusableCell(withIdentifier: LBFMFindAttentionCellID, for: indexPath) as! LBFMFindAttentionCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.eventInfosModel = viewModel.eventInfos?[indexPath.row]
         return cell
     }

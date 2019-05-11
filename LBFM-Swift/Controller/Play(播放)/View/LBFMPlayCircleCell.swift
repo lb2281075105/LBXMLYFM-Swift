@@ -43,9 +43,9 @@ class LBFMPlayCircleCell: UICollectionViewCell {
     
     //加入按钮
     private lazy var joinBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setTitle("加入", for: UIControlState.normal)
-        button.setTitleColor(UIColor.white, for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setTitle("加入", for: UIControl.State.normal)
+        button.setTitleColor(UIColor.white, for: UIControl.State.normal)
         button.backgroundColor = LBFMButtonColor
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         return button

@@ -26,9 +26,9 @@ class LBFMClassifySubModuleType20Cell: UICollectionViewCell {
     // 查看更多
     private lazy var moreBtn:UIButton = {
         let button = UIButton.init(type: .custom)
-        button.setTitle("-(查看更多)-", for: UIControlState.normal)
+        button.setTitle("-(查看更多)-", for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        button.setTitleColor(UIColor.black, for: UIControlState.normal)
+        button.setTitleColor(UIColor.black, for: UIControl.State.normal)
         button.titleLabel?.textAlignment = NSTextAlignment.center
         return button
     }()
@@ -37,11 +37,11 @@ class LBFMClassifySubModuleType20Cell: UICollectionViewCell {
     // - 懒加载collectionView
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
-        layout.sectionInset = UIEdgeInsetsMake(5, 15, 5, 15)
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 5
         layout.itemSize = CGSize(width:(LBFMScreenWidth - 40) / 3, height:180)
-        layout.scrollDirection = UICollectionViewScrollDirection.horizontal
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         let collectionView = UICollectionView.init(frame:.zero, collectionViewLayout: layout)
         collectionView.contentSize = CGSize.init(width: LBFMScreenWidth - 40, height: 180)
         collectionView.delegate = self

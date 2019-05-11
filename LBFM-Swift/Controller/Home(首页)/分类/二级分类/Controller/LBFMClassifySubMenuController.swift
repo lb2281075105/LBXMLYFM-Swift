@@ -81,7 +81,7 @@ class LBFMClassifySubMenuController: UIViewController {
         }
         
         for vc in viewControllers{
-            self.addChildViewController(vc)
+            self.addChild(vc)
         }
         let pageView = DNSPageView(frame: CGRect(x: 0, y: LBFMNavBarHeight, width: LBFMScreenWidth, height: LBFMScreenHeight - LBFMNavBarHeight), style: style, titles: nameArray as! [String], childViewControllers: viewControllers)
         view.addSubview(pageView)

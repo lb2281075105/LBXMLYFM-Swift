@@ -19,9 +19,9 @@ class LBFMHotAudiobookCell: UICollectionViewCell {
     
     private let LBHotAudiobookCellID = "LBHotAudiobookCell"
     private lazy var changeBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setTitle("换一批", for: UIControlState.normal)
-        button.setTitleColor(LBFMButtonColor, for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setTitle("换一批", for: UIControl.State.normal)
+        button.setTitleColor(LBFMButtonColor, for: UIControl.State.normal)
         button.backgroundColor = UIColor.init(red: 254/255.0, green: 232/255.0, blue: 227/255.0, alpha: 1)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 5.0
@@ -90,7 +90,7 @@ extension LBFMHotAudiobookCell: UICollectionViewDelegate, UICollectionViewDataSo
     
     //每个分区的内边距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 0, 0);
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0);
     }
     
     //最小 item 间距

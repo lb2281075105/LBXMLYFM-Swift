@@ -17,16 +17,16 @@ class LBFMClassifySubHeaderView: UICollectionReusableView {
     }()
     // 更多
     private var moreBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setTitle("更多 >", for: UIControlState.normal)
-        button.setTitleColor(UIColor.gray, for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setTitle("更多 >", for: UIControl.State.normal)
+        button.setTitleColor(UIColor.gray, for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         return button
     }()
     // 收听全部
     private var allBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setImage(UIImage(named: "category_rec_play_all_122x46_"), for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "category_rec_play_all_122x46_"), for: UIControl.State.normal)
         button.isHidden = true
         return button
     }()

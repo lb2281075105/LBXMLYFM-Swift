@@ -20,11 +20,11 @@ class LBFMHomeVipCategoriesCell: UITableViewCell {
     // MARK: - 懒加载九宫格分类按钮
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
-        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.itemSize = CGSize(width:LBFMScreenWidth / 5, height:80)
-        layout.scrollDirection = UICollectionViewScrollDirection.horizontal
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         let collectionView = UICollectionView.init(frame:.zero, collectionViewLayout: layout)
         collectionView.contentSize = CGSize.init(width: LBFMScreenWidth, height: 80)
         collectionView.delegate = self
@@ -37,7 +37,7 @@ class LBFMHomeVipCategoriesCell: UITableViewCell {
         return collectionView
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         self.addSubview(self.collectionView)
         self.collectionView.snp.makeConstraints { (make) in

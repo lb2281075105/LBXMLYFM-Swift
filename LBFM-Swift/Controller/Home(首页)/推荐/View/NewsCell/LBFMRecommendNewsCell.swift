@@ -19,21 +19,21 @@ class LBFMRecommendNewsCell: UICollectionViewCell {
     }()
     
     private var moreBtn:UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setTitle("|  更多", for: UIControlState.normal)
-        button.setTitleColor(UIColor.gray, for: UIControlState.normal)
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button.setTitle("|  更多", for: UIControl.State.normal)
+        button.setTitleColor(UIColor.gray, for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         return button
     }()
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
-        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.itemSize = CGSize(width: (LBFMScreenWidth - 150), height:40)
         let collectionView = UICollectionView.init(frame:CGRect(x:80,y:5, width:LBFMScreenWidth-150, height:40), collectionViewLayout: layout)
-        layout.scrollDirection = UICollectionViewScrollDirection.vertical
+        layout.scrollDirection = UICollectionView.ScrollDirection.vertical
         collectionView.contentSize = CGSize(width: (LBFMScreenWidth - 150), height: 40)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -106,7 +106,7 @@ extension LBFMRecommendNewsCell : UICollectionViewDelegate, UICollectionViewData
     func starTimer () {
         let timer = Timer.init(timeInterval: 2, target: self, selector: #selector(nextPage), userInfo: nil, repeats: true)
         // 这一句代码涉及到runloop 和 主线程的知识,则在界面上不能执行其他的UI操作
-        RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+        RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
         self.timer = timer
     }
 

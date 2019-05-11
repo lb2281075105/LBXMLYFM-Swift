@@ -44,8 +44,8 @@ class LBFMHomeRadiosCell: UICollectionViewCell {
     
     // 播放按钮
     private var playBtn : UIButton = {
-        let btn = UIButton.init(type: UIButtonType.custom)
-        btn.setImage(UIImage(named: "play"), for: UIControlState.normal)
+        let btn = UIButton.init(type: UIButton.ButtonType.custom)
+        btn.setImage(UIImage(named: "play"), for: UIControl.State.normal)
         return btn
     }()
     

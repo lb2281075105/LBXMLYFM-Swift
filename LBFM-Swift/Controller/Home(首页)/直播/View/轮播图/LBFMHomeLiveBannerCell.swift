@@ -67,7 +67,7 @@ extension LBFMHomeLiveBannerCell: FSPagerViewDelegate, FSPagerViewDataSource {
         warning.configureContent(title: "Warning", body: "暂时没有点击功能", iconText: iconText)
         warning.button?.isHidden = true
         var warningConfig = SwiftMessages.defaultConfig
-        warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+        warningConfig.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
         SwiftMessages.show(config: warningConfig, view: warning)
     }
 }
