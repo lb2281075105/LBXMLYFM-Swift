@@ -6,28 +6,29 @@
 //  Copyright © 2019 刘博. All rights reserved.
 //
 
-import UIKit
 import ESTabBarController_swift
 import SwiftMessages
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // 1.加载tabbar样式
-        let tabbar = self.setupTabBarStyle(delegate: self as? UITabBarControllerDelegate)
-        self.window = UIWindow()
-        self.window?.backgroundColor = UIColor.white
-        self.window?.rootViewController = tabbar
-        self.window?.makeKeyAndVisible()
-        
+        let tabbar = setupTabBarStyle(delegate: self)
+        window = UIWindow()
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = tabbar
+        window?.makeKeyAndVisible()
+
         return true
     }
+}
 
-    
+// MARK: UITabBarControllerDelegate
+
+extension AppDelegate: UITabBarControllerDelegate {
     /// 1.加载tabbar样式
     ///
     /// - Parameter delegate: 代理
@@ -37,21 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarController.delegate = delegate
         tabBarController.title = "Irregularity"
         tabBarController.tabBar.shadowImage = UIImage(named: "transparent")
-        tabBarController.shouldHijackHandler = {
-            tabbarController, viewController, index in
-            if index == 2 {
-                return true
-            }
-            return false
-        }
+        tabBarController.shouldHijackHandler = { $2 == 2 ? true : false }
         tabBarController.didHijackHandler = {
-            [weak tabBarController] tabbarController, viewController, index in
-            
+            [weak tabBarController] _, _, _ in
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 let warning = MessageView.viewFromNib(layout: .cardView)
                 warning.configureTheme(.warning)
                 warning.configureDropShadow()
-                
+
                 let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
                 warning.configureContent(title: "Warning", body: "暂时没有此功能", iconText: iconText)
                 warning.button?.isHidden = true
@@ -62,34 +57,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 //                tabBarController?.present(vc, animated: true, completion: nil)
             }
         }
-        
-        let home = LBFMHomeController()
-        let listen = LBFMListenController()
-        let play = LBFMPlayController()
-        let find = LBFMFindController()
-        let mine = LBFMMineController()
-        
-        home.tabBarItem = ESTabBarItem.init(LBFMIrregularityBasicContentView(), title: "首页", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
-        listen.tabBarItem = ESTabBarItem.init(LBFMIrregularityBasicContentView(), title: "我听", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
-        play.tabBarItem = ESTabBarItem.init(LBFMIrregularityContentView(), title: nil, image: UIImage(named: "tab_play"), selectedImage: UIImage(named: "tab_play"))
-        find.tabBarItem = ESTabBarItem.init(LBFMIrregularityBasicContentView(), title: "发现", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
-        mine.tabBarItem = ESTabBarItem.init(LBFMIrregularityBasicContentView(), title: "我的", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
-        let homeNav = LBFMNavigationController.init(rootViewController: home)
-        let listenNav = LBFMNavigationController.init(rootViewController: listen)
-        let playNav = LBFMNavigationController.init(rootViewController: play)
-        let findNav = LBFMNavigationController.init(rootViewController: find)
-        let mineNav = LBFMNavigationController.init(rootViewController: mine)
-        home.title = "首页"
-        listen.title = "我听"
-        play.title = "播放"
-        find.title = "发现"
-        mine.title = "我的"
-        
-        tabBarController.viewControllers = [homeNav, listenNav, playNav, findNav, mineNav]
+
+        let tabarItemsModel = [
+            TabbarItemModel(viewContorler: LBFMHomeController(), style: .system, normalImage: "home", seclectImage: "home_1", title: "首页", itemTitle: "首页"),
+            TabbarItemModel(viewContorler: LBFMListenController(), style: .system, normalImage: "find", seclectImage: "find_1", title: "我听", itemTitle: "我听"),
+            TabbarItemModel(viewContorler: LBFMPlayController(), style: .custom, normalImage: "tab_play", seclectImage: "tab_play", title: "播放", itemTitle: nil),
+            TabbarItemModel(viewContorler: LBFMFindController(), style: .system, normalImage: "favor", seclectImage: "favor_1", title: "发现", itemTitle: "发现"),
+            TabbarItemModel(viewContorler: LBFMMineController(), style: .system, normalImage: "me", seclectImage: "me_1", title: "我的", itemTitle: "我的"),
+        ]
+
+        for (index, model) in tabarItemsModel.enumerated() {
+            model.configure(index)
+        }
+
+        tabBarController.viewControllers = tabarItemsModel.map { LBFMNavigationController(rootViewController: $0.viewContorler) }
+
         return tabBarController
     }
-
-    
-
 }
-

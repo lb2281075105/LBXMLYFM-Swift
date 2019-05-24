@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14F1199722979A500032FA16 /* TabbarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1199622979A500032FA16 /* TabbarItemModel.swift */; };
 		3A14006C2202D62000C98D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A14006B2202D62000C98D59 /* Assets.xcassets */; };
 		3A14006F2202D62000C98D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A14006D2202D62000C98D59 /* LaunchScreen.storyboard */; };
 		3A26D5DE22169F3B0080A362 /* URefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A26D5DD22169F3B0080A362 /* URefresh.swift */; };
@@ -180,6 +181,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14F1199622979A500032FA16 /* TabbarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItemModel.swift; sourceTree = "<group>"; };
 		2CFEE505BF3F94F8DFD531F9 /* Pods-LBFM-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBFM-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBFM-Swift/Pods-LBFM-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		3A1400612202D61D00C98D59 /* LBFM-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LBFM-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A14006B2202D62000C98D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -698,6 +700,7 @@
 			isa = PBXGroup;
 			children = (
 				3A95337A2204207A00E4DC70 /* AppDelegate.swift */,
+				14F1199622979A500032FA16 /* TabbarItemModel.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1859,6 +1862,7 @@
 				3A40DAC1221FE74E00A4C734 /* ReplicatorLayer.swift in Sources */,
 				3ACA6E372223934100202E98 /* LBFMHomeClassifyAPI.swift in Sources */,
 				3A9CF55422261DDB0093B36A /* LBFMBroadcastListController.swift in Sources */,
+				14F1199722979A500032FA16 /* TabbarItemModel.swift in Sources */,
 				3ADC9B7F2232485C00CAF62B /* LBFMPlayDetailModel.swift in Sources */,
 				3ACA6E21222368D100202E98 /* LBFMListenChannelViewModel.swift in Sources */,
 				3ADC9BA522324DA900CAF62B /* LBFMPlayDetailCircleController.swift in Sources */,
