@@ -24,7 +24,7 @@ target 'LBFM-Swift' do
   pod 'MJRefresh'
   #pod 'SkeletonView'
   #消息提示
-  pod 'SwiftMessages','~> 4.1.4'
+  pod 'SwiftMessages'
   #pod 'YYKit'
   pod 'SVProgressHUD'
   #播放网络音频

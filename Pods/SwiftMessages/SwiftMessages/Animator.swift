@@ -60,9 +60,24 @@ public class AnimationContext {
 
 public protocol Animator: class {
 
+    /// Adopting classes should declare as `weak`.
     var delegate: AnimationDelegate? { get set }
 
     func show(context: AnimationContext, completion: @escaping AnimationCompletion)
 
     func hide(context: AnimationContext, completion: @escaping AnimationCompletion)
+
+    /// The show animation duration. Return `nil` (the default) if animation has undefined duration,
+    /// such as if using `UIDynamicAnimator`. This value is utilized by `SwiftMessagesSegue`.
+    var showDuration: TimeInterval? { get }
+
+    /// The hide animation duration. Return `nil` (the default) if animation has undefined duration,
+    /// such as if using `UIDynamicAnimator`. This value is utilized by `SwiftMessagesSegue`.
+    var hideDuration: TimeInterval? { get }
 }
+
+public extension Animator {
+    var showDuration: TimeInterval? { return nil }
+    var hideDuration: TimeInterval? { return nil }
+}
+
