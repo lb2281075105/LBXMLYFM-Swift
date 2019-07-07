@@ -14,7 +14,7 @@ Swift5 喜马拉雅项目 在xcode10.1以上版本才能运行成功
 
 qq交流群:
 
-<img src="项目预览图/qq.jpeg" width="375">
+<img src="项目预览图/qq.png" width="375">
 
 <img src="项目预览图/1. 首页.png" width="375">
 <img src="项目预览图/1.1首页.png" width="375">
