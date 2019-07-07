@@ -12,7 +12,7 @@ Swift5 喜马拉雅项目 在xcode10.1以上版本才能运行成功
 <img src="项目预览图/wechat.jpg" width="375">
 
 
-qq交流群:
+qq交流群:一群已满,请加二群扫下方二维码 \n
 
 <img src="项目预览图/qq.png" width="375">
 
