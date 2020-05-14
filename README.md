@@ -7,17 +7,6 @@ Swift5 精仿漫画类App[Swift5 精仿漫画类App](https://github.com/lb228107
 Swift5 喜马拉雅项目 在xcode10.1以上版本才能运行成功
 
 喜马拉雅App:主要分为 首页 我听 发现 我的 四个大模块,详情可以查看截图
-
-[简书地址](https://www.jianshu.com/p/f2be1fcb77d3)
-
-公众号: liubo920205 后期还会有新项目更新,又需要的可以关注一下哦 \n
-<img src="项目预览图/wechat.jpg" width="375">
-
-
-qq交流群:一群已满,请加二群扫下方二维码 \n
-
-<img src="项目预览图/qq.png" width="375">
-
 <img src="项目预览图/1. 首页.png" width="375">
 <img src="项目预览图/1.1首页.png" width="375">
 <img src="项目预览图/2.我听.png" width="375">
